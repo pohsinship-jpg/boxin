@@ -93,7 +93,10 @@
         window.EXAM_DATA = window.QUESTIONS_DATA;
       } else {
         try {
-          const res = await fetch('data/questions.json');
+          let res = await fetch('questions.json');
+          if (!res.ok) {
+            res = await fetch('data/questions.json');
+          }
           if (res.ok) {
             window.EXAM_DATA = await res.json();
             window.QUESTIONS_DATA = window.EXAM_DATA;
