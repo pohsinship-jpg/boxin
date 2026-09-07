@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>醫檢國考練習與實務對接平台 | 臺中榮總病理檢驗部 (生物化學科 ✕ 微生物科)</title>
+  <meta name="description" content="結合醫事檢驗師生化與微生物國考題庫（109-115年共960題）與臺中榮總臨床SOP實務、近同儕教學引導的現代化互動學習平台。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">🧪</div>
+        <div class="brand-text">
+          <h1>醫檢國考練習與實務對接平台</h1>
+          <p>臺中榮民總醫院病理檢驗部（生物化學科 ✕ 微生物科）翻轉教學研發</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <!-- Cute Animal User Persona Button -->
+        <button id="btn-user-profile" class="user-persona-btn" title="切換登入小動物身分">
+          <span id="user-avatar" class="user-avatar-badge">🐾</span>
+          <span id="user-name">訪客小動物</span>
+          <span id="user-role-badge" class="role-tag intern">未登入</span>
+        </button>
+
+        <button id="btn-share-link" class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.82rem;">
+          📱 手機掃碼 / 線上網址
+        </button>
+        <button id="btn-theme-toggle" class="btn-icon" title="切換深色/淺色模式">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subject Switcher Bar -->
+  <section class="subject-bar">
+    <div class="subject-container">
+      <span class="subject-label">🎯 選擇專業考科：</span>
+      <div class="subject-tabs-wrapper" id="subject-tabs-wrapper">
+        <button class="sub-tab active" data-subject="biochem">
+          <span class="sub-icon">🧪</span>
+          <span class="sub-name">生物化學與臨床生化學</span>
+          <span class="sub-badge" id="badge-bc-count">560 題</span>
+        </button>
+        <button class="sub-tab" data-subject="microbiology">
+          <span class="sub-icon">🧫</span>
+          <span class="sub-name">微生物學與臨床微生物學</span>
+          <span class="sub-badge" id="badge-mb-count">400 題</span>
+        </button>
+        <button class="sub-tab" data-subject="all">
+          <span class="sub-icon">🌐</span>
+          <span class="sub-name">雙科全真總複習</span>
+          <span class="sub-badge" id="badge-all-count">960 題</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-container" id="nav-container">
+      <button class="nav-tab active" data-tab="exam">
+        📝 全真國考模擬測驗 <span class="tab-badge" id="badge-exam-count">7屆</span>
+      </button>
+      <button class="nav-tab" data-tab="category">
+        🗂️ 專題分類刷題
+      </button>
+      <button class="nav-tab" data-tab="daily">
+        ⚡ 每日隨機10題
+      </button>
+      <button class="nav-tab" data-tab="mistakes">
+        📕 錯題複習本 <span class="tab-badge" id="badge-mistakes-count">0</span>
+      </button>
+      <button class="nav-tab" data-tab="bookmarks">
+        ⭐ 收藏考題 <span class="tab-badge" id="badge-bookmarks-count">0</span>
+      </button>
+      <button class="nav-tab" data-tab="mentor">
+        🧑‍🏫 近同儕小老師模式
+      </button>
+      <button class="nav-tab" data-tab="sop">
+        📖 臨床指引手冊與SOP庫
+      </button>
+      <button class="nav-tab" data-tab="analytics" id="tab-analytics" style="display: none; color: #b45309;">
+        📊 全體大數據分析
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- Banner Info -->
+    <section class="welcome-banner card">
+      <h2 id="view-title">醫事檢驗師「微生物學與臨床微生物學」國考練習</h2>
+      <p id="view-desc">收錄 115-1、114-2、113-2、113-1、112-2 歷屆專技高考共 400 題完整試題，深度對接中榮微生物科 SOP、CLSI 感受性規範、VITEK MS PRIME 質譜儀與 Larone 黴菌鑑別實務。</p>
+      <div class="banner-stats">
+        <div class="b-stat">📚 題庫總數：<strong id="stat-total-q">400</strong> 題</div>
+        <div class="b-stat">🎯 累計作答：<strong id="stat-answered-q">0</strong> 題</div>
+        <div class="b-stat">✨ 平均正確率：<strong id="stat-accuracy">0%</strong></div>
+        <div class="b-stat">💡 實務對接珍珠：<strong>400 條</strong></div>
+      </div>
+    </section>
+
+    <!-- Dynamic Toolbar / Filter Area -->
+    <section class="toolbar-grid" id="toolbar-area">
+      <!-- Injected by JavaScript based on active tab -->
+    </section>
+
+    <!-- Main View Container -->
+    <section id="view-container">
+      <!-- Questions or SOP content will be rendered here -->
+    </section>
+
+  </main>
+
+  <!-- Exam Score Modal -->
+  <div id="score-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <div class="score-hero">
+        <div id="score-circle" class="score-circle pass">85</div>
+        <div id="score-status" class="score-status">測驗及格 (PASS)</div>
+        <p id="score-subtitle" style="color: var(--text-muted);">恭喜！成績達到及格標準 (≥ 60 分)</p>
+      </div>
+
+      <div style="margin: 1.5rem 0; padding: 1rem; background: var(--bg-card-subtle); border-radius: var(--radius-md);">
+        <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--primary);">📊 各領域答題表現</h4>
+        <div id="category-score-breakdown">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+        <button id="btn-review-wrong" class="btn btn-outline">🔍 僅檢視錯題</button>
+        <button id="btn-review-all" class="btn btn-primary">📖 檢視完整解析</button>
+        <button id="btn-close-score" class="btn btn-secondary">關閉</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Share & Secure Hosting Modal -->
+  <div id="share-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card" style="max-width: 540px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 800; display: flex; align-items: center; gap: 0.4rem;">
+          🛡️ 安全連線與多元發布方式
+        </h3>
+        <button id="btn-close-share" class="btn-icon" style="border: none; font-size: 1.25rem;">✕</button>
+      </div>
+      
+      <!-- Option 1: Intranet / LAN -->
+      <div style="background: var(--bg-card-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+        <div style="font-weight: 700; color: var(--secondary); font-size: 0.95rem; margin-bottom: 0.35rem;">
+          📶 院內同網域 / Wi-Fi 局域網連線（100% 內網安全）
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+          手機或平板連接同一院內 Wi-Fi 時，可直接輸入以下內網位址開啟：
+        </p>
+        <div id="share-lan-ip" style="background: var(--bg-card); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); font-family: monospace; font-size: 0.95rem; font-weight: 700; color: var(--primary); border: 1px solid var(--border-color);">
+          http://172.26.233.190:8088
+        </div>
+      </div>
+
+      <!-- Option 2: Official Trusted Hosting -->
+      <div style="background: var(--bg-card-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+        <div style="font-weight: 700; color: var(--primary); font-size: 0.95rem; margin-bottom: 0.35rem;">
+          🌐 官方受信任正規託管（GitHub Pages / Cloudflare）
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+          • <strong>GitHub Pages</strong>：網址為 <code>https://&lt;帳號&gt;.github.io/</code>，具備國際認證 SSL 憑證，絕非釣魚網站。<br>
+          • <strong>純靜態架構</strong>：全平台無外傳個資，答題紀錄僅保存在使用者本機瀏覽器中。
+        </p>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end;">
+        <button id="btn-close-share-footer" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login / Persona Switcher Modal -->
+  <div id="login-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card" style="max-width: 680px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.4rem;">
+            🐾 選擇您的匿名可愛小動物身分
+          </h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">保護隱私匿名作答，依照身分（負責人 / 二年期學員 / 大四實習生）開啟專屬學習功能。</p>
+        </div>
+        <button id="btn-close-login" class="btn-icon" style="border: none; font-size: 1.25rem;">✕</button>
+      </div>
+
+      <!-- Filter tabs for 50 animals -->
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+        <button class="btn btn-outline filter-animal-btn active" data-filter="all" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">全部 (50)</button>
+        <button class="btn btn-outline filter-animal-btn" data-filter="admin" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">👑 負責人 (1)</button>
+        <button class="btn btn-outline filter-animal-btn" data-filter="mentor" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">🩺 二年期學員 (9)</button>
+        <button class="btn btn-outline filter-animal-btn" data-filter="intern" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">🔬 大四實習生 (40)</button>
+      </div>
+
+      <!-- Search animal -->
+      <div class="search-box" style="margin-bottom: 0.75rem;">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="animal-search-input" placeholder="搜尋小動物 (如: 水豚, 企鵝, 海豚, 狐狸...)" style="padding: 0.45rem 0.75rem 0.45rem 2.2rem; font-size: 0.85rem;">
+      </div>
+
+      <!-- Animal Selection Grid -->
+      <div class="animal-grid" id="animal-grid-container">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- PIN Input Area -->
+      <div id="pin-login-box" style="background: var(--bg-card-subtle); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span id="selected-animal-preview" style="font-size: 1.6rem;">🦫</span>
+          <div>
+            <div id="selected-animal-name" style="font-weight: 700; font-size: 0.95rem;">請先點選上方小動物</div>
+            <div id="selected-animal-role" style="font-size: 0.75rem; color: var(--text-muted);">身分權限</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <input type="password" id="input-animal-pin" placeholder="請輸入 4 碼 PIN" maxlength="6" style="width: 130px; padding: 0.5rem 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); font-size: 0.9rem; text-align: center; letter-spacing: 2px;">
+          <button id="btn-confirm-login" class="btn btn-primary" style="padding: 0.5rem 1rem;">登入</button>
+          <button id="btn-quick-fill-pin" class="btn btn-outline" style="padding: 0.5rem 0.75rem; font-size: 0.75rem;" title="自動帶入預設 PIN 進行快速體驗">帶入 PIN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>臺中榮民總醫院 病理檢驗部 微生物科 ✕ 醫事檢驗師國考與臨床實務教學系統</p>
+    <p style="margin-top: 0.25rem; font-size: 0.75rem; color: var(--text-light);">資料來源：考選部專技高考醫事檢驗師試題（4308代號）及中榮微生物科標準檢驗程序 (ML-SIP-020, ML-SIP-021, ML-SIP-024)</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/users_data.js?v=20260907_v2"></script>
+  <script src="data/questions_data.js?v=20260907_v2"></script>
+  <script src="data/clinical_references.js?v=20260907_v2"></script>
+  <script src="app.js?v=20260907_v2"></script>
+</body>
+</html>
