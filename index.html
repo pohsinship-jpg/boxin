@@ -1,50 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-TW" data-theme="light">
+<html lang="zh-TW" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>醫檢國考練習與實務對接平台 | 臺中榮總病理檢驗部 (生物化學科 ✕ 微生物科)</title>
-  <meta name="description" content="結合醫事檢驗師生化與微生物國考題庫（109-115年共960題）與臺中榮總臨床SOP實務、近同儕教學引導的現代化互動學習平台。">
+  <title>中榮雙軌自主學習中心 | 醫檢師專技國考題庫 ✕ 每日英文片語練習</title>
+  <meta name="description" content="臺中榮民總醫院病理檢驗部研發：收錄109-115歷屆醫事檢驗師國考960題臨床SOP對接，以及高頻語料庫180核心英文片語每日互動練習。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+  
+  <!-- Global Image Fallback Handler (Never broken images!) -->
+  <script>
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && src.indexOf('images/') !== -1 && !e.target.dataset.triedFallback) {
+          e.target.dataset.triedFallback = '1';
+          e.target.src = src.replace('images/', '');
+        }
+      }
+    }, true);
+  </script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="app-header">
-    <div class="header-container">
-      <div class="brand">
-        <div class="brand-icon">🧪</div>
-        <div class="brand-text">
-          <h1>醫檢國考練習與實務對接平台</h1>
-          <p>臺中榮民總醫院病理檢驗部（生物化學科 ✕ 微生物科）翻轉教學研發</p>
+  <!-- MASTER UNIFIED TOP HEADER -->
+  <header class="master-header">
+    <div class="master-header-container">
+      <div class="master-brand">
+        <div class="master-brand-icon">🏛️</div>
+        <div class="master-brand-text">
+          <h1>中榮雙軌智慧自主學習中心</h1>
+          <p>醫事檢驗師國考實務對接 · 國際語言溝通力養成</p>
         </div>
       </div>
-      <div class="header-actions">
-        <!-- Cute Animal User Persona Button -->
-        <button id="btn-user-profile" class="user-persona-btn" title="切換登入小動物身分">
-          <span id="user-avatar" class="user-avatar-badge">🐾</span>
-          <span id="user-name">訪客小動物</span>
-          <span id="user-role-badge" class="role-tag intern">未登入</span>
-        </button>
 
-                <!-- Dual-Track Navigation -->
-        <a href="../" class="btn btn-secondary" style="text-decoration:none; padding: 0.35rem 0.75rem; font-size: 0.82rem;" title="返回學習首頁選擇">
-          🏠 學習首頁
-        </a>
-        <a href="../phrasal-verbs/" class="btn" style="text-decoration:none; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-weight: 700; padding: 0.35rem 0.85rem; font-size: 0.82rem; border-radius: 8px; display: inline-flex; align-items: center; gap: 4px; box-shadow: 0 2px 8px rgba(99,102,241,0.35);" title="前往每日英文片語練習">
-          ⚡ 英文片語練習
-        </a>
-<button id="btn-share-link" class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.82rem;">
-          📱 手機掃碼 / 線上網址
+      <!-- Channel Switcher -->
+      <nav class="track-switcher">
+        <button id="btn-nav-med" class="track-btn active med" onclick="switchTrack('med')">
+          <span>🧪</span> 醫檢國考題庫 (960題)
+        </button>
+        <button id="btn-nav-eng" class="track-btn eng" onclick="switchTrack('eng')">
+          <span>⚡</span> 每日英文片語 (180片語)
+        </button>
+      </nav>
+
+      <!-- Contextual Action Buttons -->
+      <div class="master-actions">
+        <!-- Med Track Specific -->
+        <div id="actions-med" style="display: flex; gap: 0.5rem; align-items: center;">
+          <button id="btn-user-profile" class="user-persona-btn" title="切換登入小動物身分">
+            <span id="user-avatar" class="user-avatar-badge">🐾</span>
+            <span id="user-name">訪客小動物</span>
+            <span id="user-role-badge" class="role-tag intern">未登入</span>
+          </button>
+          <button id="btn-share-link" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+            📱 掃碼
+          </button>
+        </div>
+
+        <!-- Eng Track Specific -->
+        <div id="actions-eng" style="display: none; gap: 0.5rem; align-items: center;">
+          <div class="stat-pill streak" id="streak-pill" title="連續打卡天數" style="padding: 0.3rem 0.65rem; font-size: 0.82rem;">
+            🔥 <span id="streak-count">1</span> 天
+          </div>
+          <div class="stat-pill" id="today-stats" title="今日完成題目" style="padding: 0.3rem 0.65rem; font-size: 0.82rem;">
+            🎯 <span id="completed-stat">0/10</span>
+          </div>
+        </div>
+
+        <!-- Universal Buttons -->
+        <button class="btn btn-secondary" id="btn-open-portal-modal" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;" title="開啟學習項目選擇面板">
+          🔄 主題切換
         </button>
         <button id="btn-theme-toggle" class="btn-icon" title="切換深色/淺色模式">🌓</button>
       </div>
     </div>
   </header>
 
-  <!-- Subject Switcher Bar -->
-  <section class="subject-bar">
+  <!-- TRACK 1: 醫事檢驗師國考與臨床實務題庫 -->
+  <div id="track-med-exam" class="track-container active">
+    <section class="subject-bar">
     <div class="subject-container">
       <span class="subject-label">🎯 選擇專業考科：</span>
       <div class="subject-tabs-wrapper" id="subject-tabs-wrapper">
@@ -123,8 +161,7 @@
     </section>
 
   </main>
-
-  <!-- Exam Score Modal -->
+    <!-- Exam Score Modal -->
   <div id="score-modal" class="modal-overlay" style="display: none;">
     <div class="modal-card">
       <div class="score-hero">
@@ -240,15 +277,418 @@
   </div>
 
   <!-- Footer -->
-  <footer class="app-footer">
-    <p>臺中榮民總醫院 病理檢驗部 微生物科 ✕ 醫事檢驗師國考與臨床實務教學系統</p>
-    <p style="margin-top: 0.25rem; font-size: 0.75rem; color: var(--text-light);">資料來源：考選部專技高考醫事檢驗師試題（4308代號）及中榮微生物科標準檢驗程序 (ML-SIP-020, ML-SIP-021, ML-SIP-024)</p>
-  </footer>
+  
+  </div>
+
+  <!-- TRACK 2: PhrasalFlow 每日英文片語練習 -->
+  <div id="track-phrasal-verbs" class="track-container">
+    <div style="max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem;">
+      <section class="day-nav-wrapper">
+      <div class="section-header-row">
+        <div class="section-title">
+          <span>📅 18天學習計畫總覽</span>
+        </div>
+        <div class="day-stats-hint" id="day-stats-hint">
+          當前：Day 1 (片語 #1 ~ #10)
+        </div>
+      </div>
+
+      <div class="day-scroll-container" id="day-scroll-container">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </section>
+
+    <!-- Mode Tabs -->
+    <nav class="mode-tabs">
+      <button class="tab-btn active" data-tab="quiz">
+        <span>📝</span> 每日10句挑戰
+      </button>
+      <button class="tab-btn" data-tab="flashcards">
+        <span>🗂️</span> 智慧單字卡
+      </button>
+      <button class="tab-btn" data-tab="scramble">
+        <span>🧩</span> 句子重組
+      </button>
+      <button class="tab-btn" data-tab="listening">
+        <span>🎧</span> 聽力跟讀
+      </button>
+      <button class="tab-btn" data-tab="directory">
+        <span>📖</span> 180片語百科
+      </button>
+      <button class="tab-btn" data-tab="notebook">
+        <span>⭐️</span> 錯題與收藏 (<span id="saved-count-badge">0</span>)
+      </button>
+    </nav>
+
+    <!-- MAIN VIEW 1: QUIZ CHALLENGE (每日10句挑戰) -->
+    <main id="view-quiz" class="view-panel active">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <div class="quiz-progress-text" id="quiz-progress-indicator">
+            第 1 / 10 題
+          </div>
+          <div class="quiz-badge-row">
+            <span class="badge" id="quiz-category-badge">生活例句</span>
+            <span class="badge frequency" id="quiz-frequency-badge">佔比 64.5%</span>
+          </div>
+        </div>
+
+        <div class="quiz-sentence-box">
+          <div class="sentence-en" id="quiz-sentence-display">
+            <!-- Example sentence with blank -->
+          </div>
+          <div class="sentence-zh-hint" id="quiz-hint-display">
+            💡 提示：<span id="quiz-hint-text">發生、進行</span>
+          </div>
+        </div>
+
+        <!-- 4 Multiple Choice Options -->
+        <div class="options-grid" id="quiz-options-container">
+          <!-- Dynamic Buttons -->
+        </div>
+
+        <!-- Detailed Explanation After Answer -->
+        <div class="explanation-panel" id="quiz-explanation-panel">
+          <div class="explanation-title">
+            <span id="quiz-verb-name">GO ON</span>
+            <span class="badge" id="quiz-verb-zh">發生、進行</span>
+            <button class="sentence-audio-btn" id="quiz-verb-audio-btn" title="朗讀發音">🔊</button>
+          </div>
+          <div class="explanation-body" id="quiz-explanation-text">
+            <!-- Sense definition and full sentence details -->
+          </div>
+          <div class="explanation-example-list" id="quiz-examples-list">
+            <!-- Both Everyday & Workplace examples -->
+          </div>
+        </div>
+
+        <div class="quiz-footer">
+          <button class="quiz-star-btn" id="quiz-star-btn">
+            ★ 收藏此片語
+          </button>
+          <button class="btn-primary" id="quiz-next-btn">
+            下一題 →
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- MAIN VIEW 2: FLASHCARDS (單字卡) -->
+    <section id="view-flashcards" class="view-panel">
+      <div class="flashcards-container">
+        <div class="card-nav-row">
+          <button class="btn-primary" id="fc-prev-btn" style="padding: 8px 18px;">← 上一張</button>
+          <span class="quiz-progress-text" id="fc-counter">1 / 10</span>
+          <button class="btn-primary" id="fc-next-btn" style="padding: 8px 18px;">下一張 →</button>
+        </div>
+
+        <div class="flashcard-3d-wrap" id="flashcard-element" title="點擊翻轉卡片">
+          <div class="flashcard-inner">
+            <!-- Front Face -->
+            <div class="card-face card-front">
+              <div class="card-top-meta">
+                <span class="card-rank" id="fc-front-rank">#1 · 核心高頻</span>
+                <span class="badge frequency" id="fc-front-freq">Corpus 64.5%</span>
+              </div>
+              <div style="margin: auto 0;">
+                <div class="card-verb-title" id="fc-front-verb">GO ON</div>
+                <div class="card-zh-meaning" id="fc-front-zh">發生、進行；接著進行</div>
+              </div>
+              <div class="card-hint-bottom">
+                💡 點擊卡片翻轉查看詳細用法與生活/職場例句 ↻
+              </div>
+            </div>
+
+            <!-- Back Face -->
+            <div class="card-face card-back">
+              <div class="card-top-meta">
+                <span class="card-rank" id="fc-back-verb">GO ON</span>
+                <button class="sentence-audio-btn" id="fc-audio-btn" title="朗讀發音">🔊</button>
+              </div>
+              <div class="senses-container" id="fc-back-senses">
+                <!-- Dynamic Senses & Examples -->
+              </div>
+              <div class="card-hint-bottom" style="margin-top: 10px;">
+                💡 點擊卡片翻回正面 ↻
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="quiz-star-btn" id="fc-star-btn" style="align-self: center;">
+          ★ 收藏此片語到複習庫
+        </button>
+      </div>
+    </section>
+
+    <!-- MAIN VIEW 3: SENTENCE SCRAMBLE (句子重組) -->
+    <section id="view-scramble" class="view-panel">
+      <div class="scramble-container">
+        <div class="quiz-header">
+          <div class="quiz-progress-text" id="scramble-progress">第 1 / 10 題</div>
+          <span class="badge everyday" id="scramble-badge">生活例句</span>
+        </div>
+
+        <p style="color: var(--text-secondary); margin-bottom: 12px; font-size: 15px;">
+          請依序點擊下方單字積木，重組為正確的英文句子：
+        </p>
+
+        <!-- Assembled Slots -->
+        <div class="scramble-slots" id="scramble-slots">
+          <!-- Filled Chips -->
+        </div>
+
+        <!-- Available Word Chips Pool -->
+        <div class="scramble-pool" id="scramble-pool">
+          <!-- Available Chips -->
+        </div>
+
+        <div style="font-size: 14px; color: var(--accent-amber); margin-bottom: 20px;" id="scramble-meaning">
+          <!-- Meaning hint -->
+        </div>
+
+        <div class="quiz-footer">
+          <button class="quiz-star-btn" id="scramble-reset-btn">↺ 重新排詞</button>
+          <button class="btn-primary" id="scramble-check-btn">檢查答案 ✓</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN VIEW 4: LISTENING QUIZ (聽力測驗) -->
+    <section id="view-listening" class="view-panel">
+      <div class="quiz-card" style="text-align: center;">
+        <div class="quiz-header">
+          <div class="quiz-progress-text" id="listen-progress">聽力題 1 / 10</div>
+          <span class="badge" id="listen-speed-badge">⚡ 1.0x 語速</span>
+        </div>
+
+        <div style="margin: 30px 0;">
+          <button class="btn-primary" id="listen-play-btn" style="padding: 18px 36px; font-size: 18px; margin: 0 auto;">
+            🔊 播放英文例句
+          </button>
+          <div style="font-size: 14px; color: var(--text-muted); margin-top: 12px;">
+            仔細聆聽句子中出現的動詞片語
+          </div>
+        </div>
+
+        <div class="options-grid" id="listen-options-container">
+          <!-- 4 Options -->
+        </div>
+
+        <div class="explanation-panel" id="listen-explanation-panel">
+          <div class="sentence-en" id="listen-full-sentence" style="font-size: 18px;"></div>
+          <div style="color: var(--text-secondary); margin-top: 6px;" id="listen-full-zh"></div>
+        </div>
+
+        <div class="quiz-footer">
+          <div></div>
+          <button class="btn-primary" id="listen-next-btn">下一題 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN VIEW 5: FULL DIRECTORY (180片語總表) -->
+    <section id="view-directory" class="view-panel">
+      <div class="directory-controls">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="dir-search-input" class="search-input" placeholder="搜尋片語 (如: go on, pick up, 職場, 發生)...">
+        </div>
+
+        <select id="dir-filter-select" class="filter-select">
+          <option value="all">全部 180 個片語</option>
+          <option value="main">核心高頻 (1 ~ 150)</option>
+          <option value="supplement">實用補充 (151 ~ 180)</option>
+          <option value="current-day">當前選取天數</option>
+          <option value="saved">我的收藏</option>
+        </select>
+      </div>
+
+      <div class="directory-grid" id="directory-grid">
+        <!-- 180 Cards rendered here -->
+      </div>
+    </section>
+
+    <!-- MAIN VIEW 6: NOTEBOOK (錯題與收藏) -->
+    <section id="view-notebook" class="view-panel">
+      <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-size: 18px; font-weight: 700;">⭐️ 收藏片語與複習清單</h3>
+        <button class="quiz-star-btn" id="clear-saved-btn">清空複習庫</button>
+      </div>
+      <div class="directory-grid" id="notebook-grid">
+        <!-- Saved items -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CELEBRATION MODAL -->
+  <div class="modal-overlay" id="celebration-modal">
+    <div class="modal-content">
+      <div class="modal-emoji">🎉</div>
+      <h2 class="modal-title" id="modal-title">太棒了！今日挑戰完成</h2>
+      <p class="modal-desc" id="modal-desc">
+        你已經完成了今日 10 句核心動詞片語練習！連續打卡記錄已更新。
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <button class="quiz-star-btn" id="modal-review-btn">再複習一次</button>
+        <button class="btn-primary" id="modal-next-day-btn">進入下一天 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GITHUB DEPLOY MODAL -->
+  <div class="modal-overlay" id="github-modal">
+    <div class="modal-content" style="max-width: 600px; text-align: left;">
+      <h2 class="modal-title" style="margin-bottom: 12px;">🚀 發佈到 GitHub Pages 教學</h2>
+      <p class="modal-desc" style="margin-bottom: 16px;">
+        本網頁為純靜態網頁（HTML+CSS+JS），無需任何後端或 Node.js 伺服器，直接推送到 GitHub 即可免費啟用 GitHub Pages！
+      </p>
+      <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8; color: var(--text-accent); margin-bottom: 20px;">
+        # 1. 初始化 Git 倉庫<br>
+        git init<br>
+        git add .<br>
+        git commit -m "Initial commit for PhrasalFlow daily practice"<br><br>
+        # 2. 建立 GitHub 倉庫後關聯並推送<br>
+        git remote add origin https://github.com/你的帳號/你的倉庫名稱.git<br>
+        git branch -M main<br>
+        git push -u origin main<br><br>
+        # 3. 前往 GitHub Repo -> Settings -> Pages -> Source 選擇 "Deploy from a branch (main / root)" 即可上線！
+      </div>
+      <button class="btn-primary" id="github-modal-close" style="width: 100%; justify-content: center;">我知道了，關閉</button>
+    </div>
+  </div>
 
   <!-- Scripts -->
-  <script src="users_data.js?v=20260907_v3"></script>
-  <script src="questions_data.js?v=20260907_v3"></script>
-  <script src="clinical_references.js?v=20260907_v3"></script>
-  <script src="app.js?v=20260907_v3"></script>
+  
+    </div>
+  </div>
+
+  <!-- INITIAL / ON-DEMAND PORTAL SELECTION MODAL -->
+  <div id="portal-select-modal" class="portal-modal-overlay" style="display: none;">
+    <div class="portal-modal-card">
+      <div class="portal-modal-header">
+        <span style="font-size: 2.2rem; display: inline-block; margin-bottom: 0.4rem;">🌟</span>
+        <h2 class="portal-modal-title">您今天想要精進哪一項主題？</h2>
+        <p class="portal-modal-sub">臺中榮總病理檢驗部智慧自主學習雙軌平台，請點選進入專屬系統：</p>
+      </div>
+
+      <div class="portal-cards-row">
+        <!-- Choice 1 -->
+        <div class="portal-choice-card med" onclick="selectTrackFromModal('med')">
+          <div class="portal-choice-icon">🧪</div>
+          <div class="portal-choice-title">醫事檢驗師國考題庫平台</div>
+          <p class="portal-choice-desc">
+            完整收錄 109-115 歷屆高考 <strong>960 題</strong>（生化 560 題 ✕ 微生物 400 題），含 28 張高解析鏡檢電泳圖譜與中榮臨床 SOP 對接。
+          </p>
+          <button class="portal-choice-btn">進入醫檢國考專區 ➔</button>
+        </div>
+
+        <!-- Choice 2 -->
+        <div class="portal-choice-card eng" onclick="selectTrackFromModal('eng')">
+          <div class="portal-choice-icon">⚡</div>
+          <div class="portal-choice-title">PhrasalFlow 每日英文片語</div>
+          <p class="portal-choice-desc">
+            真實語料庫頻率排名前 <strong>180 個核心動詞片語</strong>，每天精練 10 句，18 天快速打造自然語感與雙情境口說聽力！
+          </p>
+          <button class="portal-choice-btn">前往英文片語練習 ➔</button>
+        </div>
+      </div>
+
+      <div class="portal-modal-footer">
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+          <input type="checkbox" id="chk-remember-track" style="cursor: pointer;">
+          <span>記住我的選擇（下次進站直接開啟，不跳出此面板）</span>
+        </label>
+        <button class="btn btn-secondary" onclick="closePortalModal()" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">
+          先隨便逛逛
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified Controller Script -->
+  <script>
+    // Track Management
+    function switchTrack(track) {
+      localStorage.setItem('boxin_active_track', track);
+      const medTrack = document.getElementById('track-med-exam');
+      const engTrack = document.getElementById('track-phrasal-verbs');
+      const btnMed = document.getElementById('btn-nav-med');
+      const btnEng = document.getElementById('btn-nav-eng');
+      const actionsMed = document.getElementById('actions-med');
+      const actionsEng = document.getElementById('actions-eng');
+
+      if (track === 'med') {
+        medTrack.classList.add('active');
+        engTrack.classList.remove('active');
+        btnMed.classList.add('active');
+        btnEng.classList.remove('active');
+        actionsMed.style.display = 'flex';
+        actionsEng.style.display = 'none';
+        document.title = '醫檢國考練習與實務對接平台 | 臺中榮總病理檢驗部';
+      } else {
+        medTrack.classList.remove('active');
+        engTrack.classList.add('active');
+        btnMed.classList.remove('active');
+        btnEng.classList.add('active');
+        actionsMed.style.display = 'none';
+        actionsEng.style.display = 'flex';
+        document.title = 'PhrasalFlow · 每日10句英文片語練習 | 臺中榮總智慧自主學習';
+      }
+      window.dispatchEvent(new Event('resize'));
+    }
+
+    function selectTrackFromModal(track) {
+      const remember = document.getElementById('chk-remember-track').checked;
+      if (remember) {
+        localStorage.setItem('boxin_remember_track', 'true');
+      }
+      closePortalModal();
+      switchTrack(track);
+    }
+
+    function openPortalModal() {
+      document.getElementById('portal-select-modal').style.display = 'flex';
+    }
+
+    function closePortalModal() {
+      document.getElementById('portal-select-modal').style.display = 'none';
+    }
+
+    document.getElementById('btn-open-portal-modal').addEventListener('click', openPortalModal);
+
+    // Initial check
+    window.addEventListener('DOMContentLoaded', () => {
+      const remembered = localStorage.getItem('boxin_remember_track') === 'true';
+      const activeTrack = localStorage.getItem('boxin_active_track') || 'med';
+
+      if (!remembered) {
+        // First visit: show selection modal
+        openPortalModal();
+      }
+      switchTrack(activeTrack);
+    });
+
+    // Unified Theme Switcher
+    const themeToggleBtn = document.getElementById('btn-theme-toggle');
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('mb_exam_theme', newTheme);
+      localStorage.setItem('phrasalflow_theme', newTheme);
+    });
+  </script>
+
+  <!-- Data Scripts (Already on GitHub!) -->
+  <script src="questions_data.js"></script>
+  <script src="clinical_references.js"></script>
+  <script src="users_data.js"></script>
+  <script src="phrasal_verbs_data.js"></script>
+
+  <!-- Application Logic -->
+  <script src="med_app.js"></script>
+  <script src="eng_app.js"></script>
 </body>
 </html>
