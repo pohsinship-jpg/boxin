@@ -1,0 +1,9324 @@
+const PHRASAL_VERBS_DATA = [
+  {
+    "id": 1,
+    "day": 1,
+    "verb": "GO ON",
+    "zh": "發生、進行；接著進行",
+    "category": "Main",
+    "page": 2,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Happen, take place",
+        "percentage": "64.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "There is a debate going on right now between the two parties."
+          },
+          {
+            "type": "職場",
+            "en": "The meeting was still going on when I had to leave to catch the MRT."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ to)",
+        "definition": "Proceed to do or tackle STH after doing STH else",
+        "percentage": "13%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Does anyone have any questions before I go on to the next chapter?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "There is a debate going on right now between the two parties.",
+      "cloze_sentence": "There is a debate 【 ________ 】 right now between the two parties.",
+      "answer": "going on",
+      "options": [
+        "coming back",
+        "picking up",
+        "coming up",
+        "going on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Happen, take place",
+      "percentage": "64.5%",
+      "hint": "GO ON（發生、進行；接著進行）"
+    }
+  },
+  {
+    "id": 2,
+    "day": 1,
+    "verb": "PICK UP",
+    "zh": "拿起、接送、順道買/拿",
+    "category": "Main",
+    "page": 2,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Get or take SB/STH from a place",
+        "percentage": "70.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Can you pick up some food on the way home from work please?"
+          },
+          {
+            "type": "職場",
+            "en": "Can you pick up the client from the high-speed rail station before the presentation?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Can you pick up some food on the way home from work please?",
+      "cloze_sentence": "Can you 【 ________ 】 some food on the way home from work please?",
+      "answer": "pick up",
+      "options": [
+        "come up",
+        "go on",
+        "pick up",
+        "come back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Get or take SB/STH from a place",
+      "percentage": "70.5%",
+      "hint": "PICK UP（拿起、接送、順道買/拿）"
+    }
+  },
+  {
+    "id": 3,
+    "day": 1,
+    "verb": "COME BACK",
+    "zh": "回來、重提",
+    "category": "Main",
+    "page": 2,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Return to a place or a conversation topic",
+        "percentage": "96.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She came back to the kitchen with a bottle of fancy wine."
+          },
+          {
+            "type": "生活",
+            "en": "Let's come back to the sales figures after the coffee break."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She came back to the kitchen with a bottle of fancy wine.",
+      "cloze_sentence": "She 【 ________ 】 to the kitchen with a bottle of fancy wine.",
+      "answer": "came back",
+      "options": [
+        "came up",
+        "went on",
+        "picked up",
+        "came back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Return to a place or a conversation topic",
+      "percentage": "96.5%",
+      "hint": "COME BACK（回來、重提）"
+    }
+  },
+  {
+    "id": 4,
+    "day": 1,
+    "verb": "COME UP",
+    "zh": "提出、產生；即將發生",
+    "category": "Main",
+    "page": 2,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ with)",
+        "definition": "Bring forth or produce",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She instantly came up with a solution to the problem."
+          },
+          {
+            "type": "職場",
+            "en": "Our team came up with a new marketing plan for the night-market brand."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "(Be coming up)",
+        "definition": "Be happening soon (esp. be broadcast soon)",
+        "percentage": "27.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Coming up after the news, our cooking program will feature cheese."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She instantly came up with a solution to the problem.",
+      "cloze_sentence": "She instantly 【 ________ 】 with a solution to the problem.",
+      "answer": "came up",
+      "options": [
+        "came back",
+        "went on",
+        "picked up",
+        "came up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Bring forth or produce",
+      "percentage": "34%",
+      "hint": "COME UP（提出、產生；即將發生）"
+    }
+  },
+  {
+    "id": 5,
+    "day": 1,
+    "verb": "GO BACK",
+    "zh": "返回、回歸",
+    "category": "Main",
+    "page": 2,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Return to a place, time, situation, activity, conversation topic",
+        "percentage": "90%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He washed the dishes and went back to his room."
+          },
+          {
+            "type": "職場",
+            "en": "After lunch at the food court, everyone went back to their desks."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He washed the dishes and went back to his room.",
+      "cloze_sentence": "He washed the dishes and 【 ________ 】 to his room.",
+      "answer": "went back",
+      "options": [
+        "picked up",
+        "went on",
+        "went back",
+        "came back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Return to a place, time, situation, activity, conversation topic",
+      "percentage": "90%",
+      "hint": "GO BACK（返回、回歸）"
+    }
+  },
+  {
+    "id": 6,
+    "day": 1,
+    "verb": "FIND OUT",
+    "zh": "查明、發現、弄清楚",
+    "category": "Main",
+    "page": 2,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Discover STH; obtain knowledge of STH",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We need to find out who did this to her."
+          },
+          {
+            "type": "職場",
+            "en": "I need to find out why the client hasn't replied to my email."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We need to find out who did this to her.",
+      "cloze_sentence": "We need to 【 ________ 】 who did this to her.",
+      "answer": "find out",
+      "options": [
+        "come back",
+        "go on",
+        "pick up",
+        "find out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Discover STH; obtain knowledge of STH",
+      "percentage": "100%",
+      "hint": "FIND OUT（查明、發現、弄清楚）"
+    }
+  },
+  {
+    "id": 7,
+    "day": 1,
+    "verb": "COME OUT",
+    "zh": "出版、發行、顯露；結果是",
+    "category": "Main",
+    "page": 3,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(room, building, container)",
+        "definition": "Leave a place  or appear from it",
+        "percentage": "38%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She went into the bank and came out with some money."
+          },
+          {
+            "type": "生活",
+            "en": "She came out ofthe manager's office looking relieved after the interview."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become known or revealed after being kept secret",
+        "percentage": "13.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The news came out that he was leaving the team."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "(Come out and do STH)",
+        "definition": "Make public knowledge a privately held position",
+        "percentage": "11.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "People need to come out and say what they think about it."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become available or released to the public (film, record, book)",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Their new album is coming out next month."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She went into the bank and came out with some money.",
+      "cloze_sentence": "She went into the bank and 【 ________ 】 with some money.",
+      "answer": "came out",
+      "options": [
+        "picked up",
+        "came back",
+        "came out",
+        "went on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Leave a place  or appear from it",
+      "percentage": "38%",
+      "hint": "COME OUT（出版、發行、顯露；結果是）"
+    }
+  },
+  {
+    "id": 8,
+    "day": 1,
+    "verb": "GO OUT",
+    "zh": "外出、熄滅、交往",
+    "category": "Main",
+    "page": 3,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Leave a room, building, car, or one's home to go to a social event",
+        "percentage": "56.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We should go out for dinner sometime."
+          },
+          {
+            "type": "職場",
+            "en": "The whole department is going out for hotpot after work on Friday."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(Go out and do STH)",
+        "definition": "Used as an intensifier, to highlight the active nature of what is being done",
+        "percentage": "19.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Do you think he'll go out and buy the whole company?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We should go out for dinner sometime.",
+      "cloze_sentence": "We should 【 ________ 】 for dinner sometime.",
+      "answer": "go out",
+      "options": [
+        "go on",
+        "come back",
+        "pick up",
+        "go out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Leave a room, building, car, or one's home to go to a social event",
+      "percentage": "56.5%",
+      "hint": "GO OUT（外出、熄滅、交往）"
+    }
+  },
+  {
+    "id": 9,
+    "day": 1,
+    "verb": "POINT OUT",
+    "zh": "指出、提醒",
+    "category": "Main",
+    "page": 3,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Direct attention toward STH (fact, idea, information)",
+        "percentage": "89%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Experts have pointed out that eating too much sugar is extremely unhealthy"
+          },
+          {
+            "type": "生活",
+            "en": "My supervisor pointed out a mistake in my monthly report."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Experts have pointed out that eating too much sugar is extremely unhealthy",
+      "cloze_sentence": "Experts have 【 ________ 】 that eating too much sugar is extremely unhealthy",
+      "answer": "pointed out",
+      "options": [
+        "came back",
+        "picked up",
+        "went on",
+        "pointed out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Direct attention toward STH (fact, idea, information)",
+      "percentage": "89%",
+      "hint": "POINT OUT（指出、提醒）"
+    }
+  },
+  {
+    "id": 10,
+    "day": 1,
+    "verb": "GROW UP",
+    "zh": "長大、成年",
+    "category": "Main",
+    "page": 3,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Gradually advance in age and maturity",
+        "percentage": "98%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Seeing my kids growing up is such a lovely thing."
+          },
+          {
+            "type": "生活",
+            "en": "Many of my colleagues grew up in Kaohsiung before moving to Taipei for work."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Seeing my kids growing up is such a lovely thing.",
+      "cloze_sentence": "Seeing my kids 【 ________ 】 is such a lovely thing.",
+      "answer": "growing up",
+      "options": [
+        "coming back",
+        "going on",
+        "picking up",
+        "growing up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Gradually advance in age and maturity",
+      "percentage": "98%",
+      "hint": "GROW UP（長大、成年）"
+    }
+  },
+  {
+    "id": 11,
+    "day": 2,
+    "verb": "SET UP",
+    "zh": "設立、建立、安排、設置",
+    "category": "Main",
+    "page": 3,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Establish or create STH; arrange for STH to happen or exist",
+        "percentage": "64.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "An advisory committee is being set up."
+          },
+          {
+            "type": "生活",
+            "en": "We set up a new customer service team last quarter."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Place STH in a particular spot or position",
+        "percentage": "16.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We need to set up a few more chairs so everyone can sit down."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "An advisory committee is being set up.",
+      "cloze_sentence": "An advisory committee is being 【 ________ 】.",
+      "answer": "set up",
+      "options": [
+        "got out",
+        "came in",
+        "turned out",
+        "set up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Establish or create STH; arrange for STH to happen or exist",
+      "percentage": "64.5%",
+      "hint": "SET UP（設立、建立、安排、設置）"
+    }
+  },
+  {
+    "id": 12,
+    "day": 2,
+    "verb": "TURN OUT",
+    "zh": "結果是、出席、證明是",
+    "category": "Main",
+    "page": 4,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Prove or be discovered to happen or be",
+        "percentage": "91%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Her suspicion turned out to be justified."
+          },
+          {
+            "type": "職場",
+            "en": "The project turned out to be more profitable than we expected."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Her suspicion turned out to be justified.",
+      "cloze_sentence": "Her suspicion 【 ________ 】 to be justified.",
+      "answer": "turned out",
+      "options": [
+        "turned out",
+        "setting up",
+        "got out",
+        "came in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Prove or be discovered to happen or be",
+      "percentage": "91%",
+      "hint": "TURN OUT（結果是、出席、證明是）"
+    }
+  },
+  {
+    "id": 13,
+    "day": 2,
+    "verb": "GET OUT",
+    "zh": "離開、出去、逃脫",
+    "category": "Main",
+    "page": 4,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Leave a container (vehicle, room, building) or make SB/STH leave a container",
+        "percentage": "75.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "These prisoners have no hope of ever getting out of jail."
+          },
+          {
+            "type": "生活",
+            "en": "It was raining hard, so I could barely get out of the taxi outside the office."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "These prisoners have no hope of ever getting out of jail.",
+      "cloze_sentence": "These prisoners have no hope of ever 【 ________ 】 of jail.",
+      "answer": "getting out",
+      "options": [
+        "coming in",
+        "turning out",
+        "setting up",
+        "getting out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Leave a container (vehicle, room, building) or make SB/STH leave a container",
+      "percentage": "75.5%",
+      "hint": "GET OUT（離開、出去、逃脫）"
+    }
+  },
+  {
+    "id": 14,
+    "day": 2,
+    "verb": "COME IN",
+    "zh": "進來、抵達、介入",
+    "category": "Main",
+    "page": 4,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Enter a place or area (room, building)",
+        "percentage": "65%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She opened the door and he came in"
+          },
+          {
+            "type": "生活",
+            "en": "Please come in and take a seat; the interview will start soon."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become involved in a situation",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We need experts to come in and give us advice."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She opened the door and he came in",
+      "cloze_sentence": "She opened the door and he 【 ________ 】",
+      "answer": "came in",
+      "options": [
+        "turned out",
+        "came in",
+        "setting up",
+        "got out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Enter a place or area (room, building)",
+      "percentage": "65%",
+      "hint": "COME IN（進來、抵達、介入）"
+    }
+  },
+  {
+    "id": 15,
+    "day": 2,
+    "verb": "TAKE ON",
+    "zh": "承擔、接受挑戰、聘用",
+    "category": "Main",
+    "page": 4,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Undertake or handle (role, task, responsibility, problem, issue)",
+        "percentage": "42%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Nobody was willing to take on such an awful job."
+          },
+          {
+            "type": "生活",
+            "en": "She took on the role of team leader after her manager left."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Acquire or assume as one's own (quality, meaning, colour, shape)",
+        "percentage": "41.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The story takes on a whole new meaning when you read it again."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Nobody was willing to take on such an awful job.",
+      "cloze_sentence": "Nobody was willing to 【 ________ 】 such an awful job.",
+      "answer": "take on",
+      "options": [
+        "set up",
+        "turn out",
+        "take on",
+        "get out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Undertake or handle (role, task, responsibility, problem, issue)",
+      "percentage": "42%",
+      "hint": "TAKE ON（承擔、接受挑戰、聘用）"
+    }
+  },
+  {
+    "id": 16,
+    "day": 2,
+    "verb": "GIVE UP",
+    "zh": "放棄、戒除",
+    "category": "Main",
+    "page": 4,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop doing or having STH; abandon (activity, belief, possession)",
+        "percentage": "80.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She had to give up smoking when she got pregnant."
+          },
+          {
+            "type": "生活",
+            "en": "He gave up a stable job to open a bubble tea shop."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She had to give up smoking when she got pregnant.",
+      "cloze_sentence": "She had to 【 ________ 】 smoking when she got pregnant.",
+      "answer": "give up",
+      "options": [
+        "set up",
+        "turn out",
+        "get out",
+        "give up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop doing or having STH; abandon (activity, belief, possession)",
+      "percentage": "80.5%",
+      "hint": "GIVE UP（放棄、戒除）"
+    }
+  },
+  {
+    "id": 17,
+    "day": 2,
+    "verb": "MAKE UP",
+    "zh": "組成、編造、和解、彌補",
+    "category": "Main",
+    "page": 4,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Form the whole of an amount or entity",
+        "percentage": "42.5%",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Hispanics make up more than",
+        "percentage": "15%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Interns make up nearly a third of our office staff."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ for)",
+        "definition": "Compensate for STH lacking, lost or missed",
+        "percentage": "18.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Some solution has to be found to make up for such losses."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "(Make up one's mind)",
+        "definition": "Make a decision",
+        "percentage": "15.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You should make up your mind about who you will vote for."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Interns make up nearly a third of our office staff.",
+      "cloze_sentence": "Interns 【 ________ 】 nearly a third of our office staff.",
+      "answer": "make up",
+      "options": [
+        "turn out",
+        "set up",
+        "get out",
+        "make up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Hispanics make up more than",
+      "percentage": "15%",
+      "hint": "MAKE UP（組成、編造、和解、彌補）"
+    }
+  },
+  {
+    "id": 18,
+    "day": 2,
+    "verb": "END UP",
+    "zh": "最終成為、以…告終",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Finally do STH or be in a particular place, state, or situation after doing STH or as a consequence of",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "it, esp. unexpectedly",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She ended up having to sell her car after her accident."
+          },
+          {
+            "type": "職場",
+            "en": "I ended up working overtime again because of the deadline."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She ended up having to sell her car after her accident.",
+      "cloze_sentence": "She 【 ________ 】 having to sell her car after her accident.",
+      "answer": "ended up",
+      "options": [
+        "ended up",
+        "turned out",
+        "setting up",
+        "got out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "it, esp. unexpectedly",
+      "percentage": "100%",
+      "hint": "END UP（最終成為、以…告終）"
+    }
+  },
+  {
+    "id": 19,
+    "day": 2,
+    "verb": "GET BACK",
+    "zh": "返回、取回",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Return to a place, position, state, activity, conversation topic",
+        "percentage": "78.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She got back to London last Monday."
+          },
+          {
+            "type": "生活",
+            "en": "Could you get back to me about the budget by Friday?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She got back to London last Monday.",
+      "cloze_sentence": "She 【 ________ 】 to London last Monday.",
+      "answer": "got back",
+      "options": [
+        "got back",
+        "turned out",
+        "setting up",
+        "got out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Return to a place, position, state, activity, conversation topic",
+      "percentage": "78.5%",
+      "hint": "GET BACK（返回、取回）"
+    }
+  },
+  {
+    "id": 20,
+    "day": 2,
+    "verb": "LOOK UP",
+    "zh": "查閱、仰望；情況好轉",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Raise one's eyes",
+        "percentage": "88%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He looked up from his book and shook his head."
+          },
+          {
+            "type": "職場",
+            "en": "She looked up from her laptop when the manager walked in"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He looked up from his book and shook his head.",
+      "cloze_sentence": "He 【 ________ 】 from his book and shook his head.",
+      "answer": "looked up",
+      "options": [
+        "looked up",
+        "turned out",
+        "got out",
+        "setting up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Raise one's eyes",
+      "percentage": "88%",
+      "hint": "LOOK UP（查閱、仰望；情況好轉）"
+    }
+  },
+  {
+    "id": 21,
+    "day": 3,
+    "verb": "FIGURE OUT",
+    "zh": "想出、弄明白、理解",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Come to understand or determine STH",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Despite her eforts, she couldn't figure out what had happened."
+          },
+          {
+            "type": "生活",
+            "en": "It took me all morning to figure out the error in the spreadsheet."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Despite her eforts, she couldn't figure out what had happened.",
+      "cloze_sentence": "Despite her eforts, she couldn't 【 ________ 】 what had happened.",
+      "answer": "figure out",
+      "options": [
+        "take out",
+        "sit down",
+        "get up",
+        "figure out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Come to understand or determine STH",
+      "percentage": "100%",
+      "hint": "FIGURE OUT（想出、弄明白、理解）"
+    }
+  },
+  {
+    "id": 22,
+    "day": 3,
+    "verb": "SIT DOWN",
+    "zh": "坐下、落座",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move from a standing position to a sitting position 10o%",
+        "percentage": "",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Please sit down and have a drink."
+          },
+          {
+            "type": "生活",
+            "en": "Let's all sit down and go through the agenda."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Please sit down and have a drink.",
+      "cloze_sentence": "Please 【 ________ 】 and have a drink.",
+      "answer": "sit down",
+      "options": [
+        "take out",
+        "sit down",
+        "figure out",
+        "get up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move from a standing position to a sitting position 10o%",
+      "percentage": "",
+      "hint": "SIT DOWN（坐下、落座）"
+    }
+  },
+  {
+    "id": 23,
+    "day": 3,
+    "verb": "GET UP",
+    "zh": "起床、站起",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Rise or cause to rise after lying in bed or sitting/kneeling",
+        "percentage": "92%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She got up out of her chair and put on her shoes."
+          },
+          {
+            "type": "職場",
+            "en": "I have to get up at six to catch the commuter train to work."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She got up out of her chair and put on her shoes.",
+      "cloze_sentence": "She 【 ________ 】 out of her chair and put on her shoes.",
+      "answer": "got up",
+      "options": [
+        "took out",
+        "sat down",
+        "figured out",
+        "got up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Rise or cause to rise after lying in bed or sitting/kneeling",
+      "percentage": "92%",
+      "hint": "GET UP（起床、站起）"
+    }
+  },
+  {
+    "id": 24,
+    "day": 3,
+    "verb": "TAKE OUT",
+    "zh": "拿出來、外帶、帶…出去",
+    "category": "Main",
+    "page": 5,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Remove STH/SB from somewhere (container or abstract whole)",
+        "percentage": "50.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He tore open the envelope and took out a few bills."
+          },
+          {
+            "type": "生活",
+            "en": "He took his laptop out of his bag and started the presentation."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Invite to a recreational place or social event",
+        "percentage": "13.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You should take her out to this new Chinese restaurant."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Obtain an official document or service from an authority",
+        "percentage": "12.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I had to take out a loan to cover all my expenses."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He tore open the envelope and took out a few bills.",
+      "cloze_sentence": "He tore open the envelope and 【 ________ 】 a few bills.",
+      "answer": "took out",
+      "options": [
+        "sat down",
+        "took out",
+        "figured out",
+        "got up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Remove STH/SB from somewhere (container or abstract whole)",
+      "percentage": "50.5%",
+      "hint": "TAKE OUT（拿出來、外帶、帶…出去）"
+    }
+  },
+  {
+    "id": 25,
+    "day": 3,
+    "verb": "COME ON",
+    "zh": "快點、加油；發生、開始",
+    "category": "Main",
+    "page": 6,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Said to encourage SB to try harder, or do or say STH",
+        "percentage": "50%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Come on, don't be shy and tell us your story."
+          },
+          {
+            "type": "生活",
+            "en": "Come on, we can finish this report before the deadline."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Said to show SB disbelief, disagreement, or anger",
+        "percentage": "19.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Oh come on, you're just lying to me!"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Come on, don't be shy and tell us your story.",
+      "cloze_sentence": "【 ________ 】, don't be shy and tell us your story.",
+      "answer": "Come on",
+      "options": [
+        "Come on",
+        "figure out",
+        "get up",
+        "sit down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Said to encourage SB to try harder, or do or say STH",
+      "percentage": "50%",
+      "hint": "COME ON（快點、加油；發生、開始）"
+    }
+  },
+  {
+    "id": 26,
+    "day": 3,
+    "verb": "GO DOWN",
+    "zh": "下降、倒下、被記錄",
+    "category": "Main",
+    "page": 6,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move down to a lower level or position",
+        "percentage": "29%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "After hitting the iceberg,the ship began to go down."
+          },
+          {
+            "type": "職場",
+            "en": "Let's go down to the lobby to greet the visitors from head office."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Decrease in value or amount",
+        "percentage": "27%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I don't think prices will go down."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Go from one place to another, esp. one that is further south or underneath",
+        "percentage": "18%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We went down to Australia last year."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "After hitting the iceberg,the ship began to go down.",
+      "cloze_sentence": "After hitting the iceberg,the ship began to 【 ________ 】.",
+      "answer": "go down",
+      "options": [
+        "sit down",
+        "go down",
+        "figure out",
+        "get up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move down to a lower level or position",
+      "percentage": "29%",
+      "hint": "GO DOWN（下降、倒下、被記錄）"
+    }
+  },
+  {
+    "id": 27,
+    "day": 3,
+    "verb": "SHOW UP",
+    "zh": "出現、露面",
+    "category": "Main",
+    "page": 6,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make an appearance at a social or professional gathering",
+        "percentage": "81%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She didn't show up at the meeting."
+          },
+          {
+            "type": "生活",
+            "en": "Only half the team showed up to the Monday morning meeting"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She didn't show up at the meeting.",
+      "cloze_sentence": "She didn't 【 ________ 】 at the meeting.",
+      "answer": "show up",
+      "options": [
+        "figure out",
+        "get up",
+        "sit down",
+        "show up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Make an appearance at a social or professional gathering",
+      "percentage": "81%",
+      "hint": "SHOW UP（出現、露面）"
+    }
+  },
+  {
+    "id": 28,
+    "day": 3,
+    "verb": "TAKE OFF",
+    "zh": "脫掉、起飛、迅速走紅",
+    "category": "Main",
+    "page": 6,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(esp. piece of clothing or jewellery from one's body)",
+        "definition": "Remove STH",
+        "percentage": "41%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I took off my shirt and went to bed."
+          },
+          {
+            "type": "生活",
+            "en": "He took of his suit jacket before the long meeting."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Leave a place, especially suddenly",
+        "percentage": "28.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They jumped into the car and took of."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Leave the ground and rise into the air",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The plane took of at 7am."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I took off my shirt and went to bed.",
+      "cloze_sentence": "I 【 ________ 】 my shirt and went to bed.",
+      "answer": "took off",
+      "options": [
+        "got up",
+        "sat down",
+        "took off",
+        "figured out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Remove STH",
+      "percentage": "41%",
+      "hint": "TAKE OFF（脫掉、起飛、迅速走紅）"
+    }
+  },
+  {
+    "id": 29,
+    "day": 3,
+    "verb": "WORK OUT",
+    "zh": "運動健身、解決、計算出",
+    "category": "Main",
+    "page": 7,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Plan, devise or think about STH carefully or in detail",
+        "percentage": "33%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We still need to work out the details ofthe procedure."
+          },
+          {
+            "type": "生活",
+            "en": "We still need to work out the details ofthe client contract."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Exercise in order to improve health or strength",
+        "percentage": "23%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He works out at the gym five times a week."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "(+ well/badly)",
+        "definition": "Happen or develop in a particular way",
+        "percentage": "15%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Everything worked out well in the end."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Prove to be successful",
+        "percentage": "12.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Despite our efforts, it just didn't work out."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We still need to work out the details ofthe procedure.",
+      "cloze_sentence": "We still need to 【 ________ 】 the details ofthe procedure.",
+      "answer": "work out",
+      "options": [
+        "get up",
+        "sit down",
+        "work out",
+        "figure out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Plan, devise or think about STH carefully or in detail",
+      "percentage": "33%",
+      "hint": "WORK OUT（運動健身、解決、計算出）"
+    }
+  },
+  {
+    "id": 30,
+    "day": 3,
+    "verb": "STAND UP",
+    "zh": "站起來、經得起考驗",
+    "category": "Main",
+    "page": 7,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Rise to a standing position after sitting or lying down",
+        "percentage": "67.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He pushed away from the table and stood up"
+          },
+          {
+            "type": "職場",
+            "en": "Everyone stood up when the CEO entered the room."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(Stand up and say STH)",
+        "definition": "Make public knowledge a privately held position",
+        "percentage": "11%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Somebody's got to stand up and say what's wrong with this country."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He pushed away from the table and stood up",
+      "cloze_sentence": "He pushed away from the table and 【 ________ 】",
+      "answer": "stood up",
+      "options": [
+        "sat down",
+        "figured out",
+        "got up",
+        "stood up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Rise to a standing position after sitting or lying down",
+      "percentage": "67.5%",
+      "hint": "STAND UP（站起來、經得起考驗）"
+    }
+  },
+  {
+    "id": 31,
+    "day": 4,
+    "verb": "COME DOWN",
+    "zh": "降下、倒塌、流傳下來",
+    "category": "Main",
+    "page": 7,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move from a higher spatial location to a lower one; fall/land onto the ground",
+        "percentage": "32.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Come down from the roofor you will hurt yourself."
+          },
+          {
+            "type": "職場",
+            "en": "Could you come down to the third floor for a quick meeting?"
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ to)",
+        "definition": "Reduce itself to one particular thing that is the most important or essential matter",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "What it all comes down to is that the rules have not been respected."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become lower in amount or value",
+        "percentage": "11%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Interest rates are currently coming down."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Come down from the roofor you will hurt yourself.",
+      "cloze_sentence": "【 ________ 】 from the roofor you will hurt yourself.",
+      "answer": "Come down",
+      "options": [
+        "go up",
+        "go ahead",
+        "Come down",
+        "look back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move from a higher spatial location to a lower one; fall/land onto the ground",
+      "percentage": "32.5%",
+      "hint": "COME DOWN（降下、倒塌、流傳下來）"
+    }
+  },
+  {
+    "id": 32,
+    "day": 4,
+    "verb": "GO AHEAD",
+    "zh": "進行、前進、開始做",
+    "category": "Main",
+    "page": 7,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Proceed with a course of action without further hesitation",
+        "percentage": "99%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Go ahead and ask me your question!"
+          },
+          {
+            "type": "職場",
+            "en": "The manager told us to go ahead and launch the campaign."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Go ahead and ask me your question!",
+      "cloze_sentence": "【 ________ 】 and ask me your question!",
+      "answer": "Go ahead",
+      "options": [
+        "Go ahead",
+        "go up",
+        "come down",
+        "look back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Proceed with a course of action without further hesitation",
+      "percentage": "99%",
+      "hint": "GO AHEAD（進行、前進、開始做）"
+    }
+  },
+  {
+    "id": 33,
+    "day": 4,
+    "verb": "GO UP",
+    "zh": "上升、上漲、被興建",
+    "category": "Main",
+    "page": 7,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become higher in value; increase",
+        "percentage": "47.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Oil prices have gone up last year."
+          },
+          {
+            "type": "職場",
+            "en": "Rents near the office have gone up a lot this year."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move upward, or from a lower spatial location to a higher one",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He could see a few hands go up in the audience."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Oil prices have gone up last year.",
+      "cloze_sentence": "Oil prices have 【 ________ 】 last year.",
+      "answer": "gone up",
+      "options": [
+        "go ahead",
+        "gone up",
+        "look back",
+        "come down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Become higher in value; increase",
+      "percentage": "47.5%",
+      "hint": "GO UP（上升、上漲、被興建）"
+    }
+  },
+  {
+    "id": 34,
+    "day": 4,
+    "verb": "LOOK BACK",
+    "zh": "回顧、回憶",
+    "category": "Main",
+    "page": 8,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Think of STH again; reconsider STH past",
+        "percentage": "49.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Looking back on those days, we had a very happy life."
+          },
+          {
+            "type": "生活",
+            "en": "Looking back on my first internship, I learned a lot about teamwork"
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Look at STH/SB again after having momentarily looked elsewhere",
+        "percentage": "30%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He closed the dictionary and looked back to his notes."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Looking back on those days, we had a very happy life.",
+      "cloze_sentence": "【 ________ 】 on those days, we had a very happy life.",
+      "answer": "Looking back",
+      "options": [
+        "going ahead",
+        "going up",
+        "Looking back",
+        "coming down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Think of STH again; reconsider STH past",
+      "percentage": "49.5%",
+      "hint": "LOOK BACK（回顧、回憶）"
+    }
+  },
+  {
+    "id": 35,
+    "day": 4,
+    "verb": "WAKE UP",
+    "zh": "醒來、喚醒",
+    "category": "Main",
+    "page": 8,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(or make SB become)",
+        "definition": "Become  conscious again after being asleep",
+        "percentage": "92%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I was so tired that I woke up at 10 this morning."
+          },
+          {
+            "type": "生活",
+            "en": "I could barely wake up in time for the early shift."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I was so tired that I woke up at 10 this morning.",
+      "cloze_sentence": "I was so tired that I 【 ________ 】 at 10 this morning.",
+      "answer": "woke up",
+      "options": [
+        "came down",
+        "went ahead",
+        "woke up",
+        "went up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Become  conscious again after being asleep",
+      "percentage": "92%",
+      "hint": "WAKE UP（醒來、喚醒）"
+    }
+  },
+  {
+    "id": 36,
+    "day": 4,
+    "verb": "CARRY OUT",
+    "zh": "執行、實施、落實",
+    "category": "Main",
+    "page": 8,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Perform or complete (task, activity, study, experiment, attack, duties, etc)",
+        "percentage": "63.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The experiment was carried out by a well-known academic."
+          },
+          {
+            "type": "職場",
+            "en": "The team carried out a survey of our customers in Taichung."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Put into execution; implement (plan, idea, wishes, orders, views, etc)",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Economic reform will soon be carried out."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The experiment was carried out by a well-known academic.",
+      "cloze_sentence": "The experiment was 【 ________ 】 by a well-known academic.",
+      "answer": "carried out",
+      "options": [
+        "came down",
+        "carried out",
+        "went ahead",
+        "went up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Perform or complete (task, activity, study, experiment, attack, duties, etc)",
+      "percentage": "63.5%",
+      "hint": "CARRY OUT（執行、實施、落實）"
+    }
+  },
+  {
+    "id": 37,
+    "day": 4,
+    "verb": "TAKE OVER",
+    "zh": "接管、接手",
+    "category": "Main",
+    "page": 8,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Gain control, management, or possession of STH/SB (task, job, political party, organisation)",
+        "percentage": "96.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "After her father died, she took over the company"
+          },
+          {
+            "type": "職場",
+            "en": "She took over the project when her colleague resigned."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "After her father died, she took over the company",
+      "cloze_sentence": "After her father died, she 【 ________ 】 the company",
+      "answer": "took over",
+      "options": [
+        "came down",
+        "went ahead",
+        "took over",
+        "went up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Gain control, management, or possession of STH/SB (task, job, political party, organisation)",
+      "percentage": "96.5%",
+      "hint": "TAKE OVER（接管、接手）"
+    }
+  },
+  {
+    "id": 38,
+    "day": 4,
+    "verb": "HOLD UP",
+    "zh": "舉起、支撐；延誤、阻礙",
+    "category": "Main",
+    "page": 8,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Hold STH in a high position (e.g. above one's waist or head), so it can be seen or reached",
+        "percentage": "54%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The professor held up the picture so everyone could see it."
+          },
+          {
+            "type": "職場",
+            "en": "The presenter held up the new product for everyone to see."
+          },
+          {
+            "type": "通用",
+            "en": "Remain strong or in a fairly good condition after a bad period or the wear of time (person,"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "business, device)",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "These are really old shoes but they're holding up quite well."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Delay or prevent the progression of STH/SB",
+        "percentage": "11.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We were held up by heavy trafic."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The professor held up the picture so everyone could see it.",
+      "cloze_sentence": "The professor 【 ________ 】 the picture so everyone could see it.",
+      "answer": "held up",
+      "options": [
+        "went up",
+        "went ahead",
+        "came down",
+        "held up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Hold STH in a high position (e.g. above one's waist or head), so it can be seen or reached",
+      "percentage": "54%",
+      "hint": "HOLD UP（舉起、支撐；延誤、阻礙）"
+    }
+  },
+  {
+    "id": 39,
+    "day": 4,
+    "verb": "PULL OUT",
+    "zh": "拔出、撤離、駛出",
+    "category": "Main",
+    "page": 8,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take STH/SB out of a container, thing or place",
+        "percentage": "75%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He reached in his pocket and pulled out a gun."
+          },
+          {
+            "type": "職場",
+            "en": "He pulled out his phone to show the client the LINE message."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He reached in his pocket and pulled out a gun.",
+      "cloze_sentence": "He reached in his pocket and 【 ________ 】 a gun.",
+      "answer": "pulled out",
+      "options": [
+        "pulled out",
+        "came down",
+        "went ahead",
+        "went up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take STH/SB out of a container, thing or place",
+      "percentage": "75%",
+      "hint": "PULL OUT（拔出、撤離、駛出）"
+    }
+  },
+  {
+    "id": 40,
+    "day": 4,
+    "verb": "TURN AROUND",
+    "zh": "轉身、扭轉局勢、好轉",
+    "category": "Main",
+    "page": 9,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move so as to face in the opposite direction",
+        "percentage": "67.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She turned around and walked out the door."
+          },
+          {
+            "type": "生活",
+            "en": "She turned around to answer her colleague's question."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make STH become better or more successful than it previously was (economy, business)",
+        "percentage": "24.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "People have stopped believing the President could turn around the economy."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She turned around and walked out the door.",
+      "cloze_sentence": "She 【 ________ 】 and walked out the door.",
+      "answer": "turned around",
+      "options": [
+        "went up",
+        "came down",
+        "turned around",
+        "went ahead"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move so as to face in the opposite direction",
+      "percentage": "67.5%",
+      "hint": "TURN AROUND（轉身、扭轉局勢、好轉）"
+    }
+  },
+  {
+    "id": 41,
+    "day": 5,
+    "verb": "TAKE UP",
+    "zh": "開始從事、佔用(時間/空間)",
+    "category": "Main",
+    "page": 9,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Use a particular amount of space, time or effort",
+        "percentage": "25.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The rewriting of the document took up a whole afternoon."
+          },
+          {
+            "type": "生活",
+            "en": "Answering emails takes up most of my morning at the office."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Discuss or deal with (issue, idea, matter)",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The Senate will take up the issue tomorrow."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start doing a particular job or activity, esp. for pleasure 1o.",
+        "percentage": "5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He took up gardening last year."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Grasp an object, often moving it from a lower to a higher position",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I have to take up the carpet before I start hoovering."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The rewriting of the document took up a whole afternoon.",
+      "cloze_sentence": "The rewriting of the document 【 ________ 】 a whole afternoon.",
+      "answer": "took up",
+      "options": [
+        "took up",
+        "putting up",
+        "looked down",
+        "brought back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Use a particular amount of space, time or effort",
+      "percentage": "25.5%",
+      "hint": "TAKE UP（開始從事、佔用(時間/空間)）"
+    }
+  },
+  {
+    "id": 42,
+    "day": 5,
+    "verb": "LOOK DOWN",
+    "zh": "向下看；俯視、輕視",
+    "category": "Main",
+    "page": 9,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Lower one's eyes to see what is below",
+        "percentage": "92%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She looked down at the ground to see what she stepped on"
+          },
+          {
+            "type": "職場",
+            "en": "He looked down at his notes before starting the presentation."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She looked down at the ground to see what she stepped on",
+      "cloze_sentence": "She 【 ________ 】 at the ground to see what she stepped on",
+      "answer": "looked down",
+      "options": [
+        "putting up",
+        "brought back",
+        "looked down",
+        "took up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Lower one's eyes to see what is below",
+      "percentage": "92%",
+      "hint": "LOOK DOWN（向下看；俯視、輕視）"
+    }
+  },
+  {
+    "id": 43,
+    "day": 5,
+    "verb": "PUT UP",
+    "zh": "建造、張貼、提供住宿、忍受",
+    "category": "Main",
+    "page": 9,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Display or attach STH (e.g. to a wall) so it can be seen",
+        "percentage": "23%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "They put up a few posters on the wall."
+          },
+          {
+            "type": "生活",
+            "en": "We put up the new schedule on the office notice board."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ with)",
+        "definition": "Be willing to accept STH unpleasant or not desirable; tolerate",
+        "percentage": "19%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I won't put up with your bad behaviour for much longer."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Build or place STH somewhere",
+        "percentage": "18%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They're putting up a new fence after the previous one fell apart."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "They put up a few posters on the wall.",
+      "cloze_sentence": "They 【 ________ 】 a few posters on the wall.",
+      "answer": "put up",
+      "options": [
+        "brought back",
+        "took up",
+        "looked down",
+        "put up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Display or attach STH (e.g. to a wall) so it can be seen",
+      "percentage": "23%",
+      "hint": "PUT UP（建造、張貼、提供住宿、忍受）"
+    }
+  },
+  {
+    "id": 44,
+    "day": 5,
+    "verb": "BRING BACK",
+    "zh": "帶回、恢復、使想起",
+    "category": "Main",
+    "page": 9,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make STH/SB return to a place, state, situation, or conversation topic",
+        "percentage": "52.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "This will bring back war into the country."
+          },
+          {
+            "type": "職場",
+            "en": "The new manager brought back the weekly team lunch."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Bring STH one has taken from a place they come from",
+        "percentage": "22.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "This is the hat he brought back from South America."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "This will bring back war into the country.",
+      "cloze_sentence": "This will 【 ________ 】 war into the country.",
+      "answer": "bring back",
+      "options": [
+        "looking down",
+        "taking up",
+        "bring back",
+        "putting up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Make STH/SB return to a place, state, situation, or conversation topic",
+      "percentage": "52.5%",
+      "hint": "BRING BACK（帶回、恢復、使想起）"
+    }
+  },
+  {
+    "id": 45,
+    "day": 5,
+    "verb": "BRING UP",
+    "zh": "撫養、提出(話題)",
+    "category": "Main",
+    "page": 10,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Raise for discussion or consideration",
+        "percentage": "59.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I didn't think he would bring up the subject."
+          },
+          {
+            "type": "職場",
+            "en": "I didn't want to bring up the salary issue during the meeting."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Care for/be responsible for a child until it becomes an adult",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She brought up her children under very dificult circumstances."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I didn't think he would bring up the subject.",
+      "cloze_sentence": "I didn't think he would 【 ________ 】 the subject.",
+      "answer": "bring up",
+      "options": [
+        "taking up",
+        "bring up",
+        "looking down",
+        "putting up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Raise for discussion or consideration",
+      "percentage": "59.5%",
+      "hint": "BRING UP（撫養、提出(話題)）"
+    }
+  },
+  {
+    "id": 46,
+    "day": 5,
+    "verb": "LOOK OUT",
+    "zh": "小心、留神、向外看",
+    "category": "Main",
+    "page": 10,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Look outside, or at the horizon",
+        "percentage": "50.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She liked to go by the window and look out at the garden."
+          },
+          {
+            "type": "生活",
+            "en": "From my desk I can look out over the whole city"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take care of SB and make sure they are well; protect SB's interests",
+        "percentage": "25.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We look out for each other as if we were family."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She liked to go by the window and look out at the garden.",
+      "cloze_sentence": "She liked to go by the window and 【 ________ 】 at the garden.",
+      "answer": "look out",
+      "options": [
+        "put up",
+        "take up",
+        "look out",
+        "look down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Look outside, or at the horizon",
+      "percentage": "50.5%",
+      "hint": "LOOK OUT（小心、留神、向外看）"
+    }
+  },
+  {
+    "id": 47,
+    "day": 5,
+    "verb": "BRING IN",
+    "zh": "引進、賺得、帶來收入",
+    "category": "Main",
+    "page": 10,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Bring STH to a place or situation",
+        "percentage": "52%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I brought in my laptop computer today because my office computer is broken"
+          },
+          {
+            "type": "職場",
+            "en": "The company brought in a consultant to improve eficiency."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Ask SB to do a particular job or task",
+        "percentage": "30.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He had been brought in to save the company."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I brought in my laptop computer today because my office computer is broken",
+      "cloze_sentence": "I 【 ________ 】 my laptop computer today because my office computer is broken",
+      "answer": "brought in",
+      "options": [
+        "took up",
+        "putting up",
+        "looked down",
+        "brought in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Bring STH to a place or situation",
+      "percentage": "52%",
+      "hint": "BRING IN（引進、賺得、帶來收入）"
+    }
+  },
+  {
+    "id": 48,
+    "day": 5,
+    "verb": "OPEN UP",
+    "zh": "打開、敞開心扉、開拓機會",
+    "category": "Main",
+    "page": 10,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make STH become available or possible, less limited",
+        "percentage": "42.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "This opened up opportunities he would never have imagined."
+          },
+          {
+            "type": "職場",
+            "en": "The new branch in Tainan opened up a lot ofjob opportunities."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(door, gate, book, bag)",
+        "definition": "Open STH",
+        "percentage": "27.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She opened up the bag and grabbed some documents."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "This opened up opportunities he would never have imagined.",
+      "cloze_sentence": "This opened up opportunities he would never have imagined.",
+      "answer": "open up",
+      "options": [
+        "open up",
+        "take up",
+        "look down",
+        "put up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Make STH become available or possible, less limited",
+      "percentage": "42.5%",
+      "hint": "OPEN UP（打開、敞開心扉、開拓機會）"
+    }
+  },
+  {
+    "id": 49,
+    "day": 5,
+    "verb": "CHECK OUT",
+    "zh": "結帳離開、檢查、查看",
+    "category": "Main",
+    "page": 10,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Have a look at; examine STH/SB (esp. to get more information or make a judgement)",
+        "percentage": "97%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Check out our website for more information."
+          },
+          {
+            "type": "生活",
+            "en": "Check out the client's website before the meeting."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Check out our website for more information.",
+      "cloze_sentence": "【 ________ 】 our website for more information.",
+      "answer": "Check out",
+      "options": [
+        "put up",
+        "look down",
+        "Check out",
+        "take up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Have a look at; examine STH/SB (esp. to get more information or make a judgement)",
+      "percentage": "97%",
+      "hint": "CHECK OUT（結帳離開、檢查、查看）"
+    }
+  },
+  {
+    "id": 50,
+    "day": 5,
+    "verb": "MOVE ON",
+    "zh": "繼續前進、換話題、展開新生活",
+    "category": "Main",
+    "page": 11,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start doing or discussing STH new (job, activity, conversation topic)",
+        "percentage": "42%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Let's move on to our next topic."
+          },
+          {
+            "type": "生活",
+            "en": "Let's move on to the next item on the agenda"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Change physical location (spot, room, country)",
+        "percentage": "28%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She lived in New York, then London, and finally moved on to Rome."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Forget about a difficult experience and move forward mentally/emotionally",
+        "percentage": "25%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He's had a dificult year but he's now ready to move on."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Let's move on to our next topic.",
+      "cloze_sentence": "Let's 【 ________ 】 to our next topic.",
+      "answer": "move on",
+      "options": [
+        "put up",
+        "move on",
+        "take up",
+        "look down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Start doing or discussing STH new (job, activity, conversation topic)",
+      "percentage": "42%",
+      "hint": "MOVE ON（繼續前進、換話題、展開新生活）"
+    }
+  },
+  {
+    "id": 51,
+    "day": 6,
+    "verb": "PUT OUT",
+    "zh": "撲滅、熄滅、出版、伸出",
+    "category": "Main",
+    "page": 11,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make STH known or accessible to the public (information, products)",
+        "percentage": "47%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Police have put out a warning about thieves in the area."
+          },
+          {
+            "type": "職場",
+            "en": "The company put out a press release about the new product."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop STH from burning or shining",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The fire has finally been put out."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Place STH somewhere in order for it to be seen or used",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I've put out some glasses and a bottle of wine."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Police have put out a warning about thieves in the area.",
+      "cloze_sentence": "Police have 【 ________ 】 a warning about thieves in the area.",
+      "answer": "put out",
+      "options": [
+        "went in",
+        "caught up",
+        "put out",
+        "looked around"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Make STH known or accessible to the public (information, products)",
+      "percentage": "47%",
+      "hint": "PUT OUT（撲滅、熄滅、出版、伸出）"
+    }
+  },
+  {
+    "id": 52,
+    "day": 6,
+    "verb": "LOOK AROUND",
+    "zh": "環顧四周、四處參觀",
+    "category": "Main",
+    "page": 11,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Examine a place or one's surroundings so as to view what it might contain or look for a particular",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "thing",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "They entered the shop and looked around but nobody was there"
+          },
+          {
+            "type": "職場",
+            "en": "The new intern looked around the office to find the printer."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "They entered the shop and looked around but nobody was there",
+      "cloze_sentence": "They entered the shop and 【 ________ 】 but nobody was there",
+      "answer": "looked around",
+      "options": [
+        "putting out",
+        "caught up",
+        "went in",
+        "looked around"
+      ],
+      "example_type": "生活",
+      "sense_definition": "thing",
+      "percentage": "100%",
+      "hint": "LOOK AROUND（環顧四周、四處參觀）"
+    }
+  },
+  {
+    "id": 53,
+    "day": 6,
+    "verb": "CATCH UP",
+    "zh": "趕上、敘舊、補上進度",
+    "category": "Main",
+    "page": 11,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(Be/Get caught up)",
+        "definition": "Become involved in STH which prevents SB from making progress or",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "moving forward",
+        "percentage": "26%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He is very busy and always caught up in his work."
+          },
+          {
+            "type": "職場",
+            "en": "Sorry I'm late - I got caught up in a long client call."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Reach SB that is ahead by walking, running, or driving faster",
+        "percentage": "18%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She was running so fast that it was impossible to catch up with her"
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Reach the same level or standard as SB who is more advanced",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They made considerable improvements, which makes it hard for us to catch up."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He is very busy and always caught up in his work.",
+      "cloze_sentence": "He is very busy and always 【 ________ 】 in his work.",
+      "answer": "caught up",
+      "options": [
+        "putting out",
+        "went in",
+        "looked around",
+        "caught up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "moving forward",
+      "percentage": "26%",
+      "hint": "CATCH UP（趕上、敘舊、補上進度）"
+    }
+  },
+  {
+    "id": 54,
+    "day": 6,
+    "verb": "GO IN",
+    "zh": "進入、進去",
+    "category": "Main",
+    "page": 11,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(place, area, room, building)",
+        "definition": "Enter",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "%06",
+        "percentage": "",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "This restaurant looks really nice; let's go in and have lunch."
+          },
+          {
+            "type": "職場",
+            "en": "She took a deep breath and went in for the job interview."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "This restaurant looks really nice; let's go in and have lunch.",
+      "cloze_sentence": "This restaurant looks really nice; let's 【 ________ 】 and have lunch.",
+      "answer": "go in",
+      "options": [
+        "go in",
+        "catch up",
+        "look around",
+        "put out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "%06",
+      "percentage": "",
+      "hint": "GO IN（進入、進去）"
+    }
+  },
+  {
+    "id": 55,
+    "day": 6,
+    "verb": "BREAK DOWN",
+    "zh": "故障、崩潰、細分分解",
+    "category": "Main",
+    "page": 12,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop working or functioning; fail or collapse (vehicle, device, relationship, negotiations)",
+        "percentage": "24%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Our car broke down yesterday"
+          },
+          {
+            "type": "生活",
+            "en": "The office printer broke down right before the deadline."
+          },
+          {
+            "type": "通用",
+            "en": "Divide or separate into categories or smaller components so as to make it easier to understand"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "or deal with",
+        "percentage": "20%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Let's break down the task into three easy steps."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Lose control of one's emotions and yield to tears or distress",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He broke down at his son's funeral."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Undergo chemical decomposition; separate into different substances",
+        "percentage": "13.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Digestion breaks down food into small molecules."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Our car broke down yesterday",
+      "cloze_sentence": "Our car 【 ________ 】 yesterday",
+      "answer": "broke down",
+      "options": [
+        "broke down",
+        "putting out",
+        "caught up",
+        "looked around"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop working or functioning; fail or collapse (vehicle, device, relationship, negotiations)",
+      "percentage": "24%",
+      "hint": "BREAK DOWN（故障、崩潰、細分分解）"
+    }
+  },
+  {
+    "id": 56,
+    "day": 6,
+    "verb": "GET OFF",
+    "zh": "下車、動身出發、下班",
+    "category": "Main",
+    "page": 12,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Go away from, leave (train, bus, aircraft, lift)",
+        "percentage": "54%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You need to take the bus and get off at the third stop."
+          },
+          {
+            "type": "生活",
+            "en": "I get off the MRT at Taipei 101 for work every day."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(Get offto a .. start)",
+        "definition": "Begin something in a certain way",
+        "percentage": "12.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The team has got of to a good start this season."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Manage to avoid serious trouble or consequences (esp. legal punishment)",
+        "percentage": "12%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "It's not right that he could commit such a crime and get off so easily."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You need to take the bus and get off at the third stop.",
+      "cloze_sentence": "You need to take the bus and 【 ________ 】 at the third stop.",
+      "answer": "get off",
+      "options": [
+        "get off",
+        "put out",
+        "look around",
+        "catch up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Go away from, leave (train, bus, aircraft, lift)",
+      "percentage": "54%",
+      "hint": "GET OFF（下車、動身出發、下班）"
+    }
+  },
+  {
+    "id": 57,
+    "day": 6,
+    "verb": "KEEP UP",
+    "zh": "保持、跟上步伐",
+    "category": "Main",
+    "page": 12,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move, progress or increase at the same rate or pace as SB/STH",
+        "percentage": "46%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Workers'income has not kept up with inflation."
+          },
+          {
+            "type": "職場",
+            "en": "It's hard to keep up with all the emails during busy season."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make STH continue",
+        "percentage": "32.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "This is amazing; keep up the good work!"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Workers'income has not kept up with inflation.",
+      "cloze_sentence": "Workers'income has not 【 ________ 】 with inflation.",
+      "answer": "kept up",
+      "options": [
+        "kept up",
+        "looked around",
+        "putting out",
+        "caught up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move, progress or increase at the same rate or pace as SB/STH",
+      "percentage": "46%",
+      "hint": "KEEP UP（保持、跟上步伐）"
+    }
+  },
+  {
+    "id": 58,
+    "day": 6,
+    "verb": "PUT DOWN",
+    "zh": "放下、寫下、鎮壓",
+    "category": "Main",
+    "page": 12,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Place STH/SB on the floor or on a flat surface",
+        "percentage": "62%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She put down her glass and left the bar."
+          },
+          {
+            "type": "職場",
+            "en": "She put down her coffee and opened her laptop"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She put down her glass and left the bar.",
+      "cloze_sentence": "She 【 ________ 】 her glass and left the bar.",
+      "answer": "put down",
+      "options": [
+        "caught up",
+        "looked around",
+        "putting out",
+        "put down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Place STH/SB on the floor or on a flat surface",
+      "percentage": "62%",
+      "hint": "PUT DOWN（放下、寫下、鎮壓）"
+    }
+  },
+  {
+    "id": 59,
+    "day": 6,
+    "verb": "REACH OUT",
+    "zh": "伸出手、主動聯繫/尋求協助",
+    "category": "Main",
+    "page": 13,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stretch an arm in order to hold, touch, or get STH that is within short distance",
+        "percentage": "48.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She reached out for the empty jar on the table."
+          },
+          {
+            "type": "職場",
+            "en": "Feel free to reach out to HR if you have any questions."
+          },
+          {
+            "type": "通用",
+            "en": "Make an effort to address or communicate with SB, so as to help them or involve them in STH"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "",
+        "percentage": "39.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The government's eforts to reach out to right-wing voters have paid of."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She reached out for the empty jar on the table.",
+      "cloze_sentence": "She 【 ________ 】 for the empty jar on the table.",
+      "answer": "reached out",
+      "options": [
+        "reached out",
+        "caught up",
+        "looked around",
+        "putting out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stretch an arm in order to hold, touch, or get STH that is within short distance",
+      "percentage": "48.5%",
+      "hint": "REACH OUT（伸出手、主動聯繫/尋求協助）"
+    }
+  },
+  {
+    "id": 60,
+    "day": 6,
+    "verb": "GO OFF",
+    "zh": "響起、爆炸、變質",
+    "category": "Main",
+    "page": 13,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Go somewhere, esp. for a particular purpose",
+        "percentage": "44.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He decided to go off to college."
+          },
+          {
+            "type": "生活",
+            "en": "He went off to a training course in Hsinchu for the week."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Emit a loud noise or sudden light as a signal or warning",
+        "percentage": "22%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Let's hope the alarm doesn't go off."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "(bomb)",
+        "definition": "Explode  or be fired (gun)",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They could hear bombs going of at a distance."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He decided to go off to college.",
+      "cloze_sentence": "He decided to 【 ________ 】 to college.",
+      "answer": "go off",
+      "options": [
+        "put out",
+        "look around",
+        "go off",
+        "catch up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Go somewhere, esp. for a particular purpose",
+      "percentage": "44.5%",
+      "hint": "GO OFF（響起、爆炸、變質）"
+    }
+  },
+  {
+    "id": 61,
+    "day": 7,
+    "verb": "CUT OFF",
+    "zh": "切斷、中斷、使隔絕",
+    "category": "Main",
+    "page": 13,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Remove a part of STH by cutting it",
+        "percentage": "27%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Take the carrots and cut the ends off."
+          },
+          {
+            "type": "生活",
+            "en": "The manager cut me of before I finished explaining."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Interrupt SB as they are speaking",
+        "percentage": "24.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The teacher cut of the student in the middle of her sentence."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "End the provision of STH, or be deprived of a provision (supply, money)",
+        "percentage": "23.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The government decided to cut offood supplies."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Take the carrots and cut the ends off.",
+      "cloze_sentence": "Take the carrots and 【 ________ 】.",
+      "answer": "cut the ends off",
+      "options": [
+        "cut the ends off",
+        "turned back",
+        "setting out",
+        "pulled up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Remove a part of STH by cutting it",
+      "percentage": "27%",
+      "hint": "CUT OFF（切斷、中斷、使隔絕）"
+    }
+  },
+  {
+    "id": 62,
+    "day": 7,
+    "verb": "TURN BACK",
+    "zh": "折返、往回走",
+    "category": "Main",
+    "page": 13,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Turn around so as to face the opposite direction",
+        "percentage": "51.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Before leaving through the door, he turned back to kiss her goodbye."
+          },
+          {
+            "type": "職場",
+            "en": "He turned back to his computer after the phone call."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "(or make SB/STH go back)",
+        "definition": "Go back  in the direction SB/STH has come from",
+        "percentage": "25.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "When the storm hit, we had to turn back."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Before leaving through the door, he turned back to kiss her goodbye.",
+      "cloze_sentence": "Before leaving through the door, he 【 ________ 】 to kiss her goodbye.",
+      "answer": "turned back",
+      "options": [
+        "pulled up",
+        "setting out",
+        "cutting off",
+        "turned back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Turn around so as to face the opposite direction",
+      "percentage": "51.5%",
+      "hint": "TURN BACK（折返、往回走）"
+    }
+  },
+  {
+    "id": 63,
+    "day": 7,
+    "verb": "PULL UP",
+    "zh": "停下(車輛)、拉起",
+    "category": "Main",
+    "page": 14,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop or cause a vehicle to stop",
+        "percentage": "47%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "A van pulled up in front of them."
+          },
+          {
+            "type": "職場",
+            "en": "The delivery van pulled up outside the office."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Move STH/SB from a lower position to a higher one; lift from the ground",
+        "percentage": "35.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She pulled up her scarf to cover her cold face."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "A van pulled up in front of them.",
+      "cloze_sentence": "A van 【 ________ 】 in front of them.",
+      "answer": "pulled up",
+      "options": [
+        "cutting off",
+        "setting out",
+        "turned back",
+        "pulled up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop or cause a vehicle to stop",
+      "percentage": "47%",
+      "hint": "PULL UP（停下(車輛)、拉起）"
+    }
+  },
+  {
+    "id": 64,
+    "day": 7,
+    "verb": "SET OUT",
+    "zh": "出發、著手進行、陳述",
+    "category": "Main",
+    "page": 14,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start doing or working on STH, esp. with a particular goal in mind",
+        "percentage": "42.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I set out to discover the truth behind the story."
+          },
+          {
+            "type": "生活",
+            "en": "We set out to double our sales this year."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start a journey",
+        "percentage": "26.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We set out for San Francisco on the following day."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Explain or present STH clearly, esp. officially and in writing",
+        "percentage": "16%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The oficial recommendations were set out in the document."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I set out to discover the truth behind the story.",
+      "cloze_sentence": "I 【 ________ 】 to discover the truth behind the story.",
+      "answer": "set out",
+      "options": [
+        "pulled up",
+        "turned back",
+        "set out",
+        "cutting off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Start doing or working on STH, esp. with a particular goal in mind",
+      "percentage": "42.5%",
+      "hint": "SET OUT（出發、著手進行、陳述）"
+    }
+  },
+  {
+    "id": 65,
+    "day": 7,
+    "verb": "CLEAN UP",
+    "zh": "清理、打掃乾淨",
+    "category": "Main",
+    "page": 14,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Get rid of dirt, mess, pollution, or chemical substances in a place or area",
+        "percentage": "74%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Make sure you clean up your mess because I won't do it for you."
+          },
+          {
+            "type": "職場",
+            "en": "We had to clean up the meeting room after the workshop."
+          },
+          {
+            "type": "通用",
+            "en": "Make STH free from dangerous, unacceptable or controversial activities or contents"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "",
+        "percentage": "22%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He was asked to clean up his bad language during his interview."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Make sure you clean up your mess because I won't do it for you.",
+      "cloze_sentence": "Make sure you 【 ________ 】 your mess because I won't do it for you.",
+      "answer": "clean up",
+      "options": [
+        "turn back",
+        "pull up",
+        "cut off",
+        "clean up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Get rid of dirt, mess, pollution, or chemical substances in a place or area",
+      "percentage": "74%",
+      "hint": "CLEAN UP（清理、打掃乾淨）"
+    }
+  },
+  {
+    "id": 66,
+    "day": 7,
+    "verb": "SHUT DOWN",
+    "zh": "關閉、停工、倒閉",
+    "category": "Main",
+    "page": 14,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(or make STH stop)",
+        "definition": "Stop  working or operating (machine, computer, business, premise, strategy)",
+        "percentage": "94%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You should shut down your computer at night to save electricity."
+          },
+          {
+            "type": "生活",
+            "en": "Remember to shut down your computer before you leave the office."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You should shut down your computer at night to save electricity.",
+      "cloze_sentence": "You should 【 ________ 】 your computer at night to save electricity.",
+      "answer": "shut down",
+      "options": [
+        "shut down",
+        "turned back",
+        "cutting off",
+        "pulled up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop  working or operating (machine, computer, business, premise, strategy)",
+      "percentage": "94%",
+      "hint": "SHUT DOWN（關閉、停工、倒閉）"
+    }
+  },
+  {
+    "id": 67,
+    "day": 7,
+    "verb": "TURN OVER",
+    "zh": "翻轉、翻身、移交",
+    "category": "Main",
+    "page": 14,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Surrender possession or control to SB/STH (esp. in authority)",
+        "percentage": "59.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The policeman turned over the criminal to the jail guard."
+          },
+          {
+            "type": "生活",
+            "en": "She turned over the project files to her replacement."
+          },
+          {
+            "type": "通用",
+            "en": "Change position so that the other side is facing towards the outside or the top, or another"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "direction",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Put the chicken on the grill and turn it over a few times."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The policeman turned over the criminal to the jail guard.",
+      "cloze_sentence": "The policeman 【 ________ 】 the criminal to the jail guard.",
+      "answer": "turned over",
+      "options": [
+        "turned over",
+        "cutting off",
+        "turned back",
+        "pulled up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Surrender possession or control to SB/STH (esp. in authority)",
+      "percentage": "59.5%",
+      "hint": "TURN OVER（翻轉、翻身、移交）"
+    }
+  },
+  {
+    "id": 68,
+    "day": 7,
+    "verb": "SLOW DOWN",
+    "zh": "減速、慢下來",
+    "category": "Main",
+    "page": 15,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move, proceed or progress at a slower pace (vehicle, economy)",
+        "percentage": "88.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Economic growth has dramatically slowed down."
+          },
+          {
+            "type": "生活",
+            "en": "The economy has slowed down, so the company has stopped hiring."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Economic growth has dramatically slowed down.",
+      "cloze_sentence": "Economic growth has dramatically 【 ________ 】.",
+      "answer": "slowed down",
+      "options": [
+        "cutting off",
+        "pulled up",
+        "turned back",
+        "slowed down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move, proceed or progress at a slower pace (vehicle, economy)",
+      "percentage": "88.5%",
+      "hint": "SLOW DOWN（減速、慢下來）"
+    }
+  },
+  {
+    "id": 69,
+    "day": 7,
+    "verb": "WIND UP",
+    "zh": "最終落得…、結束、給…上發條",
+    "category": "Main",
+    "page": 15,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "End up in a particular situation, condition or place, esp. an unpleasant one",
+        "percentage": "87%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "They wound up having to pay off his debts."
+          },
+          {
+            "type": "職場",
+            "en": "He wound up staying late to fix the report."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "They wound up having to pay off his debts.",
+      "cloze_sentence": "They 【 ________ 】 having to pay off his debts.",
+      "answer": "wound up",
+      "options": [
+        "turned back",
+        "pulled up",
+        "wound up",
+        "cutting off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "End up in a particular situation, condition or place, esp. an unpleasant one",
+      "percentage": "87%",
+      "hint": "WIND UP（最終落得…、結束、給…上發條）"
+    }
+  },
+  {
+    "id": 70,
+    "day": 7,
+    "verb": "TURN UP",
+    "zh": "出現、調大(音量)、被找到",
+    "category": "Main",
+    "page": 15,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(or make STH be)",
+        "definition": "Yield; be  found, discovered, or noticed",
+        "percentage": "48%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The search turned up solid evidence against him."
+          },
+          {
+            "type": "生活",
+            "en": "The missing invoice finally turned up in another folder."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Increase the volume or level of STH",
+        "percentage": "21.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I really like this song; could you turn up the radio?"
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Arrive or make an appearance somewhere",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He turned up to the meeting half an hour late."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The search turned up solid evidence against him.",
+      "cloze_sentence": "The search 【 ________ 】 solid evidence against him.",
+      "answer": "turned up",
+      "options": [
+        "turned back",
+        "cutting off",
+        "turned up",
+        "pulled up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Yield; be  found, discovered, or noticed",
+      "percentage": "48%",
+      "hint": "TURN UP（出現、調大(音量)、被找到）"
+    }
+  },
+  {
+    "id": 71,
+    "day": 8,
+    "verb": "LINE UP",
+    "zh": "排隊、排列、安排好",
+    "category": "Main",
+    "page": 15,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Form or make SB/STH form into a line (also figurative)",
+        "percentage": "75%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Dozens of taxis were lined up at the entrance."
+          },
+          {
+            "type": "職場",
+            "en": "Customers lined up outside the store before the sale opened."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Dozens of taxis were lined up at the entrance.",
+      "cloze_sentence": "Dozens of taxis were 【 ________ 】 at the entrance.",
+      "answer": "lined up",
+      "options": [
+        "took back",
+        "went over",
+        "lined up",
+        "laid out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Form or make SB/STH form into a line (also figurative)",
+      "percentage": "75%",
+      "hint": "LINE UP（排隊、排列、安排好）"
+    }
+  },
+  {
+    "id": 72,
+    "day": 8,
+    "verb": "TAKE BACK",
+    "zh": "收回(話語)、退貨、帶回",
+    "category": "Main",
+    "page": 15,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take STH/SB to a place, or time period (fig.), they were in before",
+        "percentage": "50%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "After dinner, he took her back to her house."
+          },
+          {
+            "type": "職場",
+            "en": "I took the samples back to the warehouse after the meeting"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Regain possession or control over STH",
+        "percentage": "33.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The politician's ultimate goal is to take back the Senate."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "After dinner, he took her back to her house.",
+      "cloze_sentence": "After dinner, he 【 ________ 】 to her house.",
+      "answer": "took her back",
+      "options": [
+        "went over",
+        "took her back",
+        "laid out",
+        "lined up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take STH/SB to a place, or time period (fig.), they were in before",
+      "percentage": "50%",
+      "hint": "TAKE BACK（收回(話語)、退貨、帶回）"
+    }
+  },
+  {
+    "id": 73,
+    "day": 8,
+    "verb": "LAY OUT",
+    "zh": "規劃、鋪開、陳列佈局",
+    "category": "Main",
+    "page": 15,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Describe or explain STH clearly or in detail, esp. officially and in writing",
+        "percentage": "46%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The whole strategy was laid out in detail in a twenty-page document."
+          },
+          {
+            "type": "生活",
+            "en": "The manager laid out the plan for the new project."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Spread STH out on a flat surface, so it can be seen or used",
+        "percentage": "35%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He laid out the plates on the table."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The whole strategy was laid out in detail in a twenty-page document.",
+      "cloze_sentence": "The whole strategy was 【 ________ 】 in detail in a twenty-page document.",
+      "answer": "laid out",
+      "options": [
+        "took back",
+        "laid out",
+        "went over",
+        "lined up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Describe or explain STH clearly or in detail, esp. officially and in writing",
+      "percentage": "46%",
+      "hint": "LAY OUT（規劃、鋪開、陳列佈局）"
+    }
+  },
+  {
+    "id": 74,
+    "day": 8,
+    "verb": "GO OVER",
+    "zh": "仔細檢查、複習、走過去",
+    "category": "Main",
+    "page": 16,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move towards a place or person, esp. by crossing an area (room, city, country)",
+        "percentage": "63%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She went over to the window so she could watch the scene."
+          },
+          {
+            "type": "職場",
+            "en": "She went over to her colleague's desk to ask for help."
+          },
+          {
+            "type": "通用",
+            "en": "Examine or discuss each part of STH in detail in order to understand or remember it better, or"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "make sure it is correct",
+        "percentage": "20%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We need to go over the list once again."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She went over to the window so she could watch the scene.",
+      "cloze_sentence": "She 【 ________ 】 to the window so she could watch the scene.",
+      "answer": "went over",
+      "options": [
+        "went over",
+        "took back",
+        "lined up",
+        "laid out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move towards a place or person, esp. by crossing an area (room, city, country)",
+      "percentage": "63%",
+      "hint": "GO OVER（仔細檢查、複習、走過去）"
+    }
+  },
+  {
+    "id": 75,
+    "day": 8,
+    "verb": "HANG UP",
+    "zh": "掛斷電話、掛起",
+    "category": "Main",
+    "page": 16,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Finish a conversation on the telephone by putting the receiver down or switching the phone off",
+        "percentage": "76.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He hung up the phone without letting her answer his question."
+          },
+          {
+            "type": "職場",
+            "en": "He hung up the phone and told us the deal was closed."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He hung up the phone without letting her answer his question.",
+      "cloze_sentence": "He 【 ________ 】 the phone without letting her answer his question.",
+      "answer": "hung up",
+      "options": [
+        "took back",
+        "hung up",
+        "laid out",
+        "lined up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Finish a conversation on the telephone by putting the receiver down or switching the phone off",
+      "percentage": "76.5%",
+      "hint": "HANG UP（掛斷電話、掛起）"
+    }
+  },
+  {
+    "id": 76,
+    "day": 8,
+    "verb": "GO THROUGH",
+    "zh": "經歷、經受、仔細審查",
+    "category": "Main",
+    "page": 16,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Experience STH difficult or unpleasant",
+        "percentage": "61%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You have to understand the tough situation she went through before judging her."
+          },
+          {
+            "type": "職場",
+            "en": "The company went through a tough year during the pandemic."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Be officially accepted or approved",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I hope the tax cut goes through next year."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You have to understand the tough situation she went through before judging her.",
+      "cloze_sentence": "You have to understand the tough situation she 【 ________ 】 before judging her.",
+      "answer": "went through",
+      "options": [
+        "went through",
+        "laid out",
+        "took back",
+        "lined up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Experience STH difficult or unpleasant",
+      "percentage": "61%",
+      "hint": "GO THROUGH（經歷、經受、仔細審查）"
+    }
+  },
+  {
+    "id": 77,
+    "day": 8,
+    "verb": "HOLD ON",
+    "zh": "稍等、堅持住、抓緊",
+    "category": "Main",
+    "page": 16,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Refuse to let go of STH",
+        "percentage": "57%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He held on to his job until the very last day."
+          },
+          {
+            "type": "職場",
+            "en": "Hold on to that contract; we'll need it for the audit."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Wait for a short time",
+        "percentage": "35.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I'll be quick, please hold on for one minute."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He held on to his job until the very last day.",
+      "cloze_sentence": "He 【 ________ 】 to his job until the very last day.",
+      "answer": "held on",
+      "options": [
+        "held on",
+        "took back",
+        "laid out",
+        "lined up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Refuse to let go of STH",
+      "percentage": "57%",
+      "hint": "HOLD ON（稍等、堅持住、抓緊）"
+    }
+  },
+  {
+    "id": 78,
+    "day": 8,
+    "verb": "PAY OFF",
+    "zh": "得到回報、付清債務",
+    "category": "Main",
+    "page": 16,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Pay the complete amount of STH",
+        "percentage": "49%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "It will take a dozen years for him to pay off his debts."
+          },
+          {
+            "type": "職場",
+            "en": "The startup paid off all its debts after landing a big client."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Pay back the effort spent in doing STH by becoming profitable or effective",
+        "percentage": "48.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "All the hard work will pay off in the end."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "It will take a dozen years for him to pay off his debts.",
+      "cloze_sentence": "It will take a dozen years for him to 【 ________ 】 his debts.",
+      "answer": "pay off",
+      "options": [
+        "pay off",
+        "take back",
+        "line up",
+        "lay out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Pay the complete amount of STH",
+      "percentage": "49%",
+      "hint": "PAY OFF（得到回報、付清債務）"
+    }
+  },
+  {
+    "id": 79,
+    "day": 8,
+    "verb": "HOLD OUT",
+    "zh": "堅持、維持；伸出",
+    "category": "Main",
+    "page": 17,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move one's hand or an object in one's hand forward or towards SB, in order to grab or give STH",
+        "percentage": "61%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He took the keys and held them out to her."
+          },
+          {
+            "type": "職場",
+            "en": "She held out the documents for the client to sign."
+          },
+          {
+            "type": "通用",
+            "en": "Hold STH as likely to happen or succeed (hope, possibility, prospect, promise)"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "",
+        "percentage": "15%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We don't hold out much hope offinding the murderer."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He took the keys and held them out to her.",
+      "cloze_sentence": "He took the keys and 【 ________ 】 to her.",
+      "answer": "held them out",
+      "options": [
+        "held them out",
+        "lined up",
+        "laid out",
+        "took back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move one's hand or an object in one's hand forward or towards SB, in order to grab or give STH",
+      "percentage": "61%",
+      "hint": "HOLD OUT（堅持、維持；伸出）"
+    }
+  },
+  {
+    "id": 80,
+    "day": 8,
+    "verb": "BREAK UP",
+    "zh": "分手、破碎、結束",
+    "category": "Main",
+    "page": 17,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "End or cause to end or fail (esp. relationship)",
+        "percentage": "59%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Their marriage broke up in 2007."
+          },
+          {
+            "type": "生活",
+            "en": "The business partnership broke up after a serious disagreement."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Divide into smaller parts or components",
+        "percentage": "34.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The USSR broke up into more than 1O countries."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Their marriage broke up in 2007.",
+      "cloze_sentence": "Their marriage 【 ________ 】 in 2007.",
+      "answer": "broke up",
+      "options": [
+        "broke up",
+        "took back",
+        "lined up",
+        "laid out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "End or cause to end or fail (esp. relationship)",
+      "percentage": "59%",
+      "hint": "BREAK UP（分手、破碎、結束）"
+    }
+  },
+  {
+    "id": 81,
+    "day": 9,
+    "verb": "BRING OUT",
+    "zh": "推出(新產品)、使顯現、出版",
+    "category": "Main",
+    "page": 17,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make a particular detail, quality or feeling more noticeable than it usually is",
+        "percentage": "36%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "This haircut brings out the natural curl in your hair."
+          },
+          {
+            "type": "生活",
+            "en": "A good manager brings out the best in the team."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make SB or STH available for the public or an audience to see, know or buy",
+        "percentage": "33%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The band was about to bring out their new album."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take STH/SB out of a container or enclosed space",
+        "percentage": "27%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They brought out another plate from the kitchen."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "This haircut brings out the natural curl in your hair.",
+      "cloze_sentence": "This haircut 【 ________ 】 the natural curl in your hair.",
+      "answer": "brings out",
+      "options": [
+        "brings out",
+        "builds up",
+        "pulls back",
+        "hangs on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Make a particular detail, quality or feeling more noticeable than it usually is",
+      "percentage": "36%",
+      "hint": "BRING OUT（推出(新產品)、使顯現、出版）"
+    }
+  },
+  {
+    "id": 82,
+    "day": 9,
+    "verb": "PULL BACK",
+    "zh": "撤退、撤回、拉回",
+    "category": "Main",
+    "page": 17,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move backwards or make SB/STH move backwards",
+        "percentage": "66.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She pulled back the hair from her face."
+          },
+          {
+            "type": "職場",
+            "en": "He pulled back his chair and stood up to greet the client."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Withdraw or retreat from an activity or location, esp. military",
+        "percentage": "31%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The army was forced to pull back due to bad weather."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She pulled back the hair from her face.",
+      "cloze_sentence": "She 【 ________ 】 the hair from her face.",
+      "answer": "pulled back",
+      "options": [
+        "builded up",
+        "hung on",
+        "brought out",
+        "pulled back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move backwards or make SB/STH move backwards",
+      "percentage": "66.5%",
+      "hint": "PULL BACK（撤退、撤回、拉回）"
+    }
+  },
+  {
+    "id": 83,
+    "day": 9,
+    "verb": "HANG ON",
+    "zh": "稍等片刻、緊緊抓住",
+    "category": "Main",
+    "page": 17,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Wait for a short time",
+        "percentage": "41.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Please hang on for a minute, I'll be quick."
+          },
+          {
+            "type": "職場",
+            "en": "Hang on a second - let me pull up the file."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Refuse to let go of STH",
+        "percentage": "35.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He hung on to his job until the very last day."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Please hang on for a minute, I'll be quick.",
+      "cloze_sentence": "Please 【 ________ 】 for a minute, I'll be quick.",
+      "answer": "hang on",
+      "options": [
+        "hang on",
+        "build up",
+        "pull back",
+        "bring out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Wait for a short time",
+      "percentage": "41.5%",
+      "hint": "HANG ON（稍等片刻、緊緊抓住）"
+    }
+  },
+  {
+    "id": 84,
+    "day": 9,
+    "verb": "BUILD UP",
+    "zh": "建立、積累、逐漸增強",
+    "category": "Main",
+    "page": 18,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Increase or cause STH to increase, accumulate, or strengthen, especially progressively",
+        "percentage": "76%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Tension was building up among competitors."
+          },
+          {
+            "type": "職場",
+            "en": "She built up a strong client base over the years."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Tension was building up among competitors.",
+      "cloze_sentence": "Tension was 【 ________ 】 among competitors.",
+      "answer": "building up",
+      "options": [
+        "pulling back",
+        "building up",
+        "hanging on",
+        "bring out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Increase or cause STH to increase, accumulate, or strengthen, especially progressively",
+      "percentage": "76%",
+      "hint": "BUILD UP（建立、積累、逐漸增強）"
+    }
+  },
+  {
+    "id": 85,
+    "day": 9,
+    "verb": "THROW OUT",
+    "zh": "扔掉、拋棄、否決",
+    "category": "Main",
+    "page": 18,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Refuse to accept or consider (esp. by people of authority)",
+        "percentage": "29%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The president attempted to have the death penalty thrown out."
+          },
+          {
+            "type": "生活",
+            "en": "The committee threw out our first proposal."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Put STH in a rubbish bin",
+        "percentage": "25.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He threw out a dozen empty boxes that were piled up in the room."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make SB leave a place, activity or organization, esp. forcibly and unexpectedly",
+        "percentage": "21%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Several students were caught cheating and subsequently thrown out of school."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The president attempted to have the death penalty thrown out.",
+      "cloze_sentence": "The president attempted to have the death penalty 【 ________ 】.",
+      "answer": "thrown out",
+      "options": [
+        "hang on",
+        "pull back",
+        "bring out",
+        "thrown out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Refuse to accept or consider (esp. by people of authority)",
+      "percentage": "29%",
+      "hint": "THROW OUT（扔掉、拋棄、否決）"
+    }
+  },
+  {
+    "id": 86,
+    "day": 9,
+    "verb": "HANG OUT",
+    "zh": "閒晃、與朋友聚會",
+    "category": "Main",
+    "page": 18,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Spend time relaxing or enjoying oneself",
+        "percentage": "84%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I don't like to hang out with people I work with."
+          },
+          {
+            "type": "職場",
+            "en": "The team likes to hang out at a cafe near the office after work."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I don't like to hang out with people I work with.",
+      "cloze_sentence": "I don't like to 【 ________ 】 with people I work with.",
+      "answer": "hang out",
+      "options": [
+        "hang on",
+        "hang out",
+        "pull back",
+        "bring out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Spend time relaxing or enjoying oneself",
+      "percentage": "84%",
+      "hint": "HANG OUT（閒晃、與朋友聚會）"
+    }
+  },
+  {
+    "id": 87,
+    "day": 9,
+    "verb": "PUT ON",
+    "zh": "穿上、戴上、增加(體重)",
+    "category": "Main",
+    "page": 18,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put a piece of clothing or jewellery onto one's body",
+        "percentage": "52%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You should put on your gloves, it's really cold outside."
+          },
+          {
+            "type": "職場",
+            "en": "He put on his lanyard and badge before entering the office."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Present or stage (play, show, competition)",
+        "percentage": "14.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They put on such an incredible show last night!"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You should put on your gloves, it's really cold outside.",
+      "cloze_sentence": "You should 【 ________ 】 your gloves, it's really cold outside.",
+      "answer": "put on",
+      "options": [
+        "brought out",
+        "put on",
+        "hung on",
+        "pulled back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Put a piece of clothing or jewellery onto one's body",
+      "percentage": "52%",
+      "hint": "PUT ON（穿上、戴上、增加(體重)）"
+    }
+  },
+  {
+    "id": 88,
+    "day": 9,
+    "verb": "GET DOWN",
+    "zh": "下來、蹲下；使沮喪",
+    "category": "Main",
+    "page": 18,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ to)",
+        "definition": "Begin to pay serious attention to STH",
+        "percentage": "26%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We should get down to discussing those issues as soon as possible"
+          },
+          {
+            "type": "職場",
+            "en": "Let's get down to business and review the numbers."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Lower one's body as by kneeling, sitting or lying",
+        "percentage": "22.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Get down on your knees so you can get a better view."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Come down from STH; descend (car, horse, tree)",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He loves climbing trees but finds it hard to get down."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We should get down to discussing those issues as soon as possible",
+      "cloze_sentence": "We should 【 ________ 】 to discussing those issues as soon as possible",
+      "answer": "get down",
+      "options": [
+        "get down",
+        "hang on",
+        "bring out",
+        "pull back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Begin to pay serious attention to STH",
+      "percentage": "26%",
+      "hint": "GET DOWN（下來、蹲下；使沮喪）"
+    }
+  },
+  {
+    "id": 89,
+    "day": 9,
+    "verb": "COME OVER",
+    "zh": "過來、順道拜訪",
+    "category": "Main",
+    "page": 19,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Come to a place or area (spot, room, town, country), esp. towards SB or to join SB",
+        "percentage": "95%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Could you come over and give me a hand with this?"
+          },
+          {
+            "type": "生活",
+            "en": "Could you come over to my desk to check this file?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Could you come over and give me a hand with this?",
+      "cloze_sentence": "Could you 【 ________ 】 and give me a hand with this?",
+      "answer": "come over",
+      "options": [
+        "hang on",
+        "come over",
+        "bring out",
+        "pull back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Come to a place or area (spot, room, town, country), esp. towards SB or to join SB",
+      "percentage": "95%",
+      "hint": "COME OVER（過來、順道拜訪）"
+    }
+  },
+  {
+    "id": 90,
+    "day": 9,
+    "verb": "MOVE IN",
+    "zh": "搬進、遷入新居",
+    "category": "Main",
+    "page": 19,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Settle into a new house or place",
+        "percentage": "62.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He liked the house so much that he decided to move in immediately"
+          },
+          {
+            "type": "生活",
+            "en": "The team moved in to the renovated office last week."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Go towards SB/STH, esp. to attack or take control of them",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The assault was led by Lieutenant Jones, moving in from behind the hill."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He liked the house so much that he decided to move in immediately",
+      "cloze_sentence": "He liked the house so much that he decided to 【 ________ 】 immediately",
+      "answer": "move in",
+      "options": [
+        "pull back",
+        "hang on",
+        "bring out",
+        "move in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Settle into a new house or place",
+      "percentage": "62.5%",
+      "hint": "MOVE IN（搬進、遷入新居）"
+    }
+  },
+  {
+    "id": 91,
+    "day": 10,
+    "verb": "START OUT",
+    "zh": "起步、著手進行、出發",
+    "category": "Main",
+    "page": 19,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start a life, existence, profession, or course of action in a particular way or by doing a particular",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "thing",
+        "percentage": "95%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She started out as a shop assistant and gradually climbed the employment ladder."
+          },
+          {
+            "type": "生活",
+            "en": "She started out as an intern and worked her way up to manager."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She started out as a shop assistant and gradually climbed the employment ladder.",
+      "cloze_sentence": "She 【 ________ 】 as a shop assistant and gradually climbed the employment ladder.",
+      "answer": "started out",
+      "options": [
+        "called out",
+        "sat up",
+        "turned down",
+        "started out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "thing",
+      "percentage": "95%",
+      "hint": "START OUT（起步、著手進行、出發）"
+    }
+  },
+  {
+    "id": 92,
+    "day": 10,
+    "verb": "CALL OUT",
+    "zh": "大聲呼喊、點名、召集",
+    "category": "Main",
+    "page": 19,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Speak or utter loudly",
+        "percentage": "79%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He could hear a voice call out his name."
+          },
+          {
+            "type": "職場",
+            "en": "The supervisor called out the names of the new hires."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He could hear a voice call out his name.",
+      "cloze_sentence": "He could hear a voice 【 ________ 】 his name.",
+      "answer": "call out",
+      "options": [
+        "sit up",
+        "turn down",
+        "call out",
+        "start out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Speak or utter loudly",
+      "percentage": "79%",
+      "hint": "CALL OUT（大聲呼喊、點名、召集）"
+    }
+  },
+  {
+    "id": 93,
+    "day": 10,
+    "verb": "SIT UP",
+    "zh": "坐直、坐起來；熬夜",
+    "category": "Main",
+    "page": 19,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Rise from a lying to a sitting position",
+        "percentage": "93.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The sudden noise made her sit up in her bed and listen"
+          },
+          {
+            "type": "職場",
+            "en": "He sat up straight when the director began speaking."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The sudden noise made her sit up in her bed and listen",
+      "cloze_sentence": "The sudden noise made her 【 ________ 】 in her bed and listen",
+      "answer": "sit up",
+      "options": [
+        "call out",
+        "start out",
+        "sit up",
+        "turn down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Rise from a lying to a sitting position",
+      "percentage": "93.5%",
+      "hint": "SIT UP（坐直、坐起來；熬夜）"
+    }
+  },
+  {
+    "id": 94,
+    "day": 10,
+    "verb": "TURN DOWN",
+    "zh": "拒絕、調低(音量)",
+    "category": "Main",
+    "page": 19,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Refuse or dismiss (request, offer, opportunity)",
+        "percentage": "82.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "This is an opportunity you would be foolish to turn down."
+          },
+          {
+            "type": "職場",
+            "en": "She turned down the job ofer to stay with her current company."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "This is an opportunity you would be foolish to turn down.",
+      "cloze_sentence": "This is an opportunity you would be foolish to 【 ________ 】.",
+      "answer": "turn down",
+      "options": [
+        "turn down",
+        "sit up",
+        "call out",
+        "start out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Refuse or dismiss (request, offer, opportunity)",
+      "percentage": "82.5%",
+      "hint": "TURN DOWN（拒絕、調低(音量)）"
+    }
+  },
+  {
+    "id": 95,
+    "day": 10,
+    "verb": "BACK UP",
+    "zh": "備份；倒車；支持力挺",
+    "category": "Main",
+    "page": 20,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move or drive backwards a short way",
+        "percentage": "26%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He got into his car and backed up out of the alley"
+          },
+          {
+            "type": "職場",
+            "en": "The truck backed up slowly into the loading dock."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take action in order to support STH or make it happen",
+        "percentage": "21%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Politicians often fail to back up their words with actions."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Establish as valid or genuine",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You have to back up your accusations with solid evidence."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He got into his car and backed up out of the alley",
+      "cloze_sentence": "He got into his car and 【 ________ 】 out of the alley",
+      "answer": "backed up",
+      "options": [
+        "called out",
+        "backed up",
+        "sat up",
+        "started out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move or drive backwards a short way",
+      "percentage": "26%",
+      "hint": "BACK UP（備份；倒車；支持力挺）"
+    }
+  },
+  {
+    "id": 96,
+    "day": 10,
+    "verb": "PUT BACK",
+    "zh": "放回原處、推遲",
+    "category": "Main",
+    "page": 20,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move STH/SB to a place, position, or state they were in before",
+        "percentage": "85.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Could you put the milk back in the fridge please?"
+          },
+          {
+            "type": "職場",
+            "en": "Please put the files back in the cabinet after copying them."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Could you put the milk back in the fridge please?",
+      "cloze_sentence": "Could you 【 ________ 】 in the fridge please?",
+      "answer": "put the milk back",
+      "options": [
+        "called out",
+        "put the milk back",
+        "sat up",
+        "started out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move STH/SB to a place, position, or state they were in before",
+      "percentage": "85.5%",
+      "hint": "PUT BACK（放回原處、推遲）"
+    }
+  },
+  {
+    "id": 97,
+    "day": 10,
+    "verb": "SEND OUT",
+    "zh": "寄出、發出、派遣",
+    "category": "Main",
+    "page": 20,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Mail, send or distribute to a number of people",
+        "percentage": "57%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Hundreds of copies were sent out to the local population."
+          },
+          {
+            "type": "職場",
+            "en": "We sent out the meeting invitation to the whole department."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Send SB to a place for a particular purpose",
+        "percentage": "32.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Military troops were sent out to secure the region."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Hundreds of copies were sent out to the local population.",
+      "cloze_sentence": "Hundreds of copies were 【 ________ 】 to the local population.",
+      "answer": "sent out",
+      "options": [
+        "sat up",
+        "called out",
+        "started out",
+        "sent out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Mail, send or distribute to a number of people",
+      "percentage": "57%",
+      "hint": "SEND OUT（寄出、發出、派遣）"
+    }
+  },
+  {
+    "id": 98,
+    "day": 10,
+    "verb": "GET IN",
+    "zh": "進入、到達、被錄取",
+    "category": "Main",
+    "page": 20,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(or make STH/SB go)",
+        "definition": "Go  inside a place (car, house, room)",
+        "percentage": "65.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The new security lock prevents thieves from getting in."
+          },
+          {
+            "type": "生活",
+            "en": "He got in the taxi to rush to the client meeting."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ on)",
+        "definition": "Get involved in an exciting or profitable activity/opportunity",
+        "percentage": "12.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You should get in on the act!"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The new security lock prevents thieves from getting in.",
+      "cloze_sentence": "The new security lock prevents thieves from 【 ________ 】.",
+      "answer": "getting in",
+      "options": [
+        "sitting up",
+        "calling out",
+        "getting in",
+        "starting out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Go  inside a place (car, house, room)",
+      "percentage": "65.5%",
+      "hint": "GET IN（進入、到達、被錄取）"
+    }
+  },
+  {
+    "id": 99,
+    "day": 10,
+    "verb": "BLOW UP",
+    "zh": "爆炸、發脾氣、充氣",
+    "category": "Main",
+    "page": 20,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Explode or destroy STH with a bomb, or cause to be exploded or destroyed",
+        "percentage": "75.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Several attempts were made at blowing up oficial buildings."
+          },
+          {
+            "type": "職場",
+            "en": "The old factory was blown up to make way for the new office park."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Several attempts were made at blowing up oficial buildings.",
+      "cloze_sentence": "Several attempts were made at 【 ________ 】 oficial buildings.",
+      "answer": "blowing up",
+      "options": [
+        "starting out",
+        "sitting up",
+        "calling out",
+        "blowing up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Explode or destroy STH with a bomb, or cause to be exploded or destroyed",
+      "percentage": "75.5%",
+      "hint": "BLOW UP（爆炸、發脾氣、充氣）"
+    }
+  },
+  {
+    "id": 100,
+    "day": 10,
+    "verb": "CARRY ON",
+    "zh": "繼續進行、堅持下去",
+    "category": "Main",
+    "page": 21,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Continue to do or be involved with STH, or make STH continue (especially despite difficulty)",
+        "percentage": "66%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I would like to carry on working after I retire."
+          },
+          {
+            "type": "生活",
+            "en": "Please carry on with your work; I'm just observing today."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Engage or take part in",
+        "percentage": "15%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "His illness makes it dificult for him to carry on conversations."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I would like to carry on working after I retire.",
+      "cloze_sentence": "I would like to 【 ________ 】 working after I retire.",
+      "answer": "carry on",
+      "options": [
+        "call out",
+        "carry on",
+        "sit up",
+        "start out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Continue to do or be involved with STH, or make STH continue (especially despite difficulty)",
+      "percentage": "66%",
+      "hint": "CARRY ON（繼續進行、堅持下去）"
+    }
+  },
+  {
+    "id": 101,
+    "day": 11,
+    "verb": "SET OFF",
+    "zh": "出發、引起、引發",
+    "category": "Main",
+    "page": 21,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start on a trip or journey",
+        "percentage": "30.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We will finish packing and set off in the morning"
+          },
+          {
+            "type": "生活",
+            "en": "We set off early to visit the supplier in Taichung"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cause a device to explode, or a signal to start, esp. by accident",
+        "percentage": "27.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He accidentally set of my car alarm."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Make STH happen or emerge, esp. without intending to",
+        "percentage": "25.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Employees started to protest, setting of a dispute over workers'rights."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We will finish packing and set off in the morning",
+      "cloze_sentence": "We will finish packing and 【 ________ 】 in the morning",
+      "answer": "set off",
+      "options": [
+        "kept on",
+        "ran out",
+        "set off",
+        "made out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Start on a trip or journey",
+      "percentage": "30.5%",
+      "hint": "SET OFF（出發、引起、引發）"
+    }
+  },
+  {
+    "id": 102,
+    "day": 11,
+    "verb": "KEEP ON",
+    "zh": "繼續、持續不斷",
+    "category": "Main",
+    "page": 21,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Continue doing STH without stopping, or repeatedly",
+        "percentage": "92.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She wiped tears off her cheeks but kept on crying."
+          },
+          {
+            "type": "生活",
+            "en": "She kept on working even after everyone else went home."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She wiped tears off her cheeks but kept on crying.",
+      "cloze_sentence": "She wiped tears off her cheeks but 【 ________ 】 crying.",
+      "answer": "kept on",
+      "options": [
+        "kept on",
+        "setting off",
+        "ran out",
+        "made out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Continue doing STH without stopping, or repeatedly",
+      "percentage": "92.5%",
+      "hint": "KEEP ON（繼續、持續不斷）"
+    }
+  },
+  {
+    "id": 103,
+    "day": 11,
+    "verb": "RUN OUT",
+    "zh": "用光、耗盡",
+    "category": "Main",
+    "page": 21,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ of)",
+        "definition": "Use STH (or become used) completely so that nothing is left",
+        "percentage": "49.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We've run out of biscuits."
+          },
+          {
+            "type": "職場",
+            "en": "We've run out of printer paper again."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Leave suddenly, as if in a hurry",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "After the argument, she ran out into the garden and screamed."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We've run out of biscuits.",
+      "cloze_sentence": "We've 【 ________ 】 of biscuits.",
+      "answer": "run out",
+      "options": [
+        "set off",
+        "make out",
+        "keep on",
+        "run out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Use STH (or become used) completely so that nothing is left",
+      "percentage": "49.5%",
+      "hint": "RUN OUT（用光、耗盡）"
+    }
+  },
+  {
+    "id": 104,
+    "day": 11,
+    "verb": "MAKE OUT",
+    "zh": "辨認出、理解；親吻",
+    "category": "Main",
+    "page": 21,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "See or hear with difficulty",
+        "percentage": "60.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I could barely make out his face in the dark."
+          },
+          {
+            "type": "職場",
+            "en": "I couldn't make out the numbers on the faded invoice."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Represent as being a particular way, esp. falsely",
+        "percentage": "11%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He was innocent, but the media made him out to be a criminal."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "(Make it out)",
+        "definition": "Deal with a difficult situation successfully",
+        "percentage": "10.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We were lucky to make it out ofthe war alive."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I could barely make out his face in the dark.",
+      "cloze_sentence": "I could barely 【 ________ 】 his face in the dark.",
+      "answer": "make out",
+      "options": [
+        "run out",
+        "make out",
+        "set off",
+        "keep on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "See or hear with difficulty",
+      "percentage": "60.5%",
+      "hint": "MAKE OUT（辨認出、理解；親吻）"
+    }
+  },
+  {
+    "id": 105,
+    "day": 11,
+    "verb": "SHUT UP",
+    "zh": "住口、閉嘴、關閉",
+    "category": "Main",
+    "page": 22,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(or make SB/STH stop)",
+        "definition": "Stop  talking or making a noise",
+        "percentage": "97%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Just sit down and shut up!"
+          },
+          {
+            "type": "職場",
+            "en": "The noisy meeting room finally shut up when the manager stood up."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Just sit down and shut up!",
+      "cloze_sentence": "Just sit down and 【 ________ 】!",
+      "answer": "shut up",
+      "options": [
+        "shut up",
+        "ran out",
+        "kept on",
+        "setting off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop  talking or making a noise",
+      "percentage": "97%",
+      "hint": "SHUT UP（住口、閉嘴、關閉）"
+    }
+  },
+  {
+    "id": 106,
+    "day": 11,
+    "verb": "TURN OFF",
+    "zh": "關掉(電源/開關)、轉彎",
+    "category": "Main",
+    "page": 22,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop a piece of equipment working temporarily or a supply flowing by turning a tap, pressing a",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "button, or moving a switch",
+        "percentage": "69.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "People were asked to turn off their phones."
+          },
+          {
+            "type": "職場",
+            "en": "Please turn of the projector after the presentation."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cause to feel intense dislike",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "His speech turned off left-wing voters."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "People were asked to turn off their phones.",
+      "cloze_sentence": "People were asked to 【 ________ 】 their phones.",
+      "answer": "turn off",
+      "options": [
+        "keep on",
+        "set off",
+        "run out",
+        "turn off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "button, or moving a switch",
+      "percentage": "69.5%",
+      "hint": "TURN OFF（關掉(電源/開關)、轉彎）"
+    }
+  },
+  {
+    "id": 107,
+    "day": 11,
+    "verb": "BRING ABOUT",
+    "zh": "引起、導致、促成",
+    "category": "Main",
+    "page": 22,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cause to happen or emerge, esp. STH positive",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "This decision will bring about change in the political sphere."
+          },
+          {
+            "type": "職場",
+            "en": "The new policy brought about big changes in our workflow."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "This decision will bring about change in the political sphere.",
+      "cloze_sentence": "This decision will 【 ________ 】 change in the political sphere.",
+      "answer": "bring about",
+      "options": [
+        "setting off",
+        "running out",
+        "bring about",
+        "keeping on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Cause to happen or emerge, esp. STH positive",
+      "percentage": "100%",
+      "hint": "BRING ABOUT（引起、導致、促成）"
+    }
+  },
+  {
+    "id": 108,
+    "day": 11,
+    "verb": "STEP BACK",
+    "zh": "退後一步、抽離客觀思考",
+    "category": "Main",
+    "page": 22,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move back by lifting one's foot and putting it down backwards",
+        "percentage": "72%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He stepped back when the big man threatened him."
+          },
+          {
+            "type": "職場",
+            "en": "She stepped back to let the delivery worker through."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop being involved in STH so as to consider it more carefully/objectively",
+        "percentage": "22.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We need to step back and take a broader perspective on the past events."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He stepped back when the big man threatened him.",
+      "cloze_sentence": "He 【 ________ 】 when the big man threatened him.",
+      "answer": "stepped back",
+      "options": [
+        "kept on",
+        "ran out",
+        "setting off",
+        "stepped back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move back by lifting one's foot and putting it down backwards",
+      "percentage": "72%",
+      "hint": "STEP BACK（退後一步、抽離客觀思考）"
+    }
+  },
+  {
+    "id": 109,
+    "day": 11,
+    "verb": "LAY DOWN",
+    "zh": "放下、制定(規則/原則)",
+    "category": "Main",
+    "page": 22,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put STH away or down on a surface, esp. because one has stopped using it",
+        "percentage": "31%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I laid down my book and stood up."
+          },
+          {
+            "type": "生活",
+            "en": "He laid down his pen after signing the contract."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Lie flat on a surface, usually to rest",
+        "percentage": "28%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He laid the child down on the bed and wished her good night"
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Lay the foundations of; establish or create",
+        "percentage": "17%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The principles of good conduct were laid down decades ago."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I laid down my book and stood up.",
+      "cloze_sentence": "I 【 ________ 】 my book and stood up.",
+      "answer": "laid down",
+      "options": [
+        "ran out",
+        "laid down",
+        "kept on",
+        "setting off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Put STH away or down on a surface, esp. because one has stopped using it",
+      "percentage": "31%",
+      "hint": "LAY DOWN（放下、制定(規則/原則)）"
+    }
+  },
+  {
+    "id": 110,
+    "day": 11,
+    "verb": "BRING DOWN",
+    "zh": "擊落、降低、推翻(政權)",
+    "category": "Main",
+    "page": 23,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cause SB/STH to move downward or fall to the ground",
+        "percentage": "32.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The rocket attack brought down the airliner."
+          },
+          {
+            "type": "職場",
+            "en": "The strong typhoon brought down the shop's signboard."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Reduce the level, rate, or amount of STH",
+        "percentage": "26%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The company's expenses need to be brought down."
+          },
+          {
+            "type": "職場",
+            "en": "Cause SB/STH in a position of power (government, president, system, organisation) to lose its"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "power/status",
+        "percentage": "25%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They helped bring down one of the most corrupt dictatorships in history."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The rocket attack brought down the airliner.",
+      "cloze_sentence": "The rocket attack 【 ________ 】 the airliner.",
+      "answer": "brought down",
+      "options": [
+        "kept on",
+        "brought down",
+        "ran out",
+        "setting off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Cause SB/STH to move downward or fall to the ground",
+      "percentage": "32.5%",
+      "hint": "BRING DOWN（擊落、降低、推翻(政權)）"
+    }
+  },
+  {
+    "id": 111,
+    "day": 12,
+    "verb": "STAND OUT",
+    "zh": "脫穎而出、顯眼、傑出",
+    "category": "Main",
+    "page": 23,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Distinguish oneself/itself by being better, more significant or more impressive than other",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "people/things",
+        "percentage": "60.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Excellent product quality is what made the brand stand out from its competitors."
+          },
+          {
+            "type": "職場",
+            "en": "Her creative ideas made her stand out at the company."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Be easily seen or noticeable",
+        "percentage": "38%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Flashing lights make planes stand out at night."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Excellent product quality is what made the brand stand out from its competitors.",
+      "cloze_sentence": "Excellent product quality is what made the brand 【 ________ 】 from its competitors.",
+      "answer": "stand out",
+      "options": [
+        "come along",
+        "play out",
+        "break out",
+        "stand out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "people/things",
+      "percentage": "60.5%",
+      "hint": "STAND OUT（脫穎而出、顯眼、傑出）"
+    }
+  },
+  {
+    "id": 112,
+    "day": 12,
+    "verb": "COME ALONG",
+    "zh": "出現、進展、一起來",
+    "category": "Main",
+    "page": 23,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Appear or arrive; come into existence",
+        "percentage": "72.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Such an opportunity comes along only once in a lifetime."
+          },
+          {
+            "type": "生活",
+            "en": "A great job opportunity came along just after graduation."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Go somewhere with SB",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We're going to the cinema tonight; you should come along with us!"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Such an opportunity comes along only once in a lifetime.",
+      "cloze_sentence": "Such an opportunity 【 ________ 】 only once in a lifetime.",
+      "answer": "comes along",
+      "options": [
+        "plays out",
+        "stands out",
+        "comes along",
+        "breaks out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Appear or arrive; come into existence",
+      "percentage": "72.5%",
+      "hint": "COME ALONG（出現、進展、一起來）"
+    }
+  },
+  {
+    "id": 113,
+    "day": 12,
+    "verb": "PLAY OUT",
+    "zh": "發展演變、展現結果",
+    "category": "Main",
+    "page": 23,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Happen or develop; be enacted or performed",
+        "percentage": "79.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The way these negotiations play out will have important consequences."
+          },
+          {
+            "type": "生活",
+            "en": "Let's see how the negotiations play out next week."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The way these negotiations play out will have important consequences.",
+      "cloze_sentence": "The way these negotiations 【 ________ 】 will have important consequences.",
+      "answer": "play out",
+      "options": [
+        "stand out",
+        "play out",
+        "come along",
+        "break out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Happen or develop; be enacted or performed",
+      "percentage": "79.5%",
+      "hint": "PLAY OUT（發展演變、展現結果）"
+    }
+  },
+  {
+    "id": 114,
+    "day": 12,
+    "verb": "BREAK OUT",
+    "zh": "爆發(戰爭/疫情)、突然發生",
+    "category": "Main",
+    "page": 23,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Start suddenly, esp. STH undesirable and unpleasant",
+        "percentage": "69.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Riots broke out that night."
+          },
+          {
+            "type": "職場",
+            "en": "A dispute broke out between two departments over the budget."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Riots broke out that night.",
+      "cloze_sentence": "Riots 【 ________ 】 that night.",
+      "answer": "broke out",
+      "options": [
+        "came along",
+        "broke out",
+        "played out",
+        "stood out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Start suddenly, esp. STH undesirable and unpleasant",
+      "percentage": "69.5%",
+      "hint": "BREAK OUT（爆發(戰爭/疫情)、突然發生）"
+    }
+  },
+  {
+    "id": 115,
+    "day": 12,
+    "verb": "GO AROUND",
+    "zh": "流傳、傳播；足夠分配",
+    "category": "Main",
+    "page": 23,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Go from one place/person to another; circulate",
+        "percentage": "76%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "There is a rumour going around that she is pregnant."
+          },
+          {
+            "type": "職場",
+            "en": "A rumour is going around the office that we're merging."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "There is a rumour going around that she is pregnant.",
+      "cloze_sentence": "There is a rumour 【 ________ 】 that she is pregnant.",
+      "answer": "going around",
+      "options": [
+        "coming along",
+        "standing out",
+        "playing out",
+        "going around"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Go from one place/person to another; circulate",
+      "percentage": "76%",
+      "hint": "GO AROUND（流傳、傳播；足夠分配）"
+    }
+  },
+  {
+    "id": 116,
+    "day": 12,
+    "verb": "WALK OUT",
+    "zh": "走出、罷工、離席抗議",
+    "category": "Main",
+    "page": 24,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Leave a place or event, especially suddenly or angrily",
+        "percentage": "81.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She walked out of the meeting feeling irritated by her colleagues."
+          },
+          {
+            "type": "生活",
+            "en": "Several staff walked out of the meeting in protest."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She walked out of the meeting feeling irritated by her colleagues.",
+      "cloze_sentence": "She 【 ________ 】 of the meeting feeling irritated by her colleagues.",
+      "answer": "walked out",
+      "options": [
+        "stood out",
+        "played out",
+        "walked out",
+        "came along"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Leave a place or event, especially suddenly or angrily",
+      "percentage": "81.5%",
+      "hint": "WALK OUT（走出、罷工、離席抗議）"
+    }
+  },
+  {
+    "id": 117,
+    "day": 12,
+    "verb": "GET THROUGH",
+    "zh": "度過難關、接通電話、完成",
+    "category": "Main",
+    "page": 24,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ to)",
+        "definition": "Succeed in reaching a physical destination or stage",
+        "percentage": "27%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The food supplies never got through to the local population."
+          },
+          {
+            "type": "生活",
+            "en": "I couldn't get through to the supplier all afternoon."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Be successfully communicated or understood",
+        "percentage": "22.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He needed to speak slowly and clearly so his message would get through to the audience."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Succeed in contacting SB on the telephone",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I cannot seem to get through to the customer service department."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Overcome STH, esp. difficult or unpleasant",
+        "percentage": "14.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He gave me useful advice, which helped me get through this dificult situation."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The food supplies never got through to the local population.",
+      "cloze_sentence": "The food supplies never 【 ________ 】 to the local population.",
+      "answer": "got through",
+      "options": [
+        "came along",
+        "played out",
+        "got through",
+        "stood out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Succeed in reaching a physical destination or stage",
+      "percentage": "27%",
+      "hint": "GET THROUGH（度過難關、接通電話、完成）"
+    }
+  },
+  {
+    "id": 118,
+    "day": 12,
+    "verb": "HOLD BACK",
+    "zh": "阻止、抑制、隱瞞",
+    "category": "Main",
+    "page": 24,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Decide not to do or say STH",
+        "percentage": "23.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "They should not hold back from joining us if they want to."
+          },
+          {
+            "type": "職場",
+            "en": "She held back her real opinion during the meeting."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Prevent SB/STH from reaching their full potential",
+        "percentage": "21%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You cannot let a few unmotivated pupils hold back the rest of the group."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Prevent SB/STH from going somewhere",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Security guards tried to hold back the crowd."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Contain an unwanted physical manifestation (tears, laughter, sigh, sneeze)",
+        "percentage": "16%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She was holding back the laughter with great efort."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "They should not hold back from joining us if they want to.",
+      "cloze_sentence": "They should not 【 ________ 】 from joining us if they want to.",
+      "answer": "hold back",
+      "options": [
+        "stand out",
+        "come along",
+        "hold back",
+        "play out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Decide not to do or say STH",
+      "percentage": "23.5%",
+      "hint": "HOLD BACK（阻止、抑制、隱瞞）"
+    }
+  },
+  {
+    "id": 119,
+    "day": 12,
+    "verb": "WRITE DOWN",
+    "zh": "寫下、記下",
+    "category": "Main",
+    "page": 24,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Record information on paper",
+        "percentage": "98%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You should write down his contact details in case you want to get in touch."
+          },
+          {
+            "type": "職場",
+            "en": "Write down the client's requirements so we don't forget them"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You should write down his contact details in case you want to get in touch.",
+      "cloze_sentence": "You should 【 ________ 】 his contact details in case you want to get in touch.",
+      "answer": "write down",
+      "options": [
+        "stand out",
+        "come along",
+        "play out",
+        "write down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Record information on paper",
+      "percentage": "98%",
+      "hint": "WRITE DOWN（寫下、記下）"
+    }
+  },
+  {
+    "id": 120,
+    "day": 12,
+    "verb": "MOVE BACK",
+    "zh": "搬回、後退",
+    "category": "Main",
+    "page": 24,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Return to a place one has lived in before",
+        "percentage": "75%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We moved back to New York last year."
+          },
+          {
+            "type": "職場",
+            "en": "After years in Taipei, he moved back to Tainan to work remotely"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We moved back to New York last year.",
+      "cloze_sentence": "We 【 ________ 】 to New York last year.",
+      "answer": "moved back",
+      "options": [
+        "came along",
+        "played out",
+        "stood out",
+        "moved back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Return to a place one has lived in before",
+      "percentage": "75%",
+      "hint": "MOVE BACK（搬回、後退）"
+    }
+  },
+  {
+    "id": 121,
+    "day": 13,
+    "verb": "FILL OUT",
+    "zh": "填寫(表格/問卷)",
+    "category": "Main",
+    "page": 25,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Complete a form or official document",
+        "percentage": "81.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We had to fill out a dozen forms in total."
+          },
+          {
+            "type": "職場",
+            "en": "New employees have to fill out several forms on their first day."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We had to fill out a dozen forms in total.",
+      "cloze_sentence": "We had to 【 ________ 】 a dozen forms in total.",
+      "answer": "fill out",
+      "options": [
+        "fill out",
+        "rule out",
+        "sit back",
+        "move up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Complete a form or official document",
+      "percentage": "81.5%",
+      "hint": "FILL OUT（填寫(表格/問卷)）"
+    }
+  },
+  {
+    "id": 122,
+    "day": 13,
+    "verb": "SIT BACK",
+    "zh": "向後靠坐、袖手旁觀",
+    "category": "Main",
+    "page": 25,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Rest in a comfortable position against the back of a seat",
+        "percentage": "66%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She sat back in her chair and turned on the T'V."
+          },
+          {
+            "type": "生活",
+            "en": "She sat back and listened carefully to the client's feedback."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(Sit back and do STH)",
+        "definition": "Deliberately take no action/remain passive about STH",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Wewon't just sit back and watch the situation getting worse and worse."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She sat back in her chair and turned on the T'V.",
+      "cloze_sentence": "She 【 ________ 】 in her chair and turned on the T'V.",
+      "answer": "sat back",
+      "options": [
+        "sat back",
+        "ruled out",
+        "moved up",
+        "filled out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Rest in a comfortable position against the back of a seat",
+      "percentage": "66%",
+      "hint": "SIT BACK（向後靠坐、袖手旁觀）"
+    }
+  },
+  {
+    "id": 123,
+    "day": 13,
+    "verb": "RULE OUT",
+    "zh": "排除、取消可能性",
+    "category": "Main",
+    "page": 25,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Exclude STH as a possibility, plausible cause or explanation",
+        "percentage": "93.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "They ruled out the possibility of a mass murder."
+          },
+          {
+            "type": "職場",
+            "en": "We can't rule out working over the weekend to meet the deadline."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "They ruled out the possibility of a mass murder.",
+      "cloze_sentence": "They 【 ________ 】 the possibility of a mass murder.",
+      "answer": "ruled out",
+      "options": [
+        "sat back",
+        "filled out",
+        "ruled out",
+        "moved up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Exclude STH as a possibility, plausible cause or explanation",
+      "percentage": "93.5%",
+      "hint": "RULE OUT（排除、取消可能性）"
+    }
+  },
+  {
+    "id": 124,
+    "day": 13,
+    "verb": "MOVE UP",
+    "zh": "晉升、前進、提前",
+    "category": "Main",
+    "page": 25,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move to a better position; advance to a higher level/rank",
+        "percentage": "47%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She moved up from secretary to senior manager in just a few years."
+          },
+          {
+            "type": "生活",
+            "en": "He moved up to senior engineer after just two years."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move upward, from a lower spatial location to a higher one",
+        "percentage": "22.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She put her hand on his shoulder and moved it up along the back of his neck."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She moved up from secretary to senior manager in just a few years.",
+      "cloze_sentence": "She 【 ________ 】 from secretary to senior manager in just a few years.",
+      "answer": "moved up",
+      "options": [
+        "sat back",
+        "filled out",
+        "ruled out",
+        "moved up"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move to a better position; advance to a higher level/rank",
+      "percentage": "47%",
+      "hint": "MOVE UP（晉升、前進、提前）"
+    }
+  },
+  {
+    "id": 125,
+    "day": 13,
+    "verb": "PICK OUT",
+    "zh": "挑選出、認出",
+    "category": "Main",
+    "page": 25,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Choose SB/STH among a number of alternatives",
+        "percentage": "71.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She picked out the best-looking dress she could find."
+          },
+          {
+            "type": "生活",
+            "en": "She picked out the best candidate from dozens of resumés."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Detect/be noticed among a group of things or people",
+        "percentage": "19%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "My mum could easily be picked out in the picture."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She picked out the best-looking dress she could find.",
+      "cloze_sentence": "She 【 ________ 】 the best-looking dress she could find.",
+      "answer": "picked out",
+      "options": [
+        "sat back",
+        "filled out",
+        "picked out",
+        "ruled out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Choose SB/STH among a number of alternatives",
+      "percentage": "71.5%",
+      "hint": "PICK OUT（挑選出、認出）"
+    }
+  },
+  {
+    "id": 126,
+    "day": 13,
+    "verb": "TAKE DOWN",
+    "zh": "取下、記下、拆除",
+    "category": "Main",
+    "page": 26,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "After the exhibition, they took the paintings down.",
+        "percentage": "",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "They took down the old banner and put up the new logo"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Destroy, kill, or disable",
+        "percentage": "27.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The terrorists tried to take down the President's plane."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take SB to a place, esp. further south or at a lower level",
+        "percentage": "18%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "My dad decided to take us down to Florida."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "They took down the old banner and put up the new logo",
+      "cloze_sentence": "They 【 ________ 】 the old banner and put up the new logo",
+      "answer": "took down",
+      "options": [
+        "took down",
+        "filled out",
+        "ruled out",
+        "sat back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "After the exhibition, they took the paintings down.",
+      "percentage": "",
+      "hint": "TAKE DOWN（取下、記下、拆除）"
+    }
+  },
+  {
+    "id": 127,
+    "day": 13,
+    "verb": "GET ON",
+    "zh": "上車、相處、進展",
+    "category": "Main",
+    "page": 26,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ with)",
+        "definition": "Continue doing STH after stopping",
+        "percentage": "51%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We might as well get on with it if we want to finish on time."
+          },
+          {
+            "type": "生活",
+            "en": "Let's get on with the meeting; we're short on time."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Get on board some form of public transportation (train, bus, plane, elevator)",
+        "percentage": "14.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He got on the bus to go to school."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We might as well get on with it if we want to finish on time.",
+      "cloze_sentence": "We might as well 【 ________ 】 with it if we want to finish on time.",
+      "answer": "get on",
+      "options": [
+        "fill out",
+        "rule out",
+        "sit back",
+        "get on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Continue doing STH after stopping",
+      "percentage": "51%",
+      "hint": "GET ON（上車、相處、進展）"
+    }
+  },
+  {
+    "id": 128,
+    "day": 13,
+    "verb": "GIVE BACK",
+    "zh": "歸還、回饋",
+    "category": "Main",
+    "page": 26,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Return STH to its original owner/provider",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "It's nice to be able to give back to the community"
+          },
+          {
+            "type": "職場",
+            "en": "Please give back the office keys when you leave the company."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "It's nice to be able to give back to the community",
+      "cloze_sentence": "It's nice to be able to 【 ________ 】 to the community",
+      "answer": "give back",
+      "options": [
+        "sit back",
+        "fill out",
+        "rule out",
+        "give back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Return STH to its original owner/provider",
+      "percentage": "100%",
+      "hint": "GIVE BACK（歸還、回饋）"
+    }
+  },
+  {
+    "id": 129,
+    "day": 13,
+    "verb": "HAND OVER",
+    "zh": "移交、交出權力/物品",
+    "category": "Main",
+    "page": 26,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Give STH to SB by holding it in one's hand and offering it to them",
+        "percentage": "58.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She turned around to hand over her keys to her husband."
+          },
+          {
+            "type": "職場",
+            "en": "She handed over the report to her manager before lunch."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Surrender control or responsibility for STH/SB to SB else, esp. officially",
+        "percentage": "41.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The government isn't willing to hand over power to local authorities."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She turned around to hand over her keys to her husband.",
+      "cloze_sentence": "She turned around to 【 ________ 】 her keys to her husband.",
+      "answer": "hand over",
+      "options": [
+        "fill out",
+        "rule out",
+        "sit back",
+        "hand over"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Give STH to SB by holding it in one's hand and offering it to them",
+      "percentage": "58.5%",
+      "hint": "HAND OVER（移交、交出權力/物品）"
+    }
+  },
+  {
+    "id": 130,
+    "day": 13,
+    "verb": "SUM UP",
+    "zh": "總結、概括",
+    "category": "Main",
+    "page": 26,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Express or represent the most important/representative facts, ideas, or characteristics of SB/STH,",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "especially in a brief manner",
+        "percentage": "97%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He summed up the whole discussion in just a few minutes."
+          },
+          {
+            "type": "生活",
+            "en": "To sum up, our sales grew by ten percent this quarter."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He summed up the whole discussion in just a few minutes.",
+      "cloze_sentence": "He 【 ________ 】 the whole discussion in just a few minutes.",
+      "answer": "summed up",
+      "options": [
+        "ruled out",
+        "summed up",
+        "sat back",
+        "filled out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "especially in a brief manner",
+      "percentage": "97%",
+      "hint": "SUM UP（總結、概括）"
+    }
+  },
+  {
+    "id": 131,
+    "day": 14,
+    "verb": "MOVE OUT",
+    "zh": "搬出、遷出",
+    "category": "Main",
+    "page": 26,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "",
+        "percentage": "94.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Leave one's place of residence permanently"
+          },
+          {
+            "type": "生活",
+            "en": "Our neighbour is going to move out next month."
+          },
+          {
+            "type": "通用",
+            "en": "The company moved out of its old office in Xinyi last month."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Leave one's place of residence permanently",
+      "cloze_sentence": "Leave one's place of residence permanently",
+      "answer": "move out",
+      "options": [
+        "pass on",
+        "take in",
+        "move out",
+        "come off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "",
+      "percentage": "94.5%",
+      "hint": "MOVE OUT（搬出、遷出）"
+    }
+  },
+  {
+    "id": 132,
+    "day": 14,
+    "verb": "COME OFF",
+    "zh": "脫落、成功實現、表現如何",
+    "category": "Main",
+    "page": 27,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become detached or removed from a larger whole",
+        "percentage": "34%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The button is coming off my shirt."
+          },
+          {
+            "type": "生活",
+            "en": "A button came of my shirt right before the interview."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Appear or seem to be a particular way",
+        "percentage": "24.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He was tired and not prepared, and so came off poorly in the interview."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Be finished with STH; have completed STH",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The team just came of an incredibly successful season."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The button is coming off my shirt.",
+      "cloze_sentence": "The button is 【 ________ 】 my shirt.",
+      "answer": "coming off",
+      "options": [
+        "passing on",
+        "coming off",
+        "taking in",
+        "moving out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Become detached or removed from a larger whole",
+      "percentage": "34%",
+      "hint": "COME OFF（脫落、成功實現、表現如何）"
+    }
+  },
+  {
+    "id": 133,
+    "day": 14,
+    "verb": "PASS ON",
+    "zh": "傳遞、轉交、遺傳",
+    "category": "Main",
+    "page": 27,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Circulate or communicate; give STH to SB after receiving it from SB else (information, ideas,",
+        "percentage": "",
+        "examples": []
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "object)",
+        "percentage": "37.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I got this message this morning and was asked to pass it on to you."
+          },
+          {
+            "type": "生活",
+            "en": "Please pass on this message to the rest ofthe team."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Transmit from one generation to the next (traditions, beliefs, skills, possessions)",
+        "percentage": "37%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "These ancient traditions have been passed on from generation to generation."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "(euphemism)",
+        "definition": "Die",
+        "percentage": "12.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She has been very depressed since her mother passed on."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I got this message this morning and was asked to pass it on to you.",
+      "cloze_sentence": "I got this message this morning and was asked to 【 ________ 】 to you.",
+      "answer": "pass it on",
+      "options": [
+        "come off",
+        "move out",
+        "pass it on",
+        "take in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "object)",
+      "percentage": "37.5%",
+      "hint": "PASS ON（傳遞、轉交、遺傳）"
+    }
+  },
+  {
+    "id": 134,
+    "day": 14,
+    "verb": "TAKE IN",
+    "zh": "吸收、理解、收留、欺騙",
+    "category": "Main",
+    "page": 27,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Provide a place for SB to live or stay",
+        "percentage": "24.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The family took her in when she was abandoned by her parents."
+          },
+          {
+            "type": "生活",
+            "en": "The company took in several interns from a local university."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Fully understand or grasp the meaning of STH",
+        "percentage": "17.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You have to explain more thoroughly; it's too dificult to take in."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Deceive by behaving in a dishonest way",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He was very convincing, so I was easily taken in."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The family took her in when she was abandoned by her parents.",
+      "cloze_sentence": "The family 【 ________ 】 when she was abandoned by her parents.",
+      "answer": "took her in",
+      "options": [
+        "came off",
+        "took her in",
+        "moved out",
+        "passed on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Provide a place for SB to live or stay",
+      "percentage": "24.5%",
+      "hint": "TAKE IN（吸收、理解、收留、欺騙）"
+    }
+  },
+  {
+    "id": 135,
+    "day": 14,
+    "verb": "SET DOWN",
+    "zh": "放下、記下、制定規範",
+    "category": "Main",
+    "page": 27,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put something on a surface or on the ground",
+        "percentage": "75%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He carried the bags to his room and set them down"
+          },
+          {
+            "type": "職場",
+            "en": "He set down the heavy box of samples on the table."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He carried the bags to his room and set them down",
+      "cloze_sentence": "He carried the bags to his room and 【 ________ 】",
+      "answer": "set them down",
+      "options": [
+        "moved out",
+        "passed on",
+        "set them down",
+        "came off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Put something on a surface or on the ground",
+      "percentage": "75%",
+      "hint": "SET DOWN（放下、記下、制定規範）"
+    }
+  },
+  {
+    "id": 136,
+    "day": 14,
+    "verb": "SORT OUT",
+    "zh": "整理、解決(問題)、分類",
+    "category": "Main",
+    "page": 28,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Do what is needed to solve a problem, conflict or difficult situation",
+        "percentage": "51%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Afew ideas were raised to sort out the company's financial issues."
+          },
+          {
+            "type": "職場",
+            "en": "We need to sort out the shipping delay before the client complains."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Find out information so as to understand STH",
+        "percentage": "25.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He will need some time to sort out the reasons for his failure."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Afew ideas were raised to sort out the company's financial issues.",
+      "cloze_sentence": "Afew ideas were raised to 【 ________ 】 the company's financial issues.",
+      "answer": "sort out",
+      "options": [
+        "pass on",
+        "sort out",
+        "move out",
+        "come off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Do what is needed to solve a problem, conflict or difficult situation",
+      "percentage": "51%",
+      "hint": "SORT OUT（整理、解決(問題)、分類）"
+    }
+  },
+  {
+    "id": 137,
+    "day": 14,
+    "verb": "FOLLOW UP",
+    "zh": "跟進、追蹤後續",
+    "category": "Main",
+    "page": 28,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take action about STH after a previous action or thing, esp. so as to reinforce its effect",
+        "percentage": "48.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You won't be cured immediately after the operation; you will have to follow up with therapy."
+          },
+          {
+            "type": "生活",
+            "en": "I'll follow up with the client after the meeting."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Try to find more information about STH",
+        "percentage": "45.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Detectives are following up on a few promising leads."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You won't be cured immediately after the operation; you will have to follow up with therapy.",
+      "cloze_sentence": "You won't be cured immediately after the operation; you will have to 【 ________ 】 with therapy.",
+      "answer": "follow up",
+      "options": [
+        "follow up",
+        "pass on",
+        "come off",
+        "move out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take action about STH after a previous action or thing, esp. so as to reinforce its effect",
+      "percentage": "48.5%",
+      "hint": "FOLLOW UP（跟進、追蹤後續）"
+    }
+  },
+  {
+    "id": 138,
+    "day": 14,
+    "verb": "COME THROUGH",
+    "zh": "安然度過、實現諾言、傳來",
+    "category": "Main",
+    "page": 28,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Be clearly perceived, noticed or seen (feeling, emotion, quality)",
+        "percentage": "20.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Her disappointment came through by the tone of her voice."
+          },
+          {
+            "type": "生活",
+            "en": "Her enthusiasm really came through during the presentation."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Reach success or a desired goal despite difficulty",
+        "percentage": "20%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He worked really hard, and despite some dificulties, he came through in the end."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Arrive at a destination; come into view (train, ship)",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We had to wait for a ship to come through and rescue us."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Her disappointment came through by the tone of her voice.",
+      "cloze_sentence": "Her disappointment 【 ________ 】 by the tone of her voice.",
+      "answer": "came through",
+      "options": [
+        "came off",
+        "moved out",
+        "came through",
+        "passed on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Be clearly perceived, noticed or seen (feeling, emotion, quality)",
+      "percentage": "20.5%",
+      "hint": "COME THROUGH（安然度過、實現諾言、傳來）"
+    }
+  },
+  {
+    "id": 139,
+    "day": 14,
+    "verb": "SETTLE DOWN",
+    "zh": "定居、安定下來、平靜下來",
+    "category": "Main",
+    "page": 28,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Adopt a quieter and steadier lifestyle",
+        "percentage": "31%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I just want to fall in love with the right guy and settle down."
+          },
+          {
+            "type": "職場",
+            "en": "It took a few weeks for the new team to settle down into a routine."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become calmer, quieter, more orderly",
+        "percentage": "26.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We need things to settle down before we can make a serious decision."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Get into a comfortable position, either sitting or lying",
+        "percentage": "20%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "When he reached the top of the hill, he settled down in the grass to have a rest."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I just want to fall in love with the right guy and settle down.",
+      "cloze_sentence": "I just want to fall in love with the right guy and 【 ________ 】.",
+      "answer": "settle down",
+      "options": [
+        "pass on",
+        "move out",
+        "settle down",
+        "come off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Adopt a quieter and steadier lifestyle",
+      "percentage": "31%",
+      "hint": "SETTLE DOWN（定居、安定下來、平靜下來）"
+    }
+  },
+  {
+    "id": 140,
+    "day": 14,
+    "verb": "COME AROUND",
+    "zh": "甦醒、改變想法、順道拜訪",
+    "category": "Main",
+    "page": 29,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Come in the area near STH/SB",
+        "percentage": "45%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He came around to my room and kissed me goodnight."
+          },
+          {
+            "type": "職場",
+            "en": "The manager came around to each desk to say good morning."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ to)",
+        "definition": "Convert to an opinion or decision",
+        "percentage": "22%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I believe she will come around to our way of thinking eventually"
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Happen again as a regular event, at its usual time",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You'll have to wait until summer comes around."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He came around to my room and kissed me goodnight.",
+      "cloze_sentence": "He 【 ________ 】 to my room and kissed me goodnight.",
+      "answer": "came around",
+      "options": [
+        "moved out",
+        "passed on",
+        "came off",
+        "came around"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Come in the area near STH/SB",
+      "percentage": "45%",
+      "hint": "COME AROUND（甦醒、改變想法、順道拜訪）"
+    }
+  },
+  {
+    "id": 141,
+    "day": 15,
+    "verb": "FILL IN",
+    "zh": "填寫；代班、告知詳情",
+    "category": "Main",
+    "page": 29,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ for)",
+        "definition": "Do SB's work temporarily because they cannot or will not do it themselves",
+        "percentage": "31%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I had to fill in for her yesterday because she was ill."
+          },
+          {
+            "type": "生活",
+            "en": "Can you fill in for me at the front desk this afternoon?"
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "(+ on)",
+        "definition": "Give SB extra or missing information they want or need",
+        "percentage": "29.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She filled Carol in on the plan."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put material or substance into STH in order to make it full or complete i",
+        "percentage": "9%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "All the remaining holes had to be filled in with concrete."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I had to fill in for her yesterday because she was ill.",
+      "cloze_sentence": "I had to 【 ________ 】 for her yesterday because she was ill.",
+      "answer": "fill in",
+      "options": [
+        "go along",
+        "give out",
+        "give in",
+        "fill in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Do SB's work temporarily because they cannot or will not do it themselves",
+      "percentage": "31%",
+      "hint": "FILL IN（填寫；代班、告知詳情）"
+    }
+  },
+  {
+    "id": 142,
+    "day": 15,
+    "verb": "GIVE OUT",
+    "zh": "分發、耗盡、發出",
+    "category": "Main",
+    "page": 29,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Give to each of a large number of people",
+        "percentage": "40%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The committee gave out more than 100 copies in the last meeting"
+          },
+          {
+            "type": "生活",
+            "en": "The company gave out year-end bonuses before the New Year."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Make known openly or publicly",
+        "percentage": "33.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "You should be more careful and not give out your phone number so easily"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Collapse/fail; stop functioning properly (heart, knees)",
+        "percentage": "11.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "At 95 years of age, her heart finally gave out."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The committee gave out more than 100 copies in the last meeting",
+      "cloze_sentence": "The committee 【 ________ 】 more than 100 copies in the last meeting",
+      "answer": "gave out",
+      "options": [
+        "gave in",
+        "gave out",
+        "filled in",
+        "went along"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Give to each of a large number of people",
+      "percentage": "40%",
+      "hint": "GIVE OUT（分發、耗盡、發出）"
+    }
+  },
+  {
+    "id": 143,
+    "day": 15,
+    "verb": "GIVE IN",
+    "zh": "屈服、讓步、繳交",
+    "category": "Main",
+    "page": 29,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cease resistance to (liking/temptation/habit, or to SB's demands/control)",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She shouldn't give in to her children's demands."
+          },
+          {
+            "type": "職場",
+            "en": "The boss finally gave in and approved the extra budget."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She shouldn't give in to her children's demands.",
+      "cloze_sentence": "She shouldn't 【 ________ 】 to her children's demands.",
+      "answer": "give in",
+      "options": [
+        "give out",
+        "fill in",
+        "go along",
+        "give in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Cease resistance to (liking/temptation/habit, or to SB's demands/control)",
+      "percentage": "100%",
+      "hint": "GIVE IN（屈服、讓步、繳交）"
+    }
+  },
+  {
+    "id": 144,
+    "day": 15,
+    "verb": "GO ALONG",
+    "zh": "進行、贊同、沿著前進",
+    "category": "Main",
+    "page": 30,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Progress or proceed with an activity",
+        "percentage": "44%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You will learn as you go along."
+          },
+          {
+            "type": "生活",
+            "en": "You'll pick up the software as you go along."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Act in cooperation or express agreement",
+        "percentage": "28%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The Democrats are not likely to go along with the plan."
+          }
+        ]
+      },
+      {
+        "sense_num": 3,
+        "pattern": "",
+        "definition": "Go to a place or event, esp. without much planning",
+        "percentage": "15.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Would you like to go along with us to the party?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You will learn as you go along.",
+      "cloze_sentence": "You will learn as you 【 ________ 】.",
+      "answer": "go along",
+      "options": [
+        "give in",
+        "fill in",
+        "go along",
+        "give out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Progress or proceed with an activity",
+      "percentage": "44%",
+      "hint": "GO ALONG（進行、贊同、沿著前進）"
+    }
+  },
+  {
+    "id": 145,
+    "day": 15,
+    "verb": "BREAK OFF",
+    "zh": "折斷、中斷(談判/關係)",
+    "category": "Main",
+    "page": 30,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Separate a part (or become separate) from a larger piece",
+        "percentage": "40%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He accidentally broke off a piece of wood from the fence."
+          },
+          {
+            "type": "職場",
+            "en": "A piece of the old signboard broke of during the storm."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop speaking, especially suddenly",
+        "percentage": "28%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "\"There is something that...\" He broke of abruptly."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put an end to STH (relationship, discussion, talks, negotiations)",
+        "percentage": "24%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "They broke of diplomatic relations in 1986."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He accidentally broke off a piece of wood from the fence.",
+      "cloze_sentence": "He accidentally 【 ________ 】 a piece of wood from the fence.",
+      "answer": "broke off",
+      "options": [
+        "gave in",
+        "broke off",
+        "filled in",
+        "gave out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Separate a part (or become separate) from a larger piece",
+      "percentage": "40%",
+      "hint": "BREAK OFF（折斷、中斷(談判/關係)）"
+    }
+  },
+  {
+    "id": 146,
+    "day": 15,
+    "verb": "PUT OFF",
+    "zh": "拖延、延期；使反感",
+    "category": "Main",
+    "page": 30,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Delay until a later time or date",
+        "percentage": "68%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Now that I had more free time, there was no excuse to put off exercising any longer."
+          },
+          {
+            "type": "生活",
+            "en": "We had to put of the product launch until next month."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cause to feel intense dislike",
+        "percentage": "27.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The bad smell put everyone of."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Now that I had more free time, there was no excuse to put off exercising any longer.",
+      "cloze_sentence": "Now that I had more free time, there was no excuse to 【 ________ 】 exercising any longer.",
+      "answer": "put off",
+      "options": [
+        "gave out",
+        "gave in",
+        "put off",
+        "filled in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Delay until a later time or date",
+      "percentage": "68%",
+      "hint": "PUT OFF（拖延、延期；使反感）"
+    }
+  },
+  {
+    "id": 147,
+    "day": 15,
+    "verb": "COME ABOUT",
+    "zh": "發生、產生",
+    "category": "Main",
+    "page": 30,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take place or happen/occur, esp. unexpectedly",
+        "percentage": "81.5%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I did not expect this to come about."
+          },
+          {
+            "type": "職場",
+            "en": "The merger came about after months of quiet talks."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I did not expect this to come about.",
+      "cloze_sentence": "I did not expect this to 【 ________ 】.",
+      "answer": "come about",
+      "options": [
+        "give in",
+        "fill in",
+        "come about",
+        "give out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take place or happen/occur, esp. unexpectedly",
+      "percentage": "81.5%",
+      "hint": "COME ABOUT（發生、產生）"
+    }
+  },
+  {
+    "id": 148,
+    "day": 15,
+    "verb": "CLOSE DOWN",
+    "zh": "關閉、歇業、倒閉",
+    "category": "Main",
+    "page": 30,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop operating or functioning",
+        "percentage": "87%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Non-profitable companies were closed down."
+          },
+          {
+            "type": "生活",
+            "en": "The branch in Keelung was closed down last year."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Non-profitable companies were closed down.",
+      "cloze_sentence": "Non-profitable companies were 【 ________ 】.",
+      "answer": "closed down",
+      "options": [
+        "gave out",
+        "filled in",
+        "closed down",
+        "gave in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop operating or functioning",
+      "percentage": "87%",
+      "hint": "CLOSE DOWN（關閉、歇業、倒閉）"
+    }
+  },
+  {
+    "id": 149,
+    "day": 15,
+    "verb": "PUT IN",
+    "zh": "投入(時間/精力)、提出申請",
+    "category": "Main",
+    "page": 31,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put one thing inside another; include or insert",
+        "percentage": "50%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You need to put in your contact details in case there is a problem."
+          },
+          {
+            "type": "職場",
+            "en": "Remember to put in your employee ID on the form."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Invest or devote so as to achieve STH (time, effort, work)",
+        "percentage": "26.5%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "I put in ten hours a day at the office."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You need to put in your contact details in case there is a problem.",
+      "cloze_sentence": "You need to 【 ________ 】 your contact details in case there is a problem.",
+      "answer": "put in",
+      "options": [
+        "filled in",
+        "gave out",
+        "gave in",
+        "put in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Put one thing inside another; include or insert",
+      "percentage": "50%",
+      "hint": "PUT IN（投入(時間/精力)、提出申請）"
+    }
+  },
+  {
+    "id": 150,
+    "day": 15,
+    "verb": "SET ABOUT",
+    "zh": "著手開始做",
+    "category": "Main",
+    "page": 31,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Begin a course of action, usually with a specific purpose/objective in mind",
+        "percentage": "97%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We set about laying the table before our guests arrived."
+          },
+          {
+            "type": "生活",
+            "en": "She set about organising the messy office archive."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We set about laying the table before our guests arrived.",
+      "cloze_sentence": "We 【 ________ 】 laying the table before our guests arrived.",
+      "answer": "set about",
+      "options": [
+        "gave in",
+        "gave out",
+        "set about",
+        "filled in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Begin a course of action, usually with a specific purpose/objective in mind",
+      "percentage": "97%",
+      "hint": "SET ABOUT（著手開始做）"
+    }
+  },
+  {
+    "id": 151,
+    "day": 16,
+    "verb": "LOOK FOR",
+    "zh": "尋找、尋求",
+    "category": "Supplement",
+    "page": 32,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Try to find or search for SB/STH",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I've been looking for my keys all morning."
+          },
+          {
+            "type": "生活",
+            "en": "HR is looking for two new engineers this month."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I've been looking for my keys all morning.",
+      "cloze_sentence": "I've been 【 ________ 】 my keys all morning.",
+      "answer": "looking for",
+      "options": [
+        "looking after",
+        "looking for",
+        "looking forward",
+        "getting along"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Try to find or search for SB/STH",
+      "percentage": "100%",
+      "hint": "LOOK FOR（尋找、尋求）"
+    }
+  },
+  {
+    "id": 152,
+    "day": 16,
+    "verb": "LOOK AFTER",
+    "zh": "照顧、照料、負責處理",
+    "category": "Supplement",
+    "page": 32,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take care of or be responsible for SB/STH",
+        "percentage": "86%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "She looks after her elderly mother every weekend."
+          },
+          {
+            "type": "職場",
+            "en": "Could you look after the front desk while I'm at lunch?"
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Deal with or handle a matter",
+        "percentage": "10%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Don't worry, I'll look after the arrangements."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "She looks after her elderly mother every weekend.",
+      "cloze_sentence": "She 【 ________ 】 her elderly mother every weekend.",
+      "answer": "looks after",
+      "options": [
+        "gets along",
+        "looks forward",
+        "looks for",
+        "looks after"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take care of or be responsible for SB/STH",
+      "percentage": "86%",
+      "hint": "LOOK AFTER（照顧、照料、負責處理）"
+    }
+  },
+  {
+    "id": 153,
+    "day": 16,
+    "verb": "LOOK FORWARD",
+    "zh": "期待、盼望 (look forward to)",
+    "category": "Supplement",
+    "page": 32,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ to)",
+        "definition": "Feel excited and happy about STH that is going to happen",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We're really looking forward to our trip to Japan."
+          },
+          {
+            "type": "生活",
+            "en": "We look forward to working with your company."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We're really looking forward to our trip to Japan.",
+      "cloze_sentence": "We're really 【 ________ 】 to our trip to Japan.",
+      "answer": "looking forward",
+      "options": [
+        "looking for",
+        "looking forward",
+        "getting along",
+        "looking after"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Feel excited and happy about STH that is going to happen",
+      "percentage": "100%",
+      "hint": "LOOK FORWARD（期待、盼望 (look forward to)）"
+    }
+  },
+  {
+    "id": 154,
+    "day": 16,
+    "verb": "GET ALONG",
+    "zh": "和睦相處、進展順利",
+    "category": "Supplement",
+    "page": 32,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(+ with)",
+        "definition": "Have a friendly or harmonious relationship",
+        "percentage": "61%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The two brothers have never got along very well."
+          },
+          {
+            "type": "生活",
+            "en": "She gets along well with everyone in the department."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Manage or make progress in a situation",
+        "percentage": "24%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "How are you getting along with your new job?"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The two brothers have never got along very well.",
+      "cloze_sentence": "The two brothers have never 【 ________ 】 very well.",
+      "answer": "got along",
+      "options": [
+        "looked after",
+        "got along",
+        "looked forward",
+        "looked for"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Have a friendly or harmonious relationship",
+      "percentage": "61%",
+      "hint": "GET ALONG（和睦相處、進展順利）"
+    }
+  },
+  {
+    "id": 155,
+    "day": 16,
+    "verb": "RUN INTO",
+    "zh": "巧遇、遭遇(困難)",
+    "category": "Supplement",
+    "page": 32,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Meet SB by chance",
+        "percentage": "54%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I ran into an old friend at the airport yesterday."
+          },
+          {
+            "type": "生活",
+            "en": "I ran into my old manager at a conference in Taipei."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Begin to experience STH, esp. difficulty",
+        "percentage": "29%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The project soon ran into serious financial problems."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I ran into an old friend at the airport yesterday.",
+      "cloze_sentence": "I 【 ________ 】 an old friend at the airport yesterday.",
+      "answer": "ran into",
+      "options": [
+        "looked after",
+        "looked for",
+        "ran into",
+        "looked forward"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Meet SB by chance",
+      "percentage": "54%",
+      "hint": "RUN INTO（巧遇、遭遇(困難)）"
+    }
+  },
+  {
+    "id": 156,
+    "day": 16,
+    "verb": "PUT TOGETHER",
+    "zh": "組合、組裝、籌備制定",
+    "category": "Supplement",
+    "page": 33,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Assemble or make STH by joining its parts",
+        "percentage": "58%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "It took me hours to put the bookshelf together."
+          },
+          {
+            "type": "生活",
+            "en": "She put together a slide deck for the client meeting."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Create or prepare STH by combining ideas or elements",
+        "percentage": "33%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She put together a detailed report for the meeting."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "It took me hours to put the bookshelf together.",
+      "cloze_sentence": "It took me hours to 【 ________ 】.",
+      "answer": "put the bookshelf together",
+      "options": [
+        "looked forward",
+        "looked for",
+        "put the bookshelf together",
+        "looked after"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Assemble or make STH by joining its parts",
+      "percentage": "58%",
+      "hint": "PUT TOGETHER（組合、組裝、籌備制定）"
+    }
+  },
+  {
+    "id": 157,
+    "day": 16,
+    "verb": "WORK ON",
+    "zh": "致力於、從事、努力改善",
+    "category": "Supplement",
+    "page": 33,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Spend effort trying to produce, improve or repair STH",
+        "percentage": "87%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He's still working on his first novel."
+          },
+          {
+            "type": "職場",
+            "en": "The team is working on a new app for local businesses."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He's still working on his first novel.",
+      "cloze_sentence": "He's still 【 ________ 】 his first novel.",
+      "answer": "working on",
+      "options": [
+        "looking after",
+        "working on",
+        "looking forward",
+        "looking for"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Spend effort trying to produce, improve or repair STH",
+      "percentage": "87%",
+      "hint": "WORK ON（致力於、從事、努力改善）"
+    }
+  },
+  {
+    "id": 158,
+    "day": 16,
+    "verb": "CALL OFF",
+    "zh": "取消(活動/會議)",
+    "category": "Supplement",
+    "page": 33,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cancel STH or decide it will not happen",
+        "percentage": "79%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The match was called off because of the rain."
+          },
+          {
+            "type": "生活",
+            "en": "The outdoor event was called of because of the typhoon."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Order a person or animal to stop attacking",
+        "percentage": "14%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She called of the dog before it reached him."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The match was called off because of the rain.",
+      "cloze_sentence": "The match was 【 ________ 】 because of the rain.",
+      "answer": "called off",
+      "options": [
+        "looked for",
+        "called off",
+        "looked after",
+        "looked forward"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Cancel STH or decide it will not happen",
+      "percentage": "79%",
+      "hint": "CALL OFF（取消(活動/會議)）"
+    }
+  },
+  {
+    "id": 159,
+    "day": 16,
+    "verb": "CALL BACK",
+    "zh": "回電話、召回",
+    "category": "Supplement",
+    "page": 33,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Telephone SB again, or return a call",
+        "percentage": "83%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I'm busy right now - can I call you back later?"
+          },
+          {
+            "type": "職場",
+            "en": "I'll call you back after I check with my manager."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I'm busy right now - can I call you back later?",
+      "cloze_sentence": "I'm busy right now - can I 【 ________ 】 later?",
+      "answer": "call you back",
+      "options": [
+        "look forward",
+        "look for",
+        "look after",
+        "call you back"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Telephone SB again, or return a call",
+      "percentage": "83%",
+      "hint": "CALL BACK（回電話、召回）"
+    }
+  },
+  {
+    "id": 160,
+    "day": 16,
+    "verb": "TURN INTO",
+    "zh": "轉變成、變成",
+    "category": "Supplement",
+    "page": 33,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become or change into STH different",
+        "percentage": "91%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The caterpillar eventually turns into a butterfly."
+          },
+          {
+            "type": "職場",
+            "en": "Her side project turned into a full-time business."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The caterpillar eventually turns into a butterfly.",
+      "cloze_sentence": "The caterpillar eventually 【 ________ 】 a butterfly.",
+      "answer": "turns into",
+      "options": [
+        "looks forward",
+        "turns into",
+        "looks for",
+        "looks after"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Become or change into STH different",
+      "percentage": "91%",
+      "hint": "TURN INTO（轉變成、變成）"
+    }
+  },
+  {
+    "id": 161,
+    "day": 17,
+    "verb": "GET AWAY",
+    "zh": "逃離、外出度假",
+    "category": "Supplement",
+    "page": 33,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Escape or manage to leave a place or situation",
+        "percentage": "52%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The thieves got away with thousands of dollars."
+          },
+          {
+            "type": "職場",
+            "en": "It's hard to get away from the office before eight in busy season."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take a short holiday away from home",
+        "percentage": "21%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "We're hoping to get away for a few days this summer."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The thieves got away with thousands of dollars.",
+      "cloze_sentence": "The thieves 【 ________ 】 with thousands of dollars.",
+      "answer": "got away",
+      "options": [
+        "got away",
+        "ran away",
+        "dealt with",
+        "counted on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Escape or manage to leave a place or situation",
+      "percentage": "52%",
+      "hint": "GET AWAY（逃離、外出度假）"
+    }
+  },
+  {
+    "id": 162,
+    "day": 17,
+    "verb": "RUN AWAY",
+    "zh": "逃跑、離家出走",
+    "category": "Supplement",
+    "page": 34,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Escape from a place or person by running or leaving suddenly",
+        "percentage": "84%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He ran away from home when he was sixteen."
+          },
+          {
+            "type": "職場",
+            "en": "You can't just run away from a dificult client - you have to deal with it."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He ran away from home when he was sixteen.",
+      "cloze_sentence": "He 【 ________ 】 from home when he was sixteen.",
+      "answer": "ran away",
+      "options": [
+        "dealt with",
+        "counted on",
+        "got away",
+        "ran away"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Escape from a place or person by running or leaving suddenly",
+      "percentage": "84%",
+      "hint": "RUN AWAY（逃跑、離家出走）"
+    }
+  },
+  {
+    "id": 163,
+    "day": 17,
+    "verb": "COUNT ON",
+    "zh": "依靠、指望、信賴",
+    "category": "Supplement",
+    "page": 34,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Rely on or trust SB/STH; expect STH with confidence",
+        "percentage": "95%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "You can always count on her to tell the truth."
+          },
+          {
+            "type": "生活",
+            "en": "You can count on her to finish the report on time."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "You can always count on her to tell the truth.",
+      "cloze_sentence": "You can always 【 ________ 】 her to tell the truth.",
+      "answer": "count on",
+      "options": [
+        "run away",
+        "get away",
+        "deal with",
+        "count on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Rely on or trust SB/STH; expect STH with confidence",
+      "percentage": "95%",
+      "hint": "COUNT ON（依靠、指望、信賴）"
+    }
+  },
+  {
+    "id": 164,
+    "day": 17,
+    "verb": "DEAL WITH",
+    "zh": "處理、應對、涉及",
+    "category": "Supplement",
+    "page": 34,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take action to handle a problem, task or person",
+        "percentage": "71%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The manager knows how to deal with dificult customers."
+          },
+          {
+            "type": "職場",
+            "en": "Our team deals with customer complaints every day."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Be concerned with or be about a subject",
+        "percentage": "19%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "This chapter deals with the causes of the war."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The manager knows how to deal with dificult customers.",
+      "cloze_sentence": "The manager knows how to 【 ________ 】 dificult customers.",
+      "answer": "deal with",
+      "options": [
+        "run away",
+        "deal with",
+        "get away",
+        "count on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take action to handle a problem, task or person",
+      "percentage": "71%",
+      "hint": "DEAL WITH（處理、應對、涉及）"
+    }
+  },
+  {
+    "id": 165,
+    "day": 17,
+    "verb": "WATCH OUT",
+    "zh": "小心、提防、注意",
+    "category": "Supplement",
+    "page": 34,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Be careful or alert, esp. to avoid danger",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Watch out! There's a car coming."
+          },
+          {
+            "type": "生活",
+            "en": "Watch out for the wet floor near the office entrance."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Watch out! There's a car coming.",
+      "cloze_sentence": "【 ________ 】! There's a car coming.",
+      "answer": "Watch out",
+      "options": [
+        "Watch out",
+        "get away",
+        "run away",
+        "count on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Be careful or alert, esp. to avoid danger",
+      "percentage": "100%",
+      "hint": "WATCH OUT（小心、提防、注意）"
+    }
+  },
+  {
+    "id": 166,
+    "day": 17,
+    "verb": "DROP OFF",
+    "zh": "放下、送達；打瞌睡、減少",
+    "category": "Supplement",
+    "page": 34,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Take SB/STH to a place and leave them there",
+        "percentage": "47%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I'll drop the kids off at school on my way to work."
+          },
+          {
+            "type": "職場",
+            "en": "I'll drop of the documents at your office on my way home."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Decrease in amount, number or intensity",
+        "percentage": "26%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Sales tend to drop of after the holidays."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Fall into a light sleep",
+        "percentage": "16%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She dropped of in front of the television."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I'll drop the kids off at school on my way to work.",
+      "cloze_sentence": "I'll 【 ________ 】 at school on my way to work.",
+      "answer": "drop the kids off",
+      "options": [
+        "get away",
+        "count on",
+        "drop the kids off",
+        "run away"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Take SB/STH to a place and leave them there",
+      "percentage": "47%",
+      "hint": "DROP OFF（放下、送達；打瞌睡、減少）"
+    }
+  },
+  {
+    "id": 167,
+    "day": 17,
+    "verb": "DROP OUT",
+    "zh": "退學、退出、脫離",
+    "category": "Supplement",
+    "page": 34,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Stop attending a school, course, or activity before finishing",
+        "percentage": "85%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He dropped out of university in his second year."
+          },
+          {
+            "type": "職場",
+            "en": "He dropped out of the training programme to take a full-time job."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He dropped out of university in his second year.",
+      "cloze_sentence": "He 【 ________ 】 of university in his second year.",
+      "answer": "dropped out",
+      "options": [
+        "got away",
+        "ran away",
+        "counted on",
+        "dropped out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Stop attending a school, course, or activity before finishing",
+      "percentage": "85%",
+      "hint": "DROP OUT（退學、退出、脫離）"
+    }
+  },
+  {
+    "id": 168,
+    "day": 17,
+    "verb": "PASS AWAY",
+    "zh": "過世、逝世(委婉語)",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "(euphemism)",
+        "definition": "Die",
+        "percentage": "100%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Her grandfather passed away peacefully in his sleep"
+          },
+          {
+            "type": "職場",
+            "en": "The company's founder passed away last year."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Her grandfather passed away peacefully in his sleep",
+      "cloze_sentence": "Her grandfather 【 ________ 】 peacefully in his sleep",
+      "answer": "passed away",
+      "options": [
+        "passed away",
+        "counted on",
+        "ran away",
+        "got away"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Die",
+      "percentage": "100%",
+      "hint": "PASS AWAY（過世、逝世(委婉語)）"
+    }
+  },
+  {
+    "id": 169,
+    "day": 17,
+    "verb": "PASS OUT",
+    "zh": "昏倒、失去知覺；分發",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Lose consciousness; faint",
+        "percentage": "77%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "It was so hot that one ofthe runners passed out."
+          },
+          {
+            "type": "職場",
+            "en": "One of the staff passed out from exhaustion after too much overtime."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Distribute STH to each of a group of people",
+        "percentage": "16%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The teacher passed out the exam papers."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "It was so hot that one ofthe runners passed out.",
+      "cloze_sentence": "It was so hot that one ofthe runners 【 ________ 】.",
+      "answer": "passed out",
+      "options": [
+        "got away",
+        "ran away",
+        "counted on",
+        "passed out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Lose consciousness; faint",
+      "percentage": "77%",
+      "hint": "PASS OUT（昏倒、失去知覺；分發）"
+    }
+  },
+  {
+    "id": 170,
+    "day": 17,
+    "verb": "SIGN UP",
+    "zh": "報名參加、註冊登記",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Agree to take part in or join STH by putting one's name down",
+        "percentage": "89%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Hundreds of students signed up for the free course."
+          },
+          {
+            "type": "生活",
+            "en": "Over fifty employees signed up for the English course."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Hundreds of students signed up for the free course.",
+      "cloze_sentence": "Hundreds of students 【 ________ 】 for the free course.",
+      "answer": "signed up",
+      "options": [
+        "ran away",
+        "got away",
+        "signed up",
+        "counted on"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Agree to take part in or join STH by putting one's name down",
+      "percentage": "89%",
+      "hint": "SIGN UP（報名參加、註冊登記）"
+    }
+  },
+  {
+    "id": 171,
+    "day": 18,
+    "verb": "THROW AWAY",
+    "zh": "扔掉、丟棄、浪費(機會)",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Get rid of STH by putting it in the rubbish",
+        "percentage": "71%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Don't throw away those old newspapers - I need them."
+          },
+          {
+            "type": "職場",
+            "en": "Don't throw away those receipts - we need them for the expense report."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Waste or fail to make use of STH (opportunity, chance, advantage)",
+        "percentage": "23%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "He threw away a great chance to win the game."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Don't throw away those old newspapers - I need them.",
+      "cloze_sentence": "Don't 【 ________ 】 those old newspapers - I need them.",
+      "answer": "throw away",
+      "options": [
+        "hand in",
+        "hand out",
+        "throw away",
+        "calm down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Get rid of STH by putting it in the rubbish",
+      "percentage": "71%",
+      "hint": "THROW AWAY（扔掉、丟棄、浪費(機會)）"
+    }
+  },
+  {
+    "id": 172,
+    "day": 18,
+    "verb": "HAND IN",
+    "zh": "繳交、呈交(報告/作業)",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Give or submit STH to a person in authority",
+        "percentage": "96%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Please hand in your assignments by Friday."
+          },
+          {
+            "type": "職場",
+            "en": "Please hand in your timesheet by the end of the week"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Please hand in your assignments by Friday.",
+      "cloze_sentence": "Please 【 ________ 】 your assignments by Friday.",
+      "answer": "hand in",
+      "options": [
+        "throw away",
+        "hand in",
+        "calm down",
+        "hand out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Give or submit STH to a person in authority",
+      "percentage": "96%",
+      "hint": "HAND IN（繳交、呈交(報告/作業)）"
+    }
+  },
+  {
+    "id": 173,
+    "day": 18,
+    "verb": "HAND OUT",
+    "zh": "分發、發放",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Give STH to each member of a group; distribute",
+        "percentage": "90%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Volunteers handed out leaflets to passers-by"
+          },
+          {
+            "type": "職場",
+            "en": "The manager handed out the new name cards to the team."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Volunteers handed out leaflets to passers-by",
+      "cloze_sentence": "Volunteers 【 ________ 】 leaflets to passers-by",
+      "answer": "handed out",
+      "options": [
+        "handed in",
+        "handed out",
+        "threw away",
+        "calmed down"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Give STH to each member of a group; distribute",
+      "percentage": "90%",
+      "hint": "HAND OUT（分發、發放）"
+    }
+  },
+  {
+    "id": 174,
+    "day": 18,
+    "verb": "CALM DOWN",
+    "zh": "冷靜下來、鎮定",
+    "category": "Supplement",
+    "page": 35,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become or make SB become calmer and less upset or excited",
+        "percentage": "96%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "It took a while for her to calm down after the argument."
+          },
+          {
+            "type": "職場",
+            "en": "Take a deep breath and calm down before the presentation."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "It took a while for her to calm down after the argument.",
+      "cloze_sentence": "It took a while for her to 【 ________ 】 after the argument.",
+      "answer": "calm down",
+      "options": [
+        "hand out",
+        "hand in",
+        "calm down",
+        "throw away"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Become or make SB become calmer and less upset or excited",
+      "percentage": "96%",
+      "hint": "CALM DOWN（冷靜下來、鎮定）"
+    }
+  },
+  {
+    "id": 175,
+    "day": 18,
+    "verb": "CHEER UP",
+    "zh": "振作起來、使高興",
+    "category": "Supplement",
+    "page": 36,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become or make SB become happier or less sad",
+        "percentage": "93%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "I bought her some flowers to cheer her up."
+          },
+          {
+            "type": "職場",
+            "en": "The surprise bonus really cheered up the whole team."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "I bought her some flowers to cheer her up.",
+      "cloze_sentence": "I bought her some flowers to 【 ________ 】.",
+      "answer": "cheer her up",
+      "options": [
+        "hand out",
+        "cheer her up",
+        "throw away",
+        "hand in"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Become or make SB become happier or less sad",
+      "percentage": "93%",
+      "hint": "CHEER UP（振作起來、使高興）"
+    }
+  },
+  {
+    "id": 176,
+    "day": 18,
+    "verb": "SHOW OFF",
+    "zh": "炫耀、賣弄",
+    "category": "Supplement",
+    "page": 36,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Try to impress others by displaying one's abilities or possessions",
+        "percentage": "87%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "He's always showing off his new sports car."
+          },
+          {
+            "type": "生活",
+            "en": "He likes to show of his new gadgets at the office."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "He's always showing off his new sports car.",
+      "cloze_sentence": "He's always 【 ________ 】 his new sports car.",
+      "answer": "showing off",
+      "options": [
+        "handing in",
+        "handing out",
+        "throwing away",
+        "showing off"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Try to impress others by displaying one's abilities or possessions",
+      "percentage": "87%",
+      "hint": "SHOW OFF（炫耀、賣弄）"
+    }
+  },
+  {
+    "id": 177,
+    "day": 18,
+    "verb": "WRAP UP",
+    "zh": "圓滿結束、總結；包好",
+    "category": "Supplement",
+    "page": 36,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Finish or complete STH",
+        "percentage": "46%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "Let's wrap up the meeting and continue tomorrow."
+          },
+          {
+            "type": "職場",
+            "en": "Let's wrap up the meeting; we can continue tomorrow."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Cover STH by folding paper or material around it",
+        "percentage": "32%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "She spent the evening wrapping up the Christmas presents."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Put on warm clothes",
+        "percentage": "15%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Wrap up well - it's freezing outside"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "Let's wrap up the meeting and continue tomorrow.",
+      "cloze_sentence": "Let's 【 ________ 】 the meeting and continue tomorrow.",
+      "answer": "wrap up",
+      "options": [
+        "wrap up",
+        "throw away",
+        "hand in",
+        "hand out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Finish or complete STH",
+      "percentage": "46%",
+      "hint": "WRAP UP（圓滿結束、總結；包好）"
+    }
+  },
+  {
+    "id": 178,
+    "day": 18,
+    "verb": "WARM UP",
+    "zh": "暖身、熱身；使活躍",
+    "category": "Supplement",
+    "page": 36,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Prepare the body for exercise or activity by gentle exertion",
+        "percentage": "44%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "The players warmed up before the match."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Become or make STH become warmer",
+        "percentage": "41%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "The room soon warmed up once the heater was on."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "The players warmed up before the match.",
+      "cloze_sentence": "The players 【 ________ 】 before the match.",
+      "answer": "warmed up",
+      "options": [
+        "handed in",
+        "threw away",
+        "warmed up",
+        "handed out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Prepare the body for exercise or activity by gentle exertion",
+      "percentage": "44%",
+      "hint": "WARM UP（暖身、熱身；使活躍）"
+    }
+  },
+  {
+    "id": 179,
+    "day": 18,
+    "verb": "USE UP",
+    "zh": "用光、耗盡",
+    "category": "Supplement",
+    "page": 36,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Consume the whole of STH so that none remains 1o",
+        "percentage": "0%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "We've used up all the milk, so I'll buy some more."
+          },
+          {
+            "type": "職場",
+            "en": "We've used up this month's marketing budget already"
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "We've used up all the milk, so I'll buy some more.",
+      "cloze_sentence": "We've 【 ________ 】 all the milk, so I'll buy some more.",
+      "answer": "used up",
+      "options": [
+        "handed in",
+        "used up",
+        "handed out",
+        "threw away"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Consume the whole of STH so that none remains 1o",
+      "percentage": "0%",
+      "hint": "USE UP（用光、耗盡）"
+    }
+  },
+  {
+    "id": 180,
+    "day": 18,
+    "verb": "GET AROUND",
+    "zh": "四處走動；避開、繞過(難題)；流傳開來",
+    "category": "Supplement",
+    "page": 37,
+    "senses": [
+      {
+        "sense_num": 1,
+        "pattern": "",
+        "definition": "Move or travel from place to place",
+        "percentage": "39%",
+        "examples": [
+          {
+            "type": "生活",
+            "en": "It's easy to get around the city by bike."
+          },
+          {
+            "type": "職場",
+            "en": "It's easy to get around Taipei by MRT when visiting clients."
+          }
+        ]
+      },
+      {
+        "sense_num": 2,
+        "pattern": "",
+        "definition": "Avoid or find a way past a problem, rule or restriction",
+        "percentage": "31%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "There are ways to get around these regulations."
+          }
+        ]
+      },
+      {
+        "sense_num": 1,
+        "pattern": "(Of news)",
+        "definition": "Become widely known; circulate",
+        "percentage": "17%",
+        "examples": [
+          {
+            "type": "通用",
+            "en": "Word soon got around that they were getting married."
+          }
+        ]
+      }
+    ],
+    "quiz": {
+      "sentence": "It's easy to get around the city by bike.",
+      "cloze_sentence": "It's easy to 【 ________ 】 the city by bike.",
+      "answer": "get around",
+      "options": [
+        "get around",
+        "throw away",
+        "hand in",
+        "hand out"
+      ],
+      "example_type": "生活",
+      "sense_definition": "Move or travel from place to place",
+      "percentage": "39%",
+      "hint": "GET AROUND（四處走動；避開、繞過(難題)；流傳開來）"
+    }
+  }
+];
