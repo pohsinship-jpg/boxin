@@ -115,16 +115,19 @@
 
   // Theme Handling
   function initTheme() {
+    if (window.isUnifiedThemeControlled) return;
     const savedTheme = localStorage.getItem('mb_theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    el.themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌓';
-    el.themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('mb_theme', next);
-      el.themeToggle.textContent = next === 'dark' ? '☀️' : '🌓';
-    });
+    if (el.themeToggle) {
+      el.themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌓';
+      el.themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('mb_theme', next);
+        el.themeToggle.textContent = next === 'dark' ? '☀️' : '🌓';
+      });
+    }
   }
 
   // Global Statistics Update

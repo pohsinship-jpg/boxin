@@ -691,14 +691,30 @@
     });
 
     // Unified Theme Switcher
+    window.isUnifiedThemeControlled = true;
     const themeToggleBtn = document.getElementById('btn-theme-toggle');
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('mb_exam_theme', newTheme);
-      localStorage.setItem('phrasalflow_theme', newTheme);
-    });
+    function applyUnifiedTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('mb_theme', theme);
+      localStorage.setItem('mb_exam_theme', theme);
+      localStorage.setItem('phrasalflow_theme', theme);
+      if (themeToggleBtn) {
+        themeToggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggleBtn.setAttribute('title', theme === 'dark' ? '切換為淺色模式' : '切換為深色模式');
+      }
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyUnifiedTheme(newTheme);
+      });
+      // Initial theme apply
+      const savedTheme = localStorage.getItem('mb_theme') || localStorage.getItem('phrasalflow_theme') || 'dark';
+      applyUnifiedTheme(savedTheme);
+    }
   </script>
 
   <!-- Data Scripts (Already on GitHub!) -->

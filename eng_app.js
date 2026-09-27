@@ -767,24 +767,31 @@ tabBtns.forEach(btn => {
 // THEME & MODALS
 // =========================================================================
 const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
-  state.theme = state.theme === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', state.theme);
-  localStorage.setItem('phrasalflow_theme', state.theme);
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    state.theme = state.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', state.theme);
+    localStorage.setItem('phrasalflow_theme', state.theme);
+    themeToggle.textContent = state.theme === 'dark' ? '🌙' : '☀️';
+  });
   themeToggle.textContent = state.theme === 'dark' ? '🌙' : '☀️';
-});
-
-// Initialize Theme
-document.documentElement.setAttribute('data-theme', state.theme);
-themeToggle.textContent = state.theme === 'dark' ? '🌙' : '☀️';
+}
 
 // GitHub Modal
-document.getElementById('github-guide-btn').addEventListener('click', () => {
-  document.getElementById('github-modal').className = 'modal-overlay active';
-});
-document.getElementById('github-modal-close').addEventListener('click', () => {
-  document.getElementById('github-modal').className = 'modal-overlay';
-});
+const ghGuideBtn = document.getElementById('github-guide-btn');
+if (ghGuideBtn) {
+  ghGuideBtn.addEventListener('click', () => {
+    const modal = document.getElementById('github-modal');
+    if (modal) modal.className = 'modal-overlay active';
+  });
+}
+const ghCloseBtn = document.getElementById('github-modal-close');
+if (ghCloseBtn) {
+  ghCloseBtn.addEventListener('click', () => {
+    const modal = document.getElementById('github-modal');
+    if (modal) modal.className = 'modal-overlay';
+  });
+}
 
 // Celebration Modal buttons
 document.getElementById('modal-review-btn').addEventListener('click', () => {
