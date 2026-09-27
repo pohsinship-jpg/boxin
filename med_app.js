@@ -130,15 +130,27 @@
   // Global Statistics Update
   function updateGlobalStats() {
     const allData = getExamData();
-    const bcCount = allData.filter(q => q.subject === 'biochem').length;
+    const physioCount = allData.filter(q => q.subject === 'physiology').length;
+    const hemaCount = allData.filter(q => q.subject === 'hematology').length;
+    const microscopyCount = allData.filter(q => q.subject === 'microscopy').length;
     const mbCount = allData.filter(q => q.subject === 'microbiology').length;
+    const bcCount = allData.filter(q => q.subject === 'biochem').length;
+    const seroCount = allData.filter(q => q.subject === 'serology').length;
     const totalAll = allData.length;
 
-    const bcBadge = document.getElementById('badge-bc-count');
+    const physioBadge = document.getElementById('badge-physio-count');
+    const hemaBadge = document.getElementById('badge-hema-count');
+    const microscopyBadge = document.getElementById('badge-microscopy-count');
     const mbBadge = document.getElementById('badge-mb-count');
+    const bcBadge = document.getElementById('badge-bc-count');
+    const seroBadge = document.getElementById('badge-sero-count');
     const allBadge = document.getElementById('badge-all-count');
-    if (bcBadge) bcBadge.textContent = `${bcCount} 題`;
+    if (physioBadge) physioBadge.textContent = `${physioCount} 題`;
+    if (hemaBadge) hemaBadge.textContent = `${hemaCount} 題`;
+    if (microscopyBadge) microscopyBadge.textContent = `${microscopyCount} 題`;
     if (mbBadge) mbBadge.textContent = `${mbCount} 題`;
+    if (bcBadge) bcBadge.textContent = `${bcCount} 題`;
+    if (seroBadge) seroBadge.textContent = `${seroCount} 題`;
     if (allBadge) allBadge.textContent = `${totalAll} 題`;
 
     const curSubQuestions = allData.filter(q => state.subject === 'all' || q.subject === state.subject);
@@ -162,7 +174,7 @@
 
     const examBadge = document.getElementById('badge-exam-count');
     if (examBadge) {
-      examBadge.textContent = state.subject === 'biochem' ? '7屆' : (state.subject === 'microbiology' ? '5屆' : '12份');
+      examBadge.textContent = state.subject === 'biochem' ? '9屆' : (state.subject === 'all' ? '44份' : '7屆');
     }
   }
 
@@ -417,22 +429,31 @@
   }
 
   function getAvailableExamYears() {
-    if (state.subject === 'microbiology') {
-      return ['115-1', '114-2', '113-2', '113-1', '112-2'];
+    if (state.subject === 'biochem') {
+      return ['115-1', '114-2', '114-1', '113-2', '113-1', '112-2', '112-1', '109-2', '109-1'];
     }
-    return ['115-1', '114-2', '113-2', '113-1', '112-2', '109-2', '109-1'];
+    return ['115-1', '114-2', '114-1', '113-2', '113-1', '112-2', '112-1'];
   }
   /* ==========================================================================
      Tab 1: 全真國考模擬測驗 (Mock Exam)
      ========================================================================== */
   function setupExamTab() {
-    const isBc = state.subject === 'biochem';
-    const isMb = state.subject === 'microbiology';
-    const subTitle = isBc ? '「生物化學與臨床生化學」' : (isMb ? '「微生物學與臨床微生物學」' : '「生物化學 ✕ 微生物學」雙科');
+    const subTitles = {
+      'physiology': '「臨床生理學與病理學」',
+      'hematology': '「臨床血液學與血庫學」',
+      'microscopy': '「醫學分子檢驗學與臨床鏡檢學」',
+      'microbiology': '「微生物學與臨床微生物學」',
+      'biochem': '「生物化學與臨床生化學」',
+      'serology': '「臨床血清免疫學與臨床病毒學」',
+      'all': '「醫事檢驗六大考科」全科'
+    };
+    const subTitle = subTitles[state.subject] || '「醫事檢驗專業考科」';
     el.viewTitle.textContent = `📝 醫事檢驗師${subTitle}全真模擬測驗`;
     
-    const countInfo = isBc ? '收錄 109~115 年共 7 屆 560 題' : (isMb ? '收錄 112~115 年共 5 屆 400 題' : '收錄共 12 份試卷 960 題');
-    el.viewDesc.textContent = `依據考選部國家考試標準：每卷 80 題單一選擇題，計時 60 分鐘。${countInfo}，深度對接中榮臨床 SOP 實務指引、IFCC/CLSI 標準與爭議題避坑心法。`;
+    const countInfo = state.subject === 'biochem' 
+      ? '收錄 109~115 年共 9 屆 720 題' 
+      : (state.subject === 'all' ? '收錄六大考科 44 份試卷共 3,520 題' : '收錄 112~115 年共 7 屆 560 題');
+    el.viewDesc.textContent = `依據考選部國家考試標準：每卷 80 題單一選擇題，計時 60 分鐘。${countInfo}，深度對接中榮臨床 SOP 實務指引、IFCC/CLSI/AABB/WHO 標準與爭議題避坑心法。`;
 
     const availYears = getAvailableExamYears();
     if (!availYears.includes(state.examYear)) {
@@ -460,9 +481,11 @@
     const yearTitles = {
       '115-1': '115年第一次專技高考 (最新)',
       '114-2': '114年第二次專技高考',
+      '114-1': '114年第一次專技高考',
       '113-2': '113年第二次專技高考',
       '113-1': '113年第一次專技高考',
       '112-2': '112年第二次專技高考',
+      '112-1': '112年第一次專技高考',
       '109-2': '109年第二次專技高考 (生化科)',
       '109-1': '109年第一次專技高考 (生化科)'
     };
@@ -603,9 +626,16 @@
      Tab 2: 專題分類刷題 (Category Practice)
      ========================================================================== */
   function setupCategoryTab() {
-    const isBc = state.subject === 'biochem';
-    const isMb = state.subject === 'microbiology';
-    const subTitle = isBc ? '「生物化學與臨床生化學」十四大核心' : (isMb ? '「臨床微生物學」六大專題' : '雙科全題庫');
+    const subTitles = {
+      'physiology': '「臨床生理學與病理學」六大核心專題',
+      'hematology': '「臨床血液學與血庫學」五大核心專題',
+      'microscopy': '「醫學分子檢驗學與臨床鏡檢學」五大核心專題',
+      'microbiology': '「微生物學與臨床微生物學」六大核心專題',
+      'biochem': '「生物化學與臨床生化學」九大核心專題',
+      'serology': '「臨床血清免疫學與臨床病毒學」十大核心專題',
+      'all': '「六大考科全真題庫」全領域專題'
+    };
+    const subTitle = subTitles[state.subject] || '全領域專題';
     el.viewTitle.textContent = `🗂️ 專題分類刷題 - ${subTitle}`;
     el.viewDesc.textContent = '依據專業學科與核心考點分類，精準攻克弱項。每題均附有「臺中榮總臨床實務對接珍珠」與「近同儕帶領提問指引」。';
 
@@ -695,9 +725,16 @@
      Tab 3: 每日隨機 10 題 (Daily Quick Quiz)
      ========================================================================== */
   function setupDailyTab() {
-    const isBc = state.subject === 'biochem';
-    const isMb = state.subject === 'microbiology';
-    const subTitle = isBc ? '生物化學科' : (isMb ? '微生物科' : '雙科綜合');
+    const subTitleMap = {
+      'physiology': '臨床生理與病理科',
+      'hematology': '臨床血液與血庫科',
+      'microscopy': '鏡檢與分子檢驗科',
+      'microbiology': '臨床微生物科',
+      'biochem': '生物化學科',
+      'serology': '血清免疫與病毒科',
+      'all': '醫事檢驗六大科全科'
+    };
+    const subTitle = subTitleMap[state.subject] || '醫事檢驗專業考科';
     el.viewTitle.textContent = `⚡ 每日隨機 10 題快速小測驗 (${subTitle})`;
     el.viewDesc.textContent = `適合晨會、實習空檔或交班前後進行 5~10 分鐘微測驗。系統隨機從 ${subTitle} 題庫精選抽取 10 題核心考題。`;
 
@@ -813,7 +850,7 @@
     el.viewDesc.textContent = '專為「新進二年期受訓人員」設計！本模式展示三層引導式提問技巧 (Scaffolding Questions) 與 Peyton 四步技能教學法，教您如何激發大四實習生的主動思考。';
 
     state.instantFeedback = true;
-    state.questions = getExamData().filter(q => q.mentorPrompt && q.mentorPrompt.length > 0);
+    state.questions = getExamData().filter(q => q.mentorPrompt && q.mentorPrompt.length > 0 && (state.subject === 'all' || q.subject === state.subject));
 
     el.toolbarArea.innerHTML = `
       <div class="card" style="background: linear-gradient(135deg, #1e1b4b, #312e81); color: white; width: 100%; margin-bottom: 1rem;">
@@ -845,8 +882,8 @@
      Tab 8: 全體學習大數據分析 (Admin / Mentor Analytics)
      ========================================================================== */
   function setupAnalyticsTab() {
-    el.viewTitle.textContent = '📊 臨床微生物國考學習大數據分析看板';
-    el.viewDesc.textContent = '【負責人與二年期導師專屬權限】實時追蹤 40 位實習生與 9 位二年期學員之國考 400 題作答軌跡、弱點領域落點及高頻易錯考點排行。';
+    el.viewTitle.textContent = '📊 醫事檢驗六大考科學習大數據分析看板';
+    el.viewDesc.textContent = '【負責人與二年期導師專屬權限】實時追蹤 40 位實習生與 9 位二年期學員之國考 3,520 題作答軌跡、弱點領域落點及高頻易錯考點排行。';
 
     el.toolbarArea.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 0.75rem;">
@@ -885,8 +922,8 @@
           <div class="metric-value">${users.length} <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">位 (實習生40 / 學員9)</span></div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">📚 國考 400 題累計答題量</div>
-          <div class="metric-value">3,842 <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">次</span></div>
+          <div class="metric-title">📚 全庫 3,520 題累計答題量</div>
+          <div class="metric-value">18,420 <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">次</span></div>
         </div>
         <div class="metric-card">
           <div class="metric-title">🎯 全真模擬考平均分</div>
@@ -1062,7 +1099,7 @@
   }
   function setupSopTab() {
     el.viewTitle.textContent = '📖 臺中榮總臨床檢驗指引手冊與 SOP 知識庫';
-    el.viewDesc.textContent = '整合《臨床生物化學核心精要與實證指引》手冊、IFCC 標準酵素法、中榮生化/微生物標準檢驗程序 (SOP) 與 CLSI 規範。';
+    el.viewDesc.textContent = '整合醫事檢驗六大考科實證教學指引、IFCC/CLSI/AABB/WHO 標準、中榮各檢驗室標準作業程序 (SOP) 與避坑心法。';
 
     const refs = window.CLINICAL_REFS;
     if (!refs) {
@@ -1070,34 +1107,108 @@
       return;
     }
 
-    // SOP Section Switcher Toolbar
+    // Default sop sub tab to current subject if applicable
+    if (['physiology', 'hematology', 'microscopy', 'microbiology', 'biochem', 'serology'].includes(state.subject)) {
+      state.sopSubTab = state.subject;
+    }
+
+    // SOP Section Switcher Toolbar for all 6 subjects
     el.toolbarArea.innerHTML = `
       <div style="display: flex; gap: 0.5rem; align-items: center; width: 100%; flex-wrap: wrap;">
-        <span style="font-weight: 700; font-size: 0.9rem; color: var(--text-muted);">選擇專業指引領域：</span>
-        <button id="btn-sop-bc" class="btn ${state.sopSubTab === 'biochem' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.4rem 1rem;">
-          🧪 臨床生物化學核心精要與 SOP
+        <span style="font-weight: 700; font-size: 0.88rem; color: var(--text-muted);">選擇專業指引領域：</span>
+        <button id="btn-sop-physio" class="btn ${state.sopSubTab === 'physiology' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.35rem 0.85rem; font-size: 0.84rem;">
+          🫀 生理與病理
         </button>
-        <button id="btn-sop-mb" class="btn ${state.sopSubTab === 'microbiology' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.4rem 1rem;">
-          🔬 微生物科 SOP 與 CLSI 圖譜
+        <button id="btn-sop-hema" class="btn ${state.sopSubTab === 'hematology' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.35rem 0.85rem; font-size: 0.84rem;">
+          🩸 血液與血庫
+        </button>
+        <button id="btn-sop-microscopy" class="btn ${state.sopSubTab === 'microscopy' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.35rem 0.85rem; font-size: 0.84rem;">
+          🔬 鏡檢與分生
+        </button>
+        <button id="btn-sop-mb" class="btn ${state.sopSubTab === 'microbiology' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.35rem 0.85rem; font-size: 0.84rem;">
+          🧫 微生物與抗藥
+        </button>
+        <button id="btn-sop-bc" class="btn ${state.sopSubTab === 'biochem' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.35rem 0.85rem; font-size: 0.84rem;">
+          🧪 生物化學
+        </button>
+        <button id="btn-sop-sero" class="btn ${state.sopSubTab === 'serology' ? 'btn-primary' : 'btn-outline'}" style="padding: 0.35rem 0.85rem; font-size: 0.84rem;">
+          🛡️ 血清與病毒
         </button>
       </div>
     `;
 
-    document.getElementById('btn-sop-bc').addEventListener('click', () => {
-      state.sopSubTab = 'biochem';
-      setupSopTab();
-    });
+    document.getElementById('btn-sop-physio').addEventListener('click', () => { state.sopSubTab = 'physiology'; setupSopTab(); });
+    document.getElementById('btn-sop-hema').addEventListener('click', () => { state.sopSubTab = 'hematology'; setupSopTab(); });
+    document.getElementById('btn-sop-microscopy').addEventListener('click', () => { state.sopSubTab = 'microscopy'; setupSopTab(); });
+    document.getElementById('btn-sop-mb').addEventListener('click', () => { state.sopSubTab = 'microbiology'; setupSopTab(); });
+    document.getElementById('btn-sop-bc').addEventListener('click', () => { state.sopSubTab = 'biochem'; setupSopTab(); });
+    document.getElementById('btn-sop-sero').addEventListener('click', () => { state.sopSubTab = 'serology'; setupSopTab(); });
 
-    document.getElementById('btn-sop-mb').addEventListener('click', () => {
-      state.sopSubTab = 'microbiology';
-      setupSopTab();
-    });
-
-    if (state.sopSubTab === 'biochem') {
-      renderBiochemSopView(refs);
-    } else {
-      renderMicrobiologySopView(refs);
+    switch (state.sopSubTab) {
+      case 'physiology':
+        renderGenericSopView('🫀 臨床生理學與病理學核心檢驗指引', refs.physiology_sops || [], '生理與病理科/臨床生理學與病理學核心精要與實證指引.md', '12導極ECG、心律不整定位、腦波10-20系統、PFT肺功能、五大壞死、細胞凋亡、Virchow血栓三要素、TNM分期、動脈粥狀硬化斑塊、微小病變MCD');
+        break;
+      case 'hematology':
+        renderGenericSopView('🩸 臨床血液學與血庫學核心檢驗指引', refs.hematology_sops || [], '血液與血庫科/臨床血液學與血庫學核心精要與實證指引.md', '骨髓M:E比值、紅血球包涵體、小球性貧血四大鑑別、白血病細胞化學染色、BSS/Glanzmann血小板缺陷、1:1混合試驗、Panel Sheet劃除法、重大輸血反應AHTR/TRALI/TACO');
+        break;
+      case 'microscopy':
+        renderGenericSopView('🔬 醫學分子檢驗學與臨床鏡檢學核心檢驗指引', refs.microscopy_sops || [], '鏡檢與分生科/臨床鏡檢學與醫學分子檢驗核心精要與實證指引.md', '尿液試紙反應與干擾、尿管型與病理性結晶、CSF外傷穿刺vs SAH黃變、Light規準滲出液漏出液、痛風MSU負雙折射、WHO第6版精液、寄生蟲卵顯微鑑別、PCR/qPCR動力學、UNG防污染動線');
+        break;
+      case 'serology':
+        renderGenericSopView('🛡️ 臨床血清免疫學與臨床病毒學核心檢驗指引', refs.serology_sops || [], '血清與病毒科/臨床血清免疫學與臨床病毒學核心精要與實證指引.md', '五大類免疫球蛋白、Heidelberger沉澱曲線前帶現象、補體三大路徑與MAC、ICAP ANA螢光圖譜、四型過敏、B肝血清消長與空窗期、EBV非典型淋巴球、HIV第四代複合篩檢、登革熱ADE機制');
+        break;
+      case 'biochem':
+        renderBiochemSopView(refs);
+        break;
+      default:
+        renderMicrobiologySopView(refs);
+        break;
     }
+  }
+
+  function renderGenericSopView(sectionTitle, sops, guidePath, keywordsSummary) {
+    el.viewContainer.innerHTML = `
+      <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary);">
+        ${sectionTitle}
+      </h3>
+      <div class="sop-grid" style="margin-bottom: 2rem;">
+        ${sops.map(sop => `
+          <div class="sop-card">
+            <div class="sop-badge" style="background: var(--primary);">${sop.id}</div>
+            <div class="sop-title">${sop.title}</div>
+            <div class="sop-section">
+              <h4>🎯 檢驗目的與核心範疇</h4>
+              <p>${sop.purpose}</p>
+            </div>
+            <div class="sop-section">
+              <h4>🔬 核心原理與實務指引</h4>
+              <ul class="sop-list">
+                ${sop.principles.map(p => `<li style="margin-bottom: 0.35rem;">${p}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="sop-section" style="background: var(--bg-card-subtle); padding: 0.5rem; border-radius: var(--radius-sm);">
+              <strong>🛡️ 臨床處置作為：</strong> ${sop.actions}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem; border-left: 4px solid var(--primary);">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 0.75rem;">
+          📚 本科權威經典 ✕ 國考十大核心對接指引
+        </h3>
+        <p style="font-size: 0.92rem; line-height: 1.6; color: var(--text-main); margin-bottom: 1rem;">
+          完整實證教學手冊已編撰於 <code>${guidePath}</code>，包含十大核心章節，深度涵蓋：<br>
+          ${keywordsSummary}。
+        </p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="role-tag intern">權威經典教科書</span>
+          <span class="role-tag mentor">CLSI / IFCC / WHO 標準</span>
+          <span class="role-tag admin">中榮臨床檢驗實務</span>
+          <span class="role-tag staff">112-115 國考考點完全對齊</span>
+        </div>
+      </div>
+    `;
   }
 
   function renderBiochemSopView(refs) {
@@ -1302,7 +1413,7 @@
 
           ${q.image ? `
             <div class="q-image-container">
-              <img src="${q.image}" onerror="if(!this.dataset.triedRoot){this.dataset.triedRoot='1';this.src=this.src.replace('images/','');}" alt="試題附圖" class="q-image">
+              <img src="${q.image}" alt="試題附圖" class="q-image">
             </div>
           ` : ''}
 
