@@ -8,7 +8,7 @@ window.CLINICAL_REFS = {
     {
       id: "ML-SIP-020",
       title: "ML-SIP-020 印度墨染色標準檢驗程序",
-      dept: "臺中榮民總醫院 病理檢驗部 微生物科",
+      dept: "臨床病理檢驗部 微生物科",
       purpose: "利用負染色法快速檢測腦脊髓液 (CSF) 或體液檢體中之新型隱球菌 (Cryptococcus neoformans)。",
       principle: "印度墨 (India ink) 無法穿透新型隱球菌外層厚多醣莢膜 (Polysaccharide capsule)，在暗黑色墨汁顆粒背景下，菌體顯現清晰透明亮光暈 (Halo)。",
       steps: [
@@ -24,7 +24,7 @@ window.CLINICAL_REFS = {
     {
       id: "ML-SIP-021",
       title: "ML-SIP-021 真菌染色（10% KOH）標準檢驗程序",
-      dept: "臺中榮民總醫院 病理檢驗部 微生物科",
+      dept: "臨床病理檢驗部 微生物科",
       purpose: "用於皮屑、指甲屑、毛髮、皮下組織及深部組織檢體之真菌菌絲與孢子快速篩檢。",
       principle: "10% 氫氧化鉀 (KOH) 為強鹼，能迅速溶解人體組織角蛋白 (Keratin)、黏蛋白與宿主細胞，但真菌細胞壁含幾丁質 (Chitin) 與葡聚醣可耐受 KOH，使背景透明化凸顯真菌結構。",
       steps: [
@@ -40,7 +40,7 @@ window.CLINICAL_REFS = {
     {
       id: "ML-SIP-024",
       title: "ML-SIP-024 臨床黴菌培養與鑑定標準檢驗程序",
-      dept: "臺中榮民總醫院 病理檢驗部 微生物科",
+      dept: "臨床病理檢驗部 微生物科",
       purpose: "規範深部真菌、淺部皮癬菌及雙形性致病真菌之臨床分離、純化與鑑定標準流程。",
       principle: "依據真菌對營養、抗生素耐受性與生長溫度之特性，使用選擇性與鑑別性培養基組合進行分離。",
       media: [
@@ -175,7 +175,7 @@ window.CLINICAL_REFS = {
     {
       id: "BC-SOP-001",
       title: "生化檢體採集規範與重大分析前干擾 (H-I-L Index) 處置",
-      dept: "臺中榮民總醫院 病理檢驗部 生化科",
+      dept: "臨床病理檢驗部 生化科",
       purpose: "規範各類抗凝劑採血管適用範疇，並建立溶血 (Hemolysis)、黃疸 (Icterus)、乳糜 (Lipemia) 之系統性校驗與干擾排除機制。",
       principles: [
         "綠頭管 (Heparin 鋰鹽/鈉鹽)：活化 Antithrombin III，為急件生化與血氣分析最標準抗凝劑。",
@@ -189,7 +189,7 @@ window.CLINICAL_REFS = {
     {
       id: "BC-SOP-002",
       title: "IFCC 臨床酵素連續監測法 (340 nm 偶聯動力學) 作業程序",
-      dept: "臺中榮民總醫院 病理檢驗部 生化科",
+      dept: "臨床病理檢驗部 生化科",
       purpose: "標準化測定血清中 AST, ALT, CK, LDH, ALP 之催化活性，確保測定在零級動力學 (Zero-order kinetics) 條件下進行。",
       principles: [
         "測定條件：受質濃度飽和 ([S] ≧ 10~20 Km)，反應速率僅與酵素活性成正比；在 37°C 恆溫槽中連續記錄吸光差 (ΔA/min)。",
@@ -203,7 +203,7 @@ window.CLINICAL_REFS = {
     {
       id: "BC-SOP-003",
       title: "高陰離子間隙代謝性酸中毒 (Anion Gap) 與血液氣體分析評估",
-      dept: "臺中榮民總醫院 病理檢驗部 生化科 / 急診檢驗室",
+      dept: "臨床病理檢驗部 生化科 / 急診檢驗室",
       purpose: "利用電解質與動脈血氣分析，快速鑑別代謝性/呼吸性酸鹼失衡、代償狀態與潛在致命中毒毒物。",
       principles: [
         "陰離子間隙公式：AG = [Na+] - ([Cl-] + [HCO3-])，正常參考區間為 8 ~ 16 mmol/L。",
@@ -217,7 +217,7 @@ window.CLINICAL_REFS = {
     {
       id: "BC-SOP-004",
       title: "血清蛋白電泳 (SPEP) 與免疫固定電泳 (IFE) 臨床判讀指引",
-      dept: "臺中榮民總醫院 病理檢驗部 生化科",
+      dept: "臨床病理檢驗部 生化科",
       purpose: "藉由瓊脂糖凝膠或毛細管電泳，精準分型多發性骨髓瘤單株免疫球蛋白 (M-protein) 及各類重大器質性疾病圖譜。",
       principles: [
         "pH 8.6 電泳五大區帶：Albumin (泳動最快)、α1、α2、β、γ-球蛋白 (泳動最慢)。",
@@ -231,7 +231,7 @@ window.CLINICAL_REFS = {
     {
       id: "BC-SOP-005",
       title: "血糖檢驗 (HK法/GOD法) 與糖尿病急慢性監測指標解析",
-      dept: "臺中榮民總醫院 病理檢驗部 生化科",
+      dept: "臨床病理檢驗部 生化科",
       purpose: "規範己糖激酶參考法、糖化血色素 HPLC 測定與糖尿病酮酸中毒 (DKA) 鑑別重點。",
       principles: [
         "己糖激酶法 (HK 法)：國際參考法，利用 HK 與 G6PD 偶聯反應於 340 nm 測量 NADPH 生成，專一性極高不受維生素 C 干擾。",
@@ -248,7 +248,7 @@ window.CLINICAL_REFS = {
     {
       id: "PHY-SOP-001",
       title: "12 導極心電圖 (12-Lead ECG) 標準操作與解剖定位程序",
-      dept: "臺中榮民總醫院 生理檢查室 / 心臟血管中心",
+      dept: "臨床檢驗醫學中心 生理檢查室 / 心臟血管中心",
       purpose: "規範 12 導極心電圖標準安放位置、Einthoven 定律與急性心肌梗塞導極定位判讀。",
       principles: [
         "肢體導極：Lead I (RA -> LA), Lead II (RA -> LL), Lead III (LA -> LL)；Einthoven 定律：Lead II = Lead I + Lead III。右腳 (RL) 永遠為地線端。",
@@ -261,7 +261,7 @@ window.CLINICAL_REFS = {
     {
       id: "PHY-SOP-002",
       title: "腦電圖 (EEG) 國際 10-20 系統安放與誘發試驗指引",
-      dept: "臺中榮民總醫院 神經內科檢查室 / 腦波室",
+      dept: "臨床檢驗醫學中心 神經內科檢查室 / 腦波室",
       purpose: "規範頭皮腦電圖電極安裝位置標準、四大基礎生理波頻與癲癇異常放電判讀。",
       principles: [
         "國際 10-20 系統基準點：鼻根 (Nasion)、枕外隆凸 (Inion)、雙耳前點 (Preauricular points)；左側為奇數 (1, 3, 5, 7)、右側為偶數 (2, 4, 6, 8)、中線為 Z (Fz, Cz, Pz)。",
@@ -274,7 +274,7 @@ window.CLINICAL_REFS = {
     {
       id: "PHY-SOP-003",
       title: "肺功能測試 (PFT) 與通氣障礙分類診斷程序",
-      dept: "臺中榮民總醫院 胸腔內科檢查室 / 肺功能室",
+      dept: "臨床檢驗醫學中心 胸腔內科檢查室 / 肺功能室",
       purpose: "利用肺量計與一氧化碳瀰散量 (DLCO)，精準鑑別阻塞型 vs 侷限型通氣障礙與氣喘可逆反應。",
       principles: [
         "肺量計無法直接測得之容量：殘氣量 (RV)、功能性殘氣量 (FRC)、肺總量 (TLC)；需改用氦氣稀釋法或體箱計測量。",
@@ -290,7 +290,7 @@ window.CLINICAL_REFS = {
     {
       id: "HEM-SOP-001",
       title: "骨髓穿刺與切片評估及普魯士藍鐵染色標準程序",
-      dept: "臺中榮民總醫院 血液腫瘤科 / 臨床血液檢驗室",
+      dept: "臨床檢驗醫學中心 血液腫瘤科 / 臨床血液檢驗室",
       purpose: "規範骨髓細胞豐富度計算、粒紅比值 (M:E ratio) 評估與鐵母細胞貧血鑑別。",
       principles: [
         "穿刺部位：成人首選後腸骨脊 (PSIS)；嬰幼兒為脛骨前上緣；胸骨 (Sternum) 僅限抽取嚴禁切片。",
@@ -304,7 +304,7 @@ window.CLINICAL_REFS = {
     {
       id: "HEM-SOP-002",
       title: "不規則抗體篩檢、鑑定盤 (Panel Sheet) 劃除法與交叉試驗作業程序",
-      dept: "臺中榮民總醫院 輸血醫學科 / 血庫室",
+      dept: "臨床檢驗醫學中心 輸血醫學科 / 血庫室",
       purpose: "規範血庫抗篩陽性檢體之非預期性抗體鑑定、消除法判讀與主次配血作業。",
       principles: [
         "DAT vs IAT：DAT 測體內已致敏於 RBC 表面之抗體 (AIHA, HDFN)；IAT 測體外血清游離抗體 (抗篩、交叉試驗)。",
@@ -317,7 +317,7 @@ window.CLINICAL_REFS = {
     {
       id: "HEM-SOP-003",
       title: "急性輸血不良反應 (AHTR/TRALI/TACO) 鑑別與通報指引",
-      dept: "臺中榮民總醫院 輸血委員會 / 血庫室",
+      dept: "臨床檢驗醫學中心 輸血委員會 / 血庫室",
       purpose: "規範急性溶血反應、輸血相關急性肺損傷 (TRALI) 與循環超載 (TACO) 之實驗室鑑別與緊急處置。",
       principles: [
         "急性溶血性輸血反應 (AHTR)：ABO 不合引發血管內溶血；寒顫、發燒、腰痛、血紅素尿、休克、DIC；立即停輸，重新抽血覆核血型、DAT 及血漿游離血紅素。",
@@ -333,7 +333,7 @@ window.CLINICAL_REFS = {
     {
       id: "MIC-SOP-001",
       title: "尿沉渣顯微鏡檢標本製備與管型/結晶標準判讀指引",
-      dept: "臺中榮民總醫院 臨床檢驗科 / 尿液鏡檢室",
+      dept: "臨床檢驗醫學中心 臨床檢驗科 / 尿液鏡檢室",
       purpose: "規範 CLSI GP16 尿沉渣離心濃縮倍數、病理性管型 (Casts) 與異常結晶鑑別標準。",
       principles: [
         "標本製備：取 10-12 mL 新鮮晨尿，以 400 g (約 1500-2000 rpm) 離心 5 分鐘，吸除上清液保留 0.5-1.0 mL 沉渣混勻鏡檢。",
@@ -346,7 +346,7 @@ window.CLINICAL_REFS = {
     {
       id: "MIC-SOP-002",
       title: "腦脊髓液 (CSF) 採檢外傷性穿刺 vs 蜘蛛網膜下腔出血 (SAH) 鑑別程序",
-      dept: "臺中榮民總醫院 急診檢驗室 / 體液鏡檢組",
+      dept: "臨床檢驗醫學中心 急診檢驗室 / 體液鏡檢組",
       purpose: "規範 CSF 腰椎穿刺管收集順序、外觀黃變 (Xanthochromia) 測定與各型腦膜炎鑑別。",
       principles: [
         "四管穿刺順序：第1管生化免疫、第2管微生物、第3管血球計數顯微鏡檢、第4管細胞病理/特殊分析。",
@@ -358,7 +358,7 @@ window.CLINICAL_REFS = {
     {
       id: "MIC-SOP-003",
       title: "臨床分子檢驗實驗室分區防污染與 UNG 酵素防護作業規範",
-      dept: "臺中榮民總醫院 分子病理檢驗科",
+      dept: "臨床檢驗醫學中心 分子病理檢驗科",
       purpose: "規範 PCR 實驗室單向動線物理隔離、氣壓梯級設計與 dUTP/UNG 擴增產物防污染機制。",
       principles: [
         "四區單向動線：試劑配製區 (正壓，嚴禁模板) -> 檢體抽取區 (負壓，生物安全櫃) -> 擴增區 (負壓) -> 產物分析區 (最強負壓，電泳/定序)；人員檢體嚴禁逆行。",
@@ -374,7 +374,7 @@ window.CLINICAL_REFS = {
     {
       id: "SER-SOP-001",
       title: "ICAP 抗核抗體 (ANA) HEp-2 螢光圖譜判讀標準作業程序",
-      dept: "臺中榮民總醫院 過敏免疫風濕科檢驗室",
+      dept: "臨床檢驗醫學中心 過敏免疫風濕科檢驗室",
       purpose: "規範間接免疫螢光法 (IFA) 檢測 HEp-2 細胞核抗體之國際共識 (ICAP) 分類與疾病關聯。",
       principles: [
         "間接免疫螢光受質：HEp-2 人類喉癌細胞 (抗原多、核大、具間期與分裂期細胞)。",
@@ -388,7 +388,7 @@ window.CLINICAL_REFS = {
     {
       id: "SER-SOP-002",
       title: "B 型肝炎 (HBV) 與 C 型肝炎 (HCV) 血清標記消長與分子檢驗矩陣",
-      dept: "臺中榮民總醫院 病毒肝炎檢驗室",
+      dept: "臨床檢驗醫學中心 病毒肝炎檢驗室",
       purpose: "規範肝炎抗原抗體組合判讀、空窗期判定與 HCV RNA 分子定性定量檢驗標準。",
       principles: [
         "HBV 標記核心意義：HBsAg (感染指標)、Anti-HBs (保護性抗體)、HBeAg (活躍複製高傳染力)、Anti-HBe (血清轉換複製減弱)、Anti-HBc IgM (急性感染黃金標記)、Anti-HBc IgG (曾感染標記)。",
@@ -401,7 +401,7 @@ window.CLINICAL_REFS = {
     {
       id: "SER-SOP-003",
       title: "HIV 第四代抗原/抗體複合篩檢 (Ag/Ab Combo) 與分子確診指引",
-      dept: "臺中榮民總醫院 感染科檢驗室 / 病毒室",
+      dept: "臨床檢驗醫學中心 感染科檢驗室 / 病毒室",
       purpose: "規範第四代 EIA/CLIA 篩檢法、抗體鑑別與 HIV RNA 病毒載量檢驗流程。",
       principles: [
         "第四代 Ag/Ab Combo：同時測定 HIV-1/2 抗體與游離 p24 核心衣殼抗原；將檢驗空窗期由 4-6 週縮短至 14 天左右。",

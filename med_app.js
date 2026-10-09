@@ -456,7 +456,7 @@
     const countInfo = state.subject === 'biochem' 
       ? '收錄 109~115 年共 9 屆 720 題' 
       : (state.subject === 'all' ? '收錄六大考科 44 份試卷共 3,520 題' : '收錄 112~115 年共 7 屆 560 題');
-    el.viewDesc.textContent = `依據考選部國家考試標準：每卷 80 題單一選擇題，計時 60 分鐘。${countInfo}，深度對接中榮臨床 SOP 實務指引、IFCC/CLSI/AABB/WHO 標準與爭議題避坑心法。`;
+    el.viewDesc.textContent = `依據考選部國家考試標準：每卷 80 題單一選擇題，計時 60 分鐘。${countInfo}，深度對接臨床臨床 SOP 實務指引、IFCC/CLSI/AABB/WHO 標準與爭議題避坑心法。`;
 
     const availYears = getAvailableExamYears();
     if (!availYears.includes(state.examYear)) {
@@ -640,7 +640,7 @@
     };
     const subTitle = subTitles[state.subject] || '全領域專題';
     el.viewTitle.textContent = `🗂️ 專題分類刷題 - ${subTitle}`;
-    el.viewDesc.textContent = '依據專業學科與核心考點分類，精準攻克弱項。每題均附有「臺中榮總臨床實務對接珍珠」與「近同儕帶領提問指引」。';
+    el.viewDesc.textContent = '依據專業學科與核心考點分類，精準攻克弱項。每題均附有「醫學檢驗中心臨床實務對接珍珠」與「近同儕帶領提問指引」。';
 
     state.instantFeedback = true;
     state.category = 'all';
@@ -1020,7 +1020,7 @@
             </div>
             <div style="padding: 0.65rem; background: var(--bg-card-subtle); border-radius: var(--radius-md); border-left: 3px solid var(--danger);">
               <div style="font-weight: 700;">2. 115-1 Q67: Microsporum 鋸齒厚壁紡錘形大分生孢子 (錯誤率 58%)</div>
-              <p style="color: var(--text-muted); margin-top: 0.2rem;">易與 Trichophyton 薄壁小孢子混淆，建議結合 Larone 圖譜與中榮 ML-SIP-024 複習。</p>
+              <p style="color: var(--text-muted); margin-top: 0.2rem;">易與 Trichophyton 薄壁小孢子混淆，建議結合 Larone 圖譜與臨床ML-SIP-024 複習。</p>
             </div>
             <div style="padding: 0.65rem; background: var(--bg-card-subtle); border-radius: var(--radius-md); border-left: 3px solid var(--warning);">
               <div style="font-weight: 700;">3. 113-2 Q49: 抗微生物製劑化學結構與抗藥靶點 (錯誤率 54%)</div>
@@ -1101,8 +1101,8 @@
     link.click();
   }
   function setupSopTab() {
-    el.viewTitle.textContent = '📖 臺中榮總臨床檢驗指引手冊與 SOP 知識庫';
-    el.viewDesc.textContent = '整合醫事檢驗六大考科實證教學指引、IFCC/CLSI/AABB/WHO 標準、中榮各檢驗室標準作業程序 (SOP) 與避坑心法。';
+    el.viewTitle.textContent = '📖 醫學檢驗中心臨床檢驗指引手冊與 SOP 知識庫';
+    el.viewDesc.textContent = '整合醫事檢驗六大考科實證教學指引、IFCC/CLSI/AABB/WHO 標準、各專業檢驗室標準作業程序 (SOP) 與避坑心法。';
 
     const refs = window.CLINICAL_REFS;
     if (!refs) {
@@ -1207,7 +1207,7 @@
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <span class="role-tag intern">權威經典教科書</span>
           <span class="role-tag mentor">CLSI / IFCC / WHO 標準</span>
-          <span class="role-tag admin">中榮臨床檢驗實務</span>
+          <span class="role-tag admin">臨床檢驗實務</span>
           <span class="role-tag staff">112-115 國考考點完全對齊</span>
         </div>
       </div>
@@ -1258,7 +1258,7 @@
           <span class="role-tag intern">Tietz 臨床生化</span>
           <span class="role-tag mentor">Wilson & Walker 劍橋技術</span>
           <span class="role-tag admin">IFCC 推薦標準法</span>
-          <span class="role-tag staff">中榮檢驗實務</span>
+          <span class="role-tag staff">臨床檢驗實務</span>
         </div>
       </div>
     `;
@@ -1268,7 +1268,7 @@
     el.viewContainer.innerHTML = `
       <!-- 1. SOP Cards -->
       <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary);">
-        🏥 中榮微生物科標準檢驗程序 (Standard Operating Procedures)
+        🏥 臨床微生物科標準檢驗程序 (Standard Operating Procedures)
       </h3>
       <div class="sop-grid" style="margin-bottom: 2rem;">
         ${refs.sops.map(sop => `
@@ -1456,7 +1456,7 @@
 
               <!-- Clinical Pearl -->
               <div class="clinical-pearl-box">
-                <strong>🏥 臺中榮總臨床實務對接珍珠：</strong>
+                <strong>🏥 醫學檢驗中心臨床實務對接珍珠：</strong>
                 <p style="margin-top: 0.25rem;">${q.clinicalPearl}</p>
               </div>
 
